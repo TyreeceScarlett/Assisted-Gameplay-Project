@@ -1,44 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public class AimStateManager : MonoBehaviour
 {
-    [Header("Cinemachine Axis Settings")]
-    public Cinemachine.AxisState xAxis = new Cinemachine.AxisState();
-    public Cinemachine.AxisState yAxis = new Cinemachine.AxisState();
+    [SerializeField] float mouseSense = 1;
+    float xAxis, yAxis;
+    [SerializeField] Transform camFollowPos;
 
-    [Header("References")]
-    public Transform camFollowPos; // Assign this in the Inspector
-
-    void Start()
+    //start is called before the first frame update
+    private void Start()
     {
-        // Set the input axis names here
-        xAxis.m_InputAxisName = "Mouse X";
-        yAxis.m_InputAxisName = "Mouse Y";
+     
     }
 
+    // Update is called once per frame
     void Update()
     {
-        xAxis.Update(Time.deltaTime);
-        yAxis.Update(Time.deltaTime);
+        xAxis += Input.GetAxisRaw("Mouse X") * mouseSense;
+        yAxis -= Input.GetAxisRaw("Mouse Y") * mouseSense;
+        yAxis = Mathf.Clamp(yAxis, -80, 80);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
-        // Apply vertical rotation to the follow target
-        camFollowPos.localEulerAngles = new Vector3(
-            yAxis.Value,
-            camFollowPos.localEulerAngles.y,
-            camFollowPos.localEulerAngles.z
-        );
-
-        // Apply horizontal rotation to the character
-        transform.eulerAngles = new Vector3(
-            transform.eulerAngles.x,
-            xAxis.Value,
-            transform.eulerAngles.z
-        );
+        camFollowPos.localEulerAngles = new Vector3(yAxis, camFollowPos.localEulerAngles.y, camFollowPos.localEulerAngles.z);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, xAxis, transform.eulerAngles.z);
     }
 }

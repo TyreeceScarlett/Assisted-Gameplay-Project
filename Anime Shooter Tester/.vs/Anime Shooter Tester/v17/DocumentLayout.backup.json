@@ -1,53 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\downloads\\ct6018 project\\assisted-gameplay-game\\anime shooter tester\\assets\\scripts\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\aimstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\aimstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AimStateManager.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\AimStateManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AimStateManager.cs",
-              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\AimStateManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AimStateManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwCsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T19:35:39.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovementStateManager.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\MovementStateManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MovementStateManager.cs",
-              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\MovementStateManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MovementStateManager.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwEsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T18:33:39.328Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

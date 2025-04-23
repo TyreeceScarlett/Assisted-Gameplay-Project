@@ -172,8 +172,8 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Rigs\Vrm0XCompatibleRig.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Deserializer.g.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10ObjectMeta.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10ControlBone.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstraintSource.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10ControlBone.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\TransformExtensions.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\MaterialsMToon\Serializer.g.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationException.cs" />
