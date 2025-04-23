@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{246C37E2-0C6A-E5B0-9B5F-32BE3CFC00AB}</ProjectGuid>
+    <ProjectGuid>{DD7C248C-8D59-76C1-5F8E-217C69B6061A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>MToon.Editor</AssemblyName>
@@ -720,7 +720,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="MToon.csproj">
-      <Project>{E060CFFC-CD12-3667-6572-93FE1738A016}</Project>
+      <Project>{3F4ABFA8-37DF-1008-FC7D-3292A4CCB108}</Project>
       <Name>MToon</Name>
     </ProjectReference>
   </ItemGroup>

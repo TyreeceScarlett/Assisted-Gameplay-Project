@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9F652540-7C37-476D-DD83-CFB986BF9F31}</ProjectGuid>
+    <ProjectGuid>{9A79076E-A39A-0516-382F-243F5F89C8EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRMShaders.VRM10.MToon10.Runtime</AssemblyName>

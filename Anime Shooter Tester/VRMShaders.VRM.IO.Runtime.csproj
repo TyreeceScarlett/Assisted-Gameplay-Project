@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{685574EF-6739-EB5B-17F7-8A611A169345}</ProjectGuid>
+    <ProjectGuid>{9BD9B862-39B7-517A-97F5-D551BF984AF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRMShaders.VRM.IO.Runtime</AssemblyName>

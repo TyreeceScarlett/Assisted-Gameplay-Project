@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{9C35F954-F146-33A6-E320-F1BD9C2FCFD4}</ProjectGuid>
+    <ProjectGuid>{84E653A9-A63F-DEB0-8689-9964A27DF2C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>FastSpringBone10</AssemblyName>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3C9C959D-AB39-48FD-E4B8-AFDA676BEC44}</ProjectGuid>
+    <ProjectGuid>{13B34DC3-685C-CBF2-D1C5-EC6B9974310B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRMShaders.GLTF.IO.Runtime</AssemblyName>

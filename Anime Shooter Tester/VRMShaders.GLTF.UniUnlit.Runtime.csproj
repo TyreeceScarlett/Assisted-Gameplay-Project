@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A977C5E0-2BD5-2F84-EE52-CDA98826AFBD}</ProjectGuid>
+    <ProjectGuid>{9A06E846-89D2-EA17-9F81-2604A292D7BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRMShaders.GLTF.UniUnlit.Runtime</AssemblyName>

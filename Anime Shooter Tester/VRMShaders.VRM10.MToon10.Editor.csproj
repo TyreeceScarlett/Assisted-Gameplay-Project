@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A3ADDA48-6981-65D2-8935-9A6BBF16C0F0}</ProjectGuid>
+    <ProjectGuid>{2EB6938E-5BFA-C2C5-9C0F-B308A1029DAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRMShaders.VRM10.MToon10.Editor</AssemblyName>
@@ -720,7 +720,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VRMShaders.VRM10.MToon10.Runtime.csproj">
-      <Project>{9F652540-7C37-476D-DD83-CFB986BF9F31}</Project>
+      <Project>{9A79076E-A39A-0516-382F-243F5F89C8EF}</Project>
       <Name>VRMShaders.VRM10.MToon10.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

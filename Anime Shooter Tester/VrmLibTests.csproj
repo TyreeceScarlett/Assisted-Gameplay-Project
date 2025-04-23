@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DA3DB223-B9A0-E474-EF7A-1A5623BDFF0F}</ProjectGuid>
+    <ProjectGuid>{2219AFBC-D85D-3E11-6C8B-1D87B3519092}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VrmLibTests</AssemblyName>
@@ -716,7 +716,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VrmLib.csproj">
-      <Project>{BF511655-867D-6A15-3568-B3B33E320A22}</Project>
+      <Project>{ED0F47AE-26C5-3108-FCB6-8DF6098EB33F}</Project>
       <Name>VrmLib</Name>
     </ProjectReference>
   </ItemGroup>

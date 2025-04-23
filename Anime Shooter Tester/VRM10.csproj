@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{82A15DFA-107D-E732-AA1A-A1F2E20E5F54}</ProjectGuid>
+    <ProjectGuid>{6FF2CBEE-60F3-8945-5048-81EF5B892C20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRM10</AssemblyName>
@@ -823,39 +823,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VrmLib.csproj">
-      <Project>{BF511655-867D-6A15-3568-B3B33E320A22}</Project>
+      <Project>{ED0F47AE-26C5-3108-FCB6-8DF6098EB33F}</Project>
       <Name>VrmLib</Name>
     </ProjectReference>
     <ProjectReference Include="MToon.csproj">
-      <Project>{E060CFFC-CD12-3667-6572-93FE1738A016}</Project>
+      <Project>{3F4ABFA8-37DF-1008-FC7D-3292A4CCB108}</Project>
       <Name>MToon</Name>
     </ProjectReference>
     <ProjectReference Include="UniGLTF.csproj">
-      <Project>{E0513203-4F53-16A3-93D9-C1E4A31297DC}</Project>
+      <Project>{048850FC-4EB9-5417-BCB2-A8C27D95C56D}</Project>
       <Name>UniGLTF</Name>
     </ProjectReference>
     <ProjectReference Include="VRMShaders.GLTF.IO.Runtime.csproj">
-      <Project>{3C9C959D-AB39-48FD-E4B8-AFDA676BEC44}</Project>
+      <Project>{13B34DC3-685C-CBF2-D1C5-EC6B9974310B}</Project>
       <Name>VRMShaders.GLTF.IO.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="VRMShaders.VRM10.Format.Runtime.csproj">
-      <Project>{802B6B83-9B6E-06C7-969C-2DD57AFC32DD}</Project>
+      <Project>{617F6038-4466-6654-1A4E-6212A31B08FC}</Project>
       <Name>VRMShaders.VRM10.Format.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="VRMShaders.VRM10.MToon10.Runtime.csproj">
-      <Project>{9F652540-7C37-476D-DD83-CFB986BF9F31}</Project>
+      <Project>{9A79076E-A39A-0516-382F-243F5F89C8EF}</Project>
       <Name>VRMShaders.VRM10.MToon10.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniHumanoid.csproj">
-      <Project>{BF7DA645-4982-0912-64C2-39AB973D49DE}</Project>
+      <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
       <Name>UniHumanoid</Name>
     </ProjectReference>
     <ProjectReference Include="FastSpringBone10.csproj">
-      <Project>{9C35F954-F146-33A6-E320-F1BD9C2FCFD4}</Project>
+      <Project>{84E653A9-A63F-DEB0-8689-9964A27DF2C5}</Project>
       <Name>FastSpringBone10</Name>
     </ProjectReference>
     <ProjectReference Include="UniGLTF.Utils.csproj">
-      <Project>{BBE7F161-5F3C-C65D-0E3E-41396A646F5D}</Project>
+      <Project>{939C4486-BC9F-CC9F-2A3B-E93FA61E6862}</Project>
       <Name>UniGLTF.Utils</Name>
     </ProjectReference>
   </ItemGroup>

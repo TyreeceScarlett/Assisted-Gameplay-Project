@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AD897CBF-6567-D656-75E6-67D7783BDF9B}</ProjectGuid>
+    <ProjectGuid>{E17783A0-BDB0-D4B4-39F0-8DB2BC188E9A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VRMShaders.VRM10.MToon10.Tests</AssemblyName>
@@ -715,7 +715,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VRMShaders.VRM10.MToon10.Runtime.csproj">
-      <Project>{9F652540-7C37-476D-DD83-CFB986BF9F31}</Project>
+      <Project>{9A79076E-A39A-0516-382F-243F5F89C8EF}</Project>
       <Name>VRMShaders.VRM10.MToon10.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D96F20FB-B1B2-FA07-4CBE-75A6B5953BA1}</ProjectGuid>
+    <ProjectGuid>{74CFE458-D809-BE16-9182-8BED170B5CA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UniHumanoid.Editor.Tests</AssemblyName>
@@ -715,7 +715,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniHumanoid.csproj">
-      <Project>{BF7DA645-4982-0912-64C2-39AB973D49DE}</Project>
+      <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
       <Name>UniHumanoid</Name>
     </ProjectReference>
   </ItemGroup>
