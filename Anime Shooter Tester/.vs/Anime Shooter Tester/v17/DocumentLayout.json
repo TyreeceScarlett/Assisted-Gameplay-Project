@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\downloads\\ct6018 project\\assisted-gameplay-game\\anime shooter tester\\assets\\scripts\\movementbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\downloads\\ct6018 project\\assisted-gameplay-game\\anime shooter tester\\assets\\scripts\\walkstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\walkstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\idlestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\runstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\runstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\crouchingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crouchingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\movementbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,20 +34,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovementStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\MovementStateManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MovementStateManager.cs",
+              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\MovementStateManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MovementStateManager.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA1wC4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:28:19.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RunState.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\RunState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RunState.cs",
+              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\RunState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RunState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:30:33.398Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WalkState.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\WalkState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WalkState.cs",
+              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\WalkState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WalkState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:27:21.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdleState.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\IdleState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IdleState.cs",
+              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\IdleState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IdleState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:26:30.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CrouchingState.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\CrouchingState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CrouchingState.cs",
+              "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\CrouchingState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CrouchingState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T22:24:41.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MovementBaseState.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\MovementBaseState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovementBaseState.cs",
               "ToolTip": "C:\\Users\\pokes\\Downloads\\CT6018 project\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\MovementBaseState.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovementBaseState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T22:18:59.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T22:18:59.894Z"
             }
           ]
         }

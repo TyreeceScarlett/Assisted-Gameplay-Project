@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
+
+    MovementBaseState currentState;
+
+    public IdleState Idle = new IdleState();
+    public WalkState walk = new WalkState();
+    public CrouchingState crouch = new CrouchingState();
+    public RunState run = new RunState();
+
+    [HideInInspector] public Animator anim;
+
     public float moveSpeed = 3;
     [HideInInspector] public Vector3 dir;
     float hzInput, vInput;
@@ -18,7 +28,9 @@ public class MovementStateManager : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         controller = GetComponent<CharacterController>();
+        SwitchState(Idle);
         if (controller != null)
         {
             // Adjust the center of the capsule collider to make sure it's aligned at the bottom
@@ -30,6 +42,17 @@ public class MovementStateManager : MonoBehaviour
     {
         GetDirectionAndMove();
         Gravity();
+
+        anim.SetFloat("hzInput", hzInput);
+        anim.SetFloat("vInput", vInput);
+
+        currentState.UpdateState(this);
+    }
+
+    public void SwitchState(MovementBaseState state)
+    {
+        currentState = state;
+        currentState.EnterState(this);
     }
 
     void GetDirectionAndMove()
