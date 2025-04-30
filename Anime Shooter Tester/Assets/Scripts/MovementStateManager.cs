@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
+    public float currentMoveSpeed;
+    public float walkSpeed = 3, walkBackSpeed = 2;
+    public float runSpeed = 7, runBackSpeed = 5;
+    public float crouchSpeed = 2, crouchBackSpeed = 1;
 
     MovementBaseState currentState;
 
@@ -16,7 +20,7 @@ public class MovementStateManager : MonoBehaviour
 
     public float moveSpeed = 3;
     [HideInInspector] public Vector3 dir;
-    float hzInput, vInput;
+    private float hzInput, vInput;  // Private fields for movement input
     CharacterController controller;
 
     [SerializeField] float groundYOffset = 0.2f;  // Adjust for accurate ground detection
@@ -25,6 +29,9 @@ public class MovementStateManager : MonoBehaviour
 
     [SerializeField] float gravity = -9.81f;
     Vector3 velocity;
+
+    // Public read-only property for vInput
+    public float VInput => vInput;
 
     void Start()
     {
