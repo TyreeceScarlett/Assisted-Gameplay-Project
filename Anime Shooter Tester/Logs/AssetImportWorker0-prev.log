@@ -15,7 +15,7 @@ C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Test
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59181
+59176
 Successfully changed project path to: C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Tester
 C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Tester
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Test
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3324] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2332590140 [EditorId] 2332590140 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [5072] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2173254319 [EditorId] 2173254319 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3324] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2332590140 [EditorId] 2332590140 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5072] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2173254319 [EditorId] 2173254319 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 3.19 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 2.30 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.17f1 (54cb9bda89c4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/Resources/UnitySubsystems
@@ -67,18 +67,18 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005978 seconds.
-- Loaded All Assemblies, in  0.285 seconds
+Registered in 0.007191 seconds.
+- Loaded All Assemblies, in  0.294 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.236 seconds
+- Finished resetting the current domain, in  0.185 seconds
 Domain Reload Profiling:
-	ReloadAssembly (170ms)
-		BeginReloadAssembly (74ms)
+	ReloadAssembly (177ms)
+		BeginReloadAssembly (73ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
@@ -87,21 +87,21 @@ Domain Reload Profiling:
 		LoadAllAssembliesAndSetupDomain (0ms)
 			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (107ms)
-				TypeCache.Initialize (106ms)
-					TypeCache.ScanAssembly (104ms)
+			SetupTypeCache (108ms)
+				TypeCache.Initialize (108ms)
+					TypeCache.ScanAssembly (106ms)
 				ResolveRequiredComponents (0ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (183ms)
+			SetupLoadedEditorAssemblies (143ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (7ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (6ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (123ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				ProcessInitializeOnLoadAttributes (96ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -109,48 +109,48 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.526 seconds
-Refreshing native plugins compatible for Editor in 1.92 ms, found 1 plugins.
+- Loaded All Assemblies, in  0.515 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.379 seconds
+- Finished resetting the current domain, in  0.326 seconds
 Domain Reload Profiling:
-	ReloadAssembly (186ms)
-		BeginReloadAssembly (117ms)
+	ReloadAssembly (158ms)
+		BeginReloadAssembly (94ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (30ms)
-		LoadAllAssembliesAndSetupDomain (337ms)
-			LoadAssemblies (202ms)
+			CreateAndSetChildDomain (22ms)
+		LoadAllAssembliesAndSetupDomain (355ms)
+			LoadAssemblies (215ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (184ms)
-				TypeCache.Initialize (169ms)
-					TypeCache.ScanAssembly (164ms)
+			SetupTypeCache (180ms)
+				TypeCache.Initialize (164ms)
+					TypeCache.ScanAssembly (161ms)
 				ResolveRequiredComponents (3ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (246ms)
+			SetupLoadedEditorAssemblies (215ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (4ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (3ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (55ms)
-				ProcessInitializeOnLoadAttributes (158ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
+				BeforeProcessingInitializeOnLoad (48ms)
+				ProcessInitializeOnLoadAttributes (137ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
 				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2191 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 33 unused Assets / (135.3 KB). Loaded Objects now: 2678.
 Memory consumption went from 101.7 MB to 101.5 MB.
-Total: 2.713600 ms (FindLiveObjects: 0.373700 ms CreateObjectMapping: 0.051900 ms MarkObjects: 2.138700 ms  DeleteObjects: 0.148000 ms)
+Total: 3.270300 ms (FindLiveObjects: 0.214500 ms CreateObjectMapping: 0.032400 ms MarkObjects: 2.873000 ms  DeleteObjects: 0.148900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -166,385 +166,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 927.266773 seconds.
-  path: Assets/Girl Placeholder@Fast Run.fbx
-  artifactKey: Guid(c93bd2693166fc343a01b454a5db1193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Girl Placeholder@Fast Run.fbx using Guid(c93bd2693166fc343a01b454a5db1193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af62ed94ebc8185974b92b0477e26186') in 0.240280 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 244
-========================================================================
-Received Import Request.
-  Time since last request: 4.929237 seconds.
-  path: Assets/Girl Placeholder@Shoulder Rubbing.fbx
-  artifactKey: Guid(615cec76b195ada42bca6815f9828673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Girl Placeholder@Shoulder Rubbing.fbx using Guid(615cec76b195ada42bca6815f9828673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4698c5856288c3da4a5d4963077927de') in 0.104418 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 244
-========================================================================
-Received Import Request.
-  Time since last request: 1.526419 seconds.
-  path: Assets/Girl Placeholder@Bored.fbx
-  artifactKey: Guid(64bbd775f6de2584392c7af2430713c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Girl Placeholder@Bored.fbx using Guid(64bbd775f6de2584392c7af2430713c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa99f683de45b863fc1a701f700cb7d7') in 0.103462 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 244
-========================================================================
-Received Import Request.
-  Time since last request: 5.065115 seconds.
-  path: Assets/New Terrain.asset
-  artifactKey: Guid(f803df3dc5971d9479572593cca5afa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain.asset using Guid(f803df3dc5971d9479572593cca5afa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f85f2825c9dcb482e7949145f076a3d6') in 0.004059 seconds
+  Time since last request: 14983.992280 seconds.
+  path: Assets/Animations/Walking/Left Strafe Walk.anim
+  artifactKey: Guid(ca8077f2c3b2eff42b2d228ed15f9438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/Left Strafe Walk.anim using Guid(ca8077f2c3b2eff42b2d228ed15f9438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf452166de63a7d403281a5f8d0b226') in 0.013869 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 3.900780 seconds.
-  path: Assets/Not Needed Walking Animation
-  artifactKey: Guid(7b541d500775c1546a1e99dc5306ae0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Not Needed Walking Animation using Guid(7b541d500775c1546a1e99dc5306ae0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4db9b7e9a7208f8dc4c798cb90d75a1') in 0.000701 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.663584 seconds.
-  path: Assets/Not Currently Used
-  artifactKey: Guid(7b541d500775c1546a1e99dc5306ae0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Not Currently Used using Guid(7b541d500775c1546a1e99dc5306ae0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6d29eda36b4a85137109970d492bb5') in 0.000535 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 28.009655 seconds.
-  path: Assets/Moving Animations/Crouch Idle.fbx
-  artifactKey: Guid(e0bbf484613f17745938be19ebb2981b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouch Idle.fbx using Guid(e0bbf484613f17745938be19ebb2981b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b8716f24fc15cd71ce30c91fa1b8ac6') in 0.084395 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 5.206523 seconds.
-  path: Assets/Moving Animations/Crouch Idle.fbx
-  artifactKey: Guid(e0bbf484613f17745938be19ebb2981b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouch Idle.fbx using Guid(e0bbf484613f17745938be19ebb2981b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9189e97184bec9457b54853f160c7092') in 0.090329 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
-========================================================================
-Received Import Request.
-  Time since last request: 1.020201 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Left.fbx
-  artifactKey: Guid(8bde18cc56a6f3d49b3d7327d34d84f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Left.fbx using Guid(8bde18cc56a6f3d49b3d7327d34d84f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894cca5aef958af4cf6b9b8d2eb225c3') in 0.083038 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 3.642144 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Left.fbx
-  artifactKey: Guid(8bde18cc56a6f3d49b3d7327d34d84f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Left.fbx using Guid(8bde18cc56a6f3d49b3d7327d34d84f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d6c7b92111d6a3692d5a6802ecd7ca') in 0.081690 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
-========================================================================
-Received Import Request.
-  Time since last request: 0.480017 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Right.fbx
-  artifactKey: Guid(d4b8b9551bad4a044a3111a90d4fc830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Right.fbx using Guid(d4b8b9551bad4a044a3111a90d4fc830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422a2a68d124fae997c887186276a626') in 0.082278 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 2.373035 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Right.fbx
-  artifactKey: Guid(d4b8b9551bad4a044a3111a90d4fc830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Right.fbx using Guid(d4b8b9551bad4a044a3111a90d4fc830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2206ded39b6f4ef7ffaff74a98c430e') in 0.083713 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
-========================================================================
-Received Import Request.
-  Time since last request: 0.990046 seconds.
-  path: Assets/Moving Animations/Crouched Walking.fbx
-  artifactKey: Guid(1aad94a74a34bb04c9400309a2c8daeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Walking.fbx using Guid(1aad94a74a34bb04c9400309a2c8daeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec7542a7ccfbaec9e3b9431ab21b102') in 0.090588 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 2.276455 seconds.
-  path: Assets/Moving Animations/Crouched Walking.fbx
-  artifactKey: Guid(1aad94a74a34bb04c9400309a2c8daeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Walking.fbx using Guid(1aad94a74a34bb04c9400309a2c8daeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de6439a81bc298f4ee2adf3c3ecaf0cb') in 0.084581 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
-========================================================================
-Received Import Request.
-  Time since last request: 22.621319 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(f0c210851b9ffa84e919900d20ad41b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(f0c210851b9ffa84e919900d20ad41b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18bacef3fbe92e7f2b2ae158519b3df') in 0.005017 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 7.825236 seconds.
-  path: Assets/Moving Animations/Crouch Idle.anim
-  artifactKey: Guid(f0c210851b9ffa84e919900d20ad41b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouch Idle.anim using Guid(f0c210851b9ffa84e919900d20ad41b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8593352d5a2d458f50628eeb2e4ed24b') in 0.004563 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 26.414570 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(1503fa04d4e0fab4192a2d1973909bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(1503fa04d4e0fab4192a2d1973909bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aca3be0f21dc8fbadb7744e7e47be167') in 0.005181 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.723428 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Left.anim
-  artifactKey: Guid(1503fa04d4e0fab4192a2d1973909bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Left.anim using Guid(1503fa04d4e0fab4192a2d1973909bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b75d51bbc7bd5ce941b577a281e8598') in 0.005530 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 10.342394 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(ea296cde3e5e0e442bbbeb105214bb5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(ea296cde3e5e0e442bbbeb105214bb5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b18ecbbf92e2c0b0d8586b931eb92bf9') in 0.004570 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 11.119834 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Right.anim
-  artifactKey: Guid(ea296cde3e5e0e442bbbeb105214bb5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Right.anim using Guid(ea296cde3e5e0e442bbbeb105214bb5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7337c393b2677c0200ea01cd1f2f307c') in 0.005382 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 16.558947 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(ef38bb6a2f9b39d4cbde1132dd40267f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(ef38bb6a2f9b39d4cbde1132dd40267f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebbf7c2d30e1eb978b9a962ec8575cb2') in 0.005072 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 2.224204 seconds.
-  path: Assets/Moving Animations/Crouched Sneaking Right.anim
-  artifactKey: Guid(ef38bb6a2f9b39d4cbde1132dd40267f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Sneaking Right.anim using Guid(ef38bb6a2f9b39d4cbde1132dd40267f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe683b27ae244e61bae781d2f73003e7') in 0.006933 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 42.944229 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0183d1b15eba84991d308efaac58219') in 0.005943 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.673177 seconds.
-  path: Assets/Moving Animations/Crouched Walking.anim
-  artifactKey: Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Crouched Walking.anim using Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7fdc6eecd22746689db94a7baa18d01') in 0.006368 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 15.608471 seconds.
-  path: Assets/Animations/PlayerController.controller
-  artifactKey: Guid(f45023d5ae45a3c43a0782e355118e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/PlayerController.controller using Guid(f45023d5ae45a3c43a0782e355118e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4232494792d9f7d0b3ab9fc476aba298') in 0.088496 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 25
-========================================================================
-Received Import Request.
-  Time since last request: 84.419941 seconds.
-  path: Assets/Animations/Crouching/Crouched Walking 1.anim
-  artifactKey: Guid(6322bf94adeea7a42996351651a9f3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/Crouched Walking 1.anim using Guid(6322bf94adeea7a42996351651a9f3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92e6213b1f52af4373f9084b4fd561b') in 0.005316 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 11.242567 seconds.
-  path: Assets/Animations/Crouching/CrouchIdle.anim
-  artifactKey: Guid(f0c210851b9ffa84e919900d20ad41b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchIdle.anim using Guid(f0c210851b9ffa84e919900d20ad41b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bf39aecc19f34303546432a9e32b19') in 0.005075 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.827266 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalking.anim
-  artifactKey: Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalking.anim using Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d188e319619f38d4c50c325e43752e8') in 0.006032 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.003545 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalk.anim
-  artifactKey: Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalk.anim using Guid(b544c67189728da45ae69762b01fdc7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '273556f202134faefeccde214a34fd07') in 0.005540 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.913373 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalkBack.anim
-  artifactKey: Guid(6322bf94adeea7a42996351651a9f3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalkBack.anim using Guid(6322bf94adeea7a42996351651a9f3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666452c4d22a07d7d000ae2977c208a5') in 0.005948 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 425.305783 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalk 1.anim
-  artifactKey: Guid(e5ae4ba86c579e848bc7c502b4242d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalk 1.anim using Guid(e5ae4ba86c579e848bc7c502b4242d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972d0a586b418b51b2055c2a529661b0') in 0.006750 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 1.157993 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalk 2.anim
-  artifactKey: Guid(43349f2119496a446aa5e24c41cd3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalk 2.anim using Guid(43349f2119496a446aa5e24c41cd3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e02d9cc9da392270ce2284f2b4258b26') in 0.006057 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 21.137862 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalkBackRight.anim
-  artifactKey: Guid(43349f2119496a446aa5e24c41cd3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalkBackRight.anim using Guid(43349f2119496a446aa5e24c41cd3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9116f67603b0d175d3d7156db498b0') in 0.006215 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.565334 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalkBackLeft.anim
-  artifactKey: Guid(e5ae4ba86c579e848bc7c502b4242d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalkBackLeft.anim using Guid(e5ae4ba86c579e848bc7c502b4242d75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf0555489649968f0b5b88117ee4220') in 0.005885 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 80.090297 seconds.
-  path: Assets/Animations/Crouching/CrouchedWalkBack.anim
-  artifactKey: Guid(6322bf94adeea7a42996351651a9f3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Crouching/CrouchedWalkBack.anim using Guid(6322bf94adeea7a42996351651a9f3e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeaa8a8afc9c2ebae6f47439b3efaff8') in 0.005826 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 813.037675 seconds.
-  path: Assets/Animations/Running/Running.fbx
-  artifactKey: Guid(cb2d0007f30f626469e95781d8f0b665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Running/Running.fbx using Guid(cb2d0007f30f626469e95781d8f0b665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e83b929a71f22094f129e55e261b87') in 0.092725 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 13.618173 seconds.
-  path: Assets/Moving Animations/Running Right Turn (1).fbx
-  artifactKey: Guid(4d41a7e2d6531544fba56dc7c5b73622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running Right Turn (1).fbx using Guid(4d41a7e2d6531544fba56dc7c5b73622) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b5b53cf7462593a04cef7907dbc19f6') in 0.086414 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 0.506008 seconds.
-  path: Assets/Moving Animations/Running Backward.fbx
-  artifactKey: Guid(e93d67a49151d8a4aa69620a4de880b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running Backward.fbx using Guid(e93d67a49151d8a4aa69620a4de880b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '020890f9cadf452b944841a097415a3f') in 0.084726 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 2.154831 seconds.
-  path: Assets/Moving Animations/Running Right Turn.fbx
-  artifactKey: Guid(cb1c2ed07c26abd4dbc629a0f51539f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running Right Turn.fbx using Guid(cb1c2ed07c26abd4dbc629a0f51539f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a5673489491ec4b8ce8924c9fe8a229') in 0.087667 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 0.432982 seconds.
-  path: Assets/Moving Animations/Running.fbx
-  artifactKey: Guid(f9e53318169a00a4287a7501bf383cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running.fbx using Guid(f9e53318169a00a4287a7501bf383cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72ba9a814d7a2aca03313c8c051476f3') in 0.076385 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 255
-========================================================================
-Received Import Request.
-  Time since last request: 421.171315 seconds.
-  path: Assets/Animations/Running/Idle.anim
-  artifactKey: Guid(e3361400227b310499e7b533bb7ed4c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Running/Idle.anim using Guid(e3361400227b310499e7b533bb7ed4c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26eec95d116de7b8bdce1251f5195566') in 0.069535 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 11.218424 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(ad233da4179338049a5f6a88b6b42d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(ad233da4179338049a5f6a88b6b42d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2a943960e1a1e81a8a8e60205af118d') in 0.002926 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 7.354799 seconds.
-  path: Assets/Moving Animations/Running.anim
-  artifactKey: Guid(ad233da4179338049a5f6a88b6b42d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running.anim using Guid(ad233da4179338049a5f6a88b6b42d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4300cf52f762317e6bb4b096e5824ef') in 0.002995 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 134.411284 seconds.
-  path: Assets/Moving Animations/Running.fbx
-  artifactKey: Guid(f9e53318169a00a4287a7501bf383cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running.fbx using Guid(f9e53318169a00a4287a7501bf383cd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5847a255af7b3bd42efc967ba7e330ce') in 0.095859 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257
-========================================================================
-Received Import Request.
-  Time since last request: 3.470676 seconds.
-  path: Assets/Moving Animations/mixamo.com.anim
-  artifactKey: Guid(be70bdf2a6b64d2408c981a95aa88bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/mixamo.com.anim using Guid(be70bdf2a6b64d2408c981a95aa88bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8eaa305884d327fc8f8acc4edcff35') in 0.005334 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 14.090168 seconds.
-  path: Assets/Animations/Running/mixamo.com.anim
-  artifactKey: Guid(be70bdf2a6b64d2408c981a95aa88bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Running/mixamo.com.anim using Guid(be70bdf2a6b64d2408c981a95aa88bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27e94ab2e4d18af144b61d365798f226') in 0.005741 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.229126 seconds.
-  path: Assets/Animations/Running/Running.anim
-  artifactKey: Guid(be70bdf2a6b64d2408c981a95aa88bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Running/Running.anim using Guid(be70bdf2a6b64d2408c981a95aa88bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf2fbad2303f1a4af6aa6f7a7cffe335') in 0.005576 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 40.186405 seconds.
-  path: Assets/Moving Animations/Running Backward.fbx
-  artifactKey: Guid(e93d67a49151d8a4aa69620a4de880b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Moving Animations/Running Backward.fbx using Guid(e93d67a49151d8a4aa69620a4de880b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6558d2e265aea18d7dcf87421995b17e') in 0.081799 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 257

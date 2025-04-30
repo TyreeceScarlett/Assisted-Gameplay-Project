@@ -15,7 +15,7 @@ C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Test
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59176
+49918
 Successfully changed project path to: C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Tester
 C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Tester
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/pokes/OneDrive/Desktop/Github/Assisted-Gameplay-Game/Anime Shooter Test
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [5072] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2173254319 [EditorId] 2173254319 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [22108] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2339457461 [EditorId] 2339457461 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [5072] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2173254319 [EditorId] 2173254319 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [22108] Host "[IP] 26.73.156.222 [Port] 0 [Flags] 2 [Guid] 2339457461 [EditorId] 2339457461 [Version] 1048832 [Id] WindowsEditor(7,TySca) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 2.30 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 5.98 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.17f1 (54cb9bda89c4)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/Resources/UnitySubsystems
@@ -67,41 +67,41 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56656
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007191 seconds.
-- Loaded All Assemblies, in  0.294 seconds
+Registered in 0.008717 seconds.
+- Loaded All Assemblies, in  0.367 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.185 seconds
+- Finished resetting the current domain, in  0.282 seconds
 Domain Reload Profiling:
-	ReloadAssembly (177ms)
-		BeginReloadAssembly (73ms)
+	ReloadAssembly (233ms)
+		BeginReloadAssembly (126ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (71ms)
+			LoadAssemblies (123ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (108ms)
-				TypeCache.Initialize (108ms)
-					TypeCache.ScanAssembly (106ms)
-				ResolveRequiredComponents (0ms)
+			SetupTypeCache (125ms)
+				TypeCache.Initialize (124ms)
+					TypeCache.ScanAssembly (122ms)
+				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (143ms)
+			SetupLoadedEditorAssemblies (223ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (6ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (8ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (96ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
+				ProcessInitializeOnLoadAttributes (150ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -109,48 +109,48 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.515 seconds
-Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+- Loaded All Assemblies, in  0.702 seconds
+Refreshing native plugins compatible for Editor in 1.52 ms, found 1 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.326 seconds
+- Finished resetting the current domain, in  0.443 seconds
 Domain Reload Profiling:
-	ReloadAssembly (158ms)
-		BeginReloadAssembly (94ms)
+	ReloadAssembly (247ms)
+		BeginReloadAssembly (149ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		LoadAllAssembliesAndSetupDomain (355ms)
-			LoadAssemblies (215ms)
+			CreateAndSetChildDomain (30ms)
+		LoadAllAssembliesAndSetupDomain (451ms)
+			LoadAssemblies (287ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (180ms)
-				TypeCache.Initialize (164ms)
-					TypeCache.ScanAssembly (161ms)
+			SetupTypeCache (230ms)
+				TypeCache.Initialize (211ms)
+					TypeCache.ScanAssembly (207ms)
 				ResolveRequiredComponents (3ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (215ms)
+			SetupLoadedEditorAssemblies (297ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (3ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (5ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (48ms)
-				ProcessInitializeOnLoadAttributes (137ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (190ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+			AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2191 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 33 unused Assets / (135.3 KB). Loaded Objects now: 2678.
 Memory consumption went from 101.7 MB to 101.5 MB.
-Total: 3.270300 ms (FindLiveObjects: 0.214500 ms CreateObjectMapping: 0.032400 ms MarkObjects: 2.873000 ms  DeleteObjects: 0.148900 ms)
+Total: 3.624200 ms (FindLiveObjects: 0.215200 ms CreateObjectMapping: 0.076600 ms MarkObjects: 3.141200 ms  DeleteObjects: 0.189700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -166,9 +166,115 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 14983.992280 seconds.
-  path: Assets/Animations/Walking/Left Strafe Walk.anim
-  artifactKey: Guid(ca8077f2c3b2eff42b2d228ed15f9438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Walking/Left Strafe Walk.anim using Guid(ca8077f2c3b2eff42b2d228ed15f9438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf452166de63a7d403281a5f8d0b226') in 0.013869 seconds
+  Time since last request: 165997.820004 seconds.
+  path: Assets/Animations/Walking/Walking Backwards.anim
+  artifactKey: Guid(28607e5f947d1b6479bc2b43fc2a369e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/Walking Backwards.anim using Guid(28607e5f947d1b6479bc2b43fc2a369e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c751ddab92b5b7fd9112e8abc88893da') in 0.023735 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.206510 seconds.
+  path: Assets/Animations/Walking/Walking Backwards Right.anim
+  artifactKey: Guid(ad6b7fe504864554b805c17893f8cfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/Walking Backwards Right.anim using Guid(ad6b7fe504864554b805c17893f8cfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a1e29770a529e26049de13d7234191') in 0.011550 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.812587 seconds.
+  path: Assets/Animations/Walking/RightStrafeWalking.anim
+  artifactKey: Guid(d3d5869681d16a942964f6615b0dd992) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/RightStrafeWalking.anim using Guid(d3d5869681d16a942964f6615b0dd992) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08273b8b195c15f0fd7931dfce0c250c') in 0.009479 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 9.025567 seconds.
+  path: Assets/Animations/Walking/LeftStrafeWalking.anim
+  artifactKey: Guid(ca247ef0269062d49bde8583d67b8cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/LeftStrafeWalking.anim using Guid(ca247ef0269062d49bde8583d67b8cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b0473022123500084053a9025507e4') in 0.008127 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.884925 seconds.
+  path: Assets/Animations/Walking/Right Strafe Walk.anim
+  artifactKey: Guid(df62794739c3beb478fa24ff1a6c63e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/Right Strafe Walk.anim using Guid(df62794739c3beb478fa24ff1a6c63e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61c0335da6a8899075cb8ff8b1fc8743') in 0.008347 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.573853 seconds.
+  path: Assets/Animations/Walking/Walking Backwards Left.anim
+  artifactKey: Guid(0345bc029efdf8d4eb5ba5716e6492e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/Walking Backwards Left.anim using Guid(0345bc029efdf8d4eb5ba5716e6492e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08a646bf9d993dc7bc32b2b8a422f511') in 0.012406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 7.851414 seconds.
+  path: Assets/Animations/Walking/WalkingBackLeft.anim
+  artifactKey: Guid(ec55c8a5a47adc44484b903ebe2f5fc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Walking/WalkingBackLeft.anim using Guid(ec55c8a5a47adc44484b903ebe2f5fc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0a647494bf329fc29e7fd955bcbadcb') in 0.009391 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.583 seconds
+Refreshing native plugins compatible for Editor in 1.59 ms, found 1 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.680 seconds
+Domain Reload Profiling:
+	ReloadAssembly (213ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		LoadAllAssembliesAndSetupDomain (367ms)
+			LoadAssemblies (216ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (208ms)
+				TypeCache.Initialize (205ms)
+					TypeCache.ScanAssembly (201ms)
+				ResolveRequiredComponents (3ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (293ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (3ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (182ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 1.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2175 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 11 unused Assets / (97.1 KB). Loaded Objects now: 2694.
+Memory consumption went from 98.6 MB to 98.5 MB.
+Total: 3.032400 ms (FindLiveObjects: 0.233500 ms CreateObjectMapping: 0.059900 ms MarkObjects: 2.618200 ms  DeleteObjects: 0.119300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
