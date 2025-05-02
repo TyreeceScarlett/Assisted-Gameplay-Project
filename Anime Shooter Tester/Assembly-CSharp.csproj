@@ -58,12 +58,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.17f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AimStateManager.cs" />
+    <Compile Include="Assets\AimStates\HipFireState.cs" />
+    <Compile Include="Assets\AimStates\AimBaseState.cs" />
     <Compile Include="Assets\Scripts\WalkState.cs" />
     <Compile Include="Assets\Scripts\MovementBaseState.cs" />
+    <Compile Include="Assets\AimStates\AimStateManager.cs" />
     <Compile Include="Assets\Scripts\RunState.cs" />
     <Compile Include="Assets\Scripts\MovementStateManager.cs" />
     <Compile Include="Assets\Scripts\CrouchingState.cs" />
+    <Compile Include="Assets\AimStates\AimState.cs" />
     <Compile Include="Assets\Scripts\IdleState.cs" />
   </ItemGroup>
   <ItemGroup>
