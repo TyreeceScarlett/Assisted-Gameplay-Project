@@ -47,17 +47,23 @@ public class AimStateManager : MonoBehaviour
             fovSmoothSpeed * Time.deltaTime
         );
 
+
         // Raycast aiming position
         Vector2 screenCentre = new Vector2(Screen.width / 2, Screen.height / 2);
         Ray ray = Camera.main.ScreenPointToRay(screenCentre);
 
+        // Debug: Log raycast hits
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, aimMask))
         {
-            aimpos.position = Vector3.Lerp(
-                aimpos.position,
-                hit.point,
-                aimSmoothSpeed * Time.deltaTime
-            );
+            // Log if we hit something
+            Debug.Log("Hit: " + hit.collider.name);
+
+            // Move the aimpos directly to the hit point
+            aimpos.position = hit.point;
+        }
+        else
+        {
+            Debug.Log("Raycast missed");
         }
 
         currentState.UpdateState(this);
