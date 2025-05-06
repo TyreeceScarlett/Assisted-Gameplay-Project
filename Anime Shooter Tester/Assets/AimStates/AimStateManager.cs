@@ -14,10 +14,17 @@ public class AimStateManager : MonoBehaviour
     float xAxis, yAxis;
 
     [HideInInspector] public Animator anim;
+    [HideInInspector] public CinemachineVirtualCamera vCam;
+    public float adsFov = 40;
+    [HideInInspector] public float hipFov;
+    [HideInInspector] public float currentFov;
+    public float fovSmoothSpeed = 10;
 
     // Start is called before the first frame update
     void Start()
     {
+        vCam = GetComponentInChildren<CinemachineVirtualCamera>();
+        hipFov = vCam.m_Lens.FieldOfView;
         anim = GetComponentInChildren<Animator>(); // ✅ Fixed typo
         SwitchState(Hip); // ✅ Fixed casing
     }
@@ -28,6 +35,8 @@ public class AimStateManager : MonoBehaviour
         xAxis += Input.GetAxisRaw("Mouse X") * mouseSense;
         yAxis -= Input.GetAxisRaw("Mouse Y") * mouseSense;
         yAxis = Mathf.Clamp(yAxis, -80, 80);
+
+        vCam.m_Lens.FieldOfView = Mathf.Lerp(vCam.m_Lens.FieldOfView, currentFov, fovSmoothSpeed * Time.deltaTime);
 
         currentState.UpdateState(this);
     }

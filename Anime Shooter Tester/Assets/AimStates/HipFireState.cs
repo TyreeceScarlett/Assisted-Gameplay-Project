@@ -6,6 +6,7 @@ public class HipFireState : AimBaseState
     {
         Debug.Log("Entered Hip Fire State");
         aim.anim.SetBool("Aiming", false); // Trigger "hipfire" animation
+        aim.currentFov = aim.hipFov;
     }
 
     public override void UpdateState(AimStateManager aim)

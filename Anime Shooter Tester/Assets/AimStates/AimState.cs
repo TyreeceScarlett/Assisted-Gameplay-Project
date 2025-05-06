@@ -6,6 +6,7 @@ public class AimState : AimBaseState
     {
         Debug.Log("Entered Aim State");
         aim.anim.SetBool("Aiming", true);  // Trigger "aiming" animation
+        aim.currentFov = aim.adsFov;
     }
 
     public override void UpdateState(AimStateManager aim)
