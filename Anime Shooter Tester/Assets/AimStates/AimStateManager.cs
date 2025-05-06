@@ -20,6 +20,10 @@ public class AimStateManager : MonoBehaviour
     [HideInInspector] public float currentFov;
     public float fovSmoothSpeed = 10;
 
+    [SerializeField] Transform aimpos;
+    [SerializeField] float aimSmoothSpeed;
+    [SerializeField] LayerMask aimMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,12 @@ public class AimStateManager : MonoBehaviour
         yAxis = Mathf.Clamp(yAxis, -80, 80);
 
         vCam.m_Lens.FieldOfView = Mathf.Lerp(vCam.m_Lens.FieldOfView, currentFov, fovSmoothSpeed * Time.deltaTime);
+
+        Vector2 screenCentre = new Vector2(Screen.width / 2, Screen.height / 2);
+        Ray ray = Camera.main.ScreenPointToRay(screenCentre);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, aimMask))
+            aimpos.position = Vector3.Lerp(aimpos.position, hit.point, aimSmoothSpeed * Time.deltaTime);
 
         currentState.UpdateState(this);
     }
