@@ -1,12 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HipFireState : AimBaseState
 {
     public override void EnterState(AimStateManager aim)
     {
         Debug.Log("Entered Hip Fire State");
-        aim.anim.SetBool("Aiming", false); // Trigger "hipfire" animation
-        aim.currentFov = aim.hipFov;
+        aim.anim.SetBool("Aiming", false);
+        aim.currentFov = aim.hipFov; // ✅ Switch back to hip FOV
     }
 
     public override void UpdateState(AimStateManager aim)
