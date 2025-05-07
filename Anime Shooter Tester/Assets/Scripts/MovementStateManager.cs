@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class MovementStateManager : MonoBehaviour
     public float runSpeed = 7, runBackSpeed = 5;
     public float crouchSpeed = 2, crouchBackSpeed = 1;
 
-    MovementBaseState currentState;
+    private MovementBaseState currentState;
 
     public IdleState Idle = new IdleState();
     public WalkState walk = new WalkState();
@@ -18,19 +16,20 @@ public class MovementStateManager : MonoBehaviour
     [HideInInspector] public Animator anim;
     [HideInInspector] public Vector3 dir;
     private float hzInput, vInput;
-    CharacterController controller;
+    private CharacterController controller;
 
-    [SerializeField] float groundYOffset = 0.2f;
-    [SerializeField] LayerMask groundMask;
-    Vector3 spherePos;
+    [SerializeField] private float groundYOffset = 0.2f;
+    [SerializeField] private LayerMask groundMask;
+    private Vector3 spherePos;
 
-    [SerializeField] float gravity = -9.81f;
-    Vector3 velocity;
+    [SerializeField] private float gravity = -9.81f;
+    private Vector3 velocity;
 
     public float moveSpeed = 3;
 
-    // Public read-only property for input
-    public float VInput => vInput;
+    // Public read-only properties for input
+    public float HzInput => hzInput; // Public getter for hzInput
+    public float VInput => vInput; // Public getter for vInput
     public bool IsRunning { get; private set; }
     public bool IsMoving => dir.magnitude > 0.1f;
     public bool IsGrounded
@@ -42,7 +41,7 @@ public class MovementStateManager : MonoBehaviour
         }
     }
 
-    public bool isCrouching = false; // 🔥 New toggle variable
+    public bool isCrouching = false; // New toggle variable for crouching
 
     void Start()
     {
@@ -58,15 +57,21 @@ public class MovementStateManager : MonoBehaviour
 
     void Update()
     {
+        // Gather inputs
         GetInputs();
+
+        // Handle movement
         GetDirectionAndMove();
         ApplyGravity();
 
-        anim.SetFloat("hzInput", hzInput);
-        anim.SetFloat("vInput", vInput);
+        // Update animator parameters
+        anim.SetFloat("hzInput", HzInput); // Accessing the public property
+        anim.SetFloat("vInput", VInput);   // Accessing the public property
 
+        // Update state
         currentState.UpdateState(this);
 
+        // Handle state transitions
         HandleStateSwitching();
     }
 
@@ -74,19 +79,27 @@ public class MovementStateManager : MonoBehaviour
     {
         hzInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
+
+        // Ensure values are valid (in case of unexpected inputs causing NaN)
+        if (float.IsNaN(hzInput) || float.IsNaN(vInput))
+        {
+            hzInput = 0f;
+            vInput = 0f;
+        }
         dir = transform.forward * vInput + transform.right * hzInput;
 
         IsRunning = Input.GetKey(KeyCode.LeftShift);
 
-        // Toggle crouch when LeftControl is pressed once
+        // Toggle crouch when LeftControl is pressed
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             isCrouching = !isCrouching;
 
+            // Switch to crouch state or return to walking/running/idle
             if (isCrouching)
                 SwitchState(crouch);
             else
-                SwitchState(IsMoving ? (IsRunning ? run : walk) : Idle);
+                SwitchState(GetMovementStateBasedOnInputs());
         }
     }
 
@@ -100,7 +113,7 @@ public class MovementStateManager : MonoBehaviour
         if (IsGrounded)
         {
             if (velocity.y < 0)
-                velocity.y = -2f;
+                velocity.y = -2f; // Prevent falling too quickly
         }
         else
         {
@@ -110,6 +123,7 @@ public class MovementStateManager : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    // Switch to the correct state
     public void SwitchState(MovementBaseState state)
     {
         currentState?.ExitState(this);
@@ -117,33 +131,47 @@ public class MovementStateManager : MonoBehaviour
         currentState.EnterState(this);
     }
 
+    // Handle state switching logic
     void HandleStateSwitching()
     {
         // Prevent state switching if crouching
-        if (isCrouching)
-            return;
+        if (isCrouching) return;
 
-        // Running
+        // Handle Running State
         if (IsRunning && IsMoving)
         {
-            if (currentState != run)
-                SwitchState(run);
+            SwitchState(run);
             return;
         }
 
-        // Walking
+        // Handle Walking State
         if (!IsRunning && IsMoving)
         {
-            if (currentState != walk)
-                SwitchState(walk);
+            SwitchState(walk);
             return;
         }
 
-        // Idle
+        // Handle Idle State
         if (!IsMoving)
         {
-            if (currentState != Idle)
-                SwitchState(Idle);
+            SwitchState(Idle);
+        }
+    }
+
+    // Determine movement state based on input
+    MovementBaseState GetMovementStateBasedOnInputs()
+    {
+        if (IsRunning)
+        {
+            return run;
+        }
+        else if (IsMoving)
+        {
+            return walk;
+        }
+        else
+        {
+            return Idle;
         }
     }
 

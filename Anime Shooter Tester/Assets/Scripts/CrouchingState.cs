@@ -4,7 +4,7 @@ public class CrouchingState : MovementBaseState
 {
     public override void EnterState(MovementStateManager movement)
     {
-        movement.anim.SetBool("Crouching", true);
+        movement.anim.SetBool("Crouching", true); // Optional: only if you have crouch idle or crouch blend tree
     }
 
     public override void UpdateState(MovementStateManager movement)
