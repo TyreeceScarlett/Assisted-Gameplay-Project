@@ -31,7 +31,7 @@ public class AimStateManager : MonoBehaviour
         vCam = GetComponentInChildren<CinemachineVirtualCamera>();
         hipFov = vCam.m_Lens.FieldOfView; // default camera FOV
         currentFov = hipFov; // start with hipfire FOV
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
         SwitchState(Hip);
     }
 
