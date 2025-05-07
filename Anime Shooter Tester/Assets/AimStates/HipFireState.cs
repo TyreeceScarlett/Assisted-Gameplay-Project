@@ -16,4 +16,9 @@ public class HipFireState : AimBaseState
             aim.SwitchState(aim.Aim);
         }
     }
+
+    public override void ExitState(AimStateManager aim)
+    {
+        // Nothing needed here for now
+    }
 }

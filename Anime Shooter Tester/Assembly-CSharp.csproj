@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\MovementStateManager.cs" />
     <Compile Include="Assets\Scripts\CrouchingState.cs" />
     <Compile Include="Assets\AimStates\AimState.cs" />
+    <Compile Include="Assets\AimStates\Weapon.cs" />
     <Compile Include="Assets\Scripts\IdleState.cs" />
   </ItemGroup>
   <ItemGroup>

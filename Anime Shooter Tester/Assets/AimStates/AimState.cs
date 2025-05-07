@@ -1,19 +1,27 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class AimState : AimBaseState
 {
     public override void EnterState(AimStateManager aim)
     {
-        Debug.Log("Entered Aim State");
+        // Switch to aiming FOV
+        aim.currentFov = aim.adsFov;
         aim.anim.SetBool("Aiming", true);
-        aim.currentFov = aim.adsFov; // ✅ Switch to ADS FOV
     }
 
     public override void UpdateState(AimStateManager aim)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        // If right mouse button released, switch back to hipfire
+        if (Input.GetMouseButtonUp(1))
         {
             aim.SwitchState(aim.Hip);
         }
+    }
+
+    public override void ExitState(AimStateManager aim)
+    {
+        aim.anim.SetBool("Aiming", false);
     }
 }
