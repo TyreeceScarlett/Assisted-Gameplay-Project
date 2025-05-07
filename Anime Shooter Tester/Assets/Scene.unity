@@ -722,7 +722,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 39d74939ac5fd91418655e48cfd2ed60, type: 3}
   m_PrefabInstance: {fileID: 1124975993}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &901848829
+--- !u!114 &901848827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -731,12 +731,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 901848825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff8cb9d27fb1124cb446b174895b9b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 75e795891a597c945ad630f733210725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 1294906734}
-  fireForce: 20
+  fireRate: 0
+  semiAuto: 0
+  bullet: {fileID: 5931115748012198302, guid: ab4b8a3d75cd5994d9130972eeb4a725, type: 3}
+  barrelPos: {fileID: 0}
+  bulletVelocity: 0
+  bulletsPerShot: 0
 --- !u!1 &908710870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1133,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 39d74939ac5fd91418655e48cfd2ed60, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 901848829}
+      addedObject: {fileID: 901848827}
   m_SourcePrefab: {fileID: 100100000, guid: 39d74939ac5fd91418655e48cfd2ed60, type: 3}
 --- !u!4 &1247548224 stripped
 Transform:
@@ -1408,6 +1411,7 @@ MonoBehaviour:
   currentFov: 0
   fovSmoothSpeed: 0
   aimpos: {fileID: 694750746}
+  actualAimPos: {x: 0, y: 0, z: 0}
   aimSmoothSpeed: 0
   aimMask:
     serializedVersion: 2

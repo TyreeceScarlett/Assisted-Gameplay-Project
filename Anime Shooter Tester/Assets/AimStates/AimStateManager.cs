@@ -20,10 +20,12 @@ public class AimStateManager : MonoBehaviour
     [HideInInspector] public float currentFov;
     public float fovSmoothSpeed = 10f;
 
-    [SerializeField] Transform aimpos;
+    public Transform aimpos;
+    [HideInInspector] public Vector3 actualAimPos;
     [SerializeField] float aimSmoothSpeed = 20f;
     [SerializeField] LayerMask aimMask;
 
+    // Start is called before the first frame update
     void Start()
     {
         vCam = GetComponentInChildren<CinemachineVirtualCamera>();
@@ -33,6 +35,7 @@ public class AimStateManager : MonoBehaviour
         SwitchState(Hip);
     }
 
+    //update is called once per frame
     void Update()
     {
         // Mouse look
@@ -41,11 +44,7 @@ public class AimStateManager : MonoBehaviour
         yAxis = Mathf.Clamp(yAxis, -80, 80);
 
         // ✅ Smooth FOV zoom
-        vCam.m_Lens.FieldOfView = Mathf.Lerp(
-            vCam.m_Lens.FieldOfView,
-            currentFov,
-            fovSmoothSpeed * Time.deltaTime
-        );
+        vCam.m_Lens.FieldOfView = Mathf.Lerp(vCam.m_Lens.FieldOfView, currentFov, fovSmoothSpeed * Time.deltaTime);
 
         // Raycast aiming position
         Vector2 screenCentre = new Vector2(Screen.width / 2, Screen.height / 2);
@@ -53,10 +52,7 @@ public class AimStateManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, aimMask))
         {
-            aimpos.position = Vector3.Lerp(
-                aimpos.position,
-                hit.point,
-                aimSmoothSpeed * Time.deltaTime
+            aimpos.position = Vector3.Lerp( aimpos.position, hit.point, aimSmoothSpeed * Time.deltaTime
             );
         }
 

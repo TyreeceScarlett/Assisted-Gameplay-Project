@@ -356,12 +356,14 @@
 "Assets/AimStates/AimState.cs"
 "Assets/AimStates/AimStateManager.cs"
 "Assets/AimStates/HipFireState.cs"
+"Assets/Bullet.cs"
 "Assets/Scripts/CrouchingState.cs"
 "Assets/Scripts/IdleState.cs"
 "Assets/Scripts/MovementBaseState.cs"
 "Assets/Scripts/MovementStateManager.cs"
 "Assets/Scripts/RunState.cs"
 "Assets/Scripts/WalkState.cs"
+"Assets/Scripts/WeaponManager.cs"
 -langversion:9.0
 /deterministic
 /optimize+
