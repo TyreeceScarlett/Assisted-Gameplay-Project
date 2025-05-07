@@ -4,7 +4,8 @@ public class IdleState : MovementBaseState
 {
     public override void EnterState(MovementStateManager movement)
     {
-        // No bools needed now — blend tree handles movement animations
+        movement.anim.SetBool("Walking", false);
+        movement.anim.SetBool("Running", false);
     }
 
     public override void UpdateState(MovementStateManager movement)
@@ -14,6 +15,6 @@ public class IdleState : MovementBaseState
 
     public override void ExitState(MovementStateManager movement)
     {
-        // Nothing needed
+        // Nothing needed here
     }
 }

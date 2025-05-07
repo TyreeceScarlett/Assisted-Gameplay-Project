@@ -4,7 +4,7 @@ public class WalkState : MovementBaseState
 {
     public override void EnterState(MovementStateManager movement)
     {
-        // Blend tree will handle walking animation
+        movement.anim.SetBool("Walking", true);
     }
 
     public override void UpdateState(MovementStateManager movement)
@@ -14,6 +14,6 @@ public class WalkState : MovementBaseState
 
     public override void ExitState(MovementStateManager movement)
     {
-        // Nothing needed
+        movement.anim.SetBool("Walking", false);
     }
 }
