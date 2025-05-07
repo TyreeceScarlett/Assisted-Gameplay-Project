@@ -356,7 +356,6 @@
 "Assets/AimStates/AimState.cs"
 "Assets/AimStates/AimStateManager.cs"
 "Assets/AimStates/HipFireState.cs"
-"Assets/AimStates/Weapon.cs"
 "Assets/Scripts/CrouchingState.cs"
 "Assets/Scripts/IdleState.cs"
 "Assets/Scripts/MovementBaseState.cs"
