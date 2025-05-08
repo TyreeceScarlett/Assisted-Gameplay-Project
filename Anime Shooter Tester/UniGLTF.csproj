@@ -61,8 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MeshIO\MeshExporter_DividedVertexBuffer.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\GltfJsonUtil.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniJSON\IStore\IStore.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\GltfJsonUtil.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\TextureIO\GltfPbrTextureImporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\glTFMesh.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\gltfExporter.cs" />
@@ -93,8 +93,8 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\BuiltInRP\Export\Materials\BuiltInFallbackMaterialExporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\MeshUtility\BindposeGizmo.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\Extensions\NumericsExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\URP\Import\UrpGltfMaterialDescriptorGenerator.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MeshIO\MeshVertex1.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\URP\Import\UrpGltfMaterialDescriptorGenerator.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniJSON\IFormatter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\URP\Import\Materials\UrpGltfDefaultMaterialImporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\glTFNode.cs" />
@@ -193,8 +193,8 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\ExtensionsAndExtras\gltfExtension.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\AnimationIO\AnimationImporterUtil.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\BuiltInRP\Import\BuiltInGltfMaterialDescriptorGenerator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\glTFTexture.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\SkinJoint.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\glTFTexture.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniJSON\Json\JsonString.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\glTFMaterial.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\IMaterialDescriptorGenerator.cs" />
@@ -221,8 +221,8 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\ArrayPin.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\TextureIO\GltfTextureImporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\MeshUtility\MeshIntegrationResult.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\glbImporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\UniGLTFVersion.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\glbImporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\URP\Import\Materials\UrpGltfPbrMaterialImporter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\IO\MigrationFlags.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniGLTF\Format\glTFAssets.cs" />

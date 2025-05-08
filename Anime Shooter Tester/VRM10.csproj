@@ -62,8 +62,8 @@
   <ItemGroup>
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneCollider.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\MorphTargetBindingMerger.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshImporterDivided.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Serializer.g.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshImporterDivided.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\Vrm10AimConstraint.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10Exception.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneJoint.cs" />
@@ -122,8 +122,8 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\ILookAtEyeDirectionProvider.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrm.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringUtility.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeControlRig.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Texture\Vrm10TextureDescriptorGenerator.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeControlRig.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstRaintException.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Format.g.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\MaterialsMToon\Deserializer.g.cs" />
@@ -175,9 +175,9 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Deserializer.g.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10ObjectMeta.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstraintSource.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10ControlBone.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\TransformExtensions.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\MaterialsMToon\Serializer.g.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10ControlBone.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationException.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\Vrm10ConstraintUtil.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\Vrm0XMToonTextureIndexMap.cs" />
