@@ -14,11 +14,15 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private Transform barrelPos;
     [SerializeField] private float bulletVelocity = 20f;
     [SerializeField] private int bulletsPerShot = 1;
+    AimStateManager aim;
 
-    private AimStateManager aim;
+    [SerializeField] AudioClip gunShot;
+    AudioSource audioSource;
 
+    // Start is called before this first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         aim = GetComponentInParent<AimStateManager>();
         if (aim == null)
         {
@@ -55,6 +59,7 @@ public class WeaponManager : MonoBehaviour
         if (aim != null && aim.aimpos != null)
         {
             barrelPos.LookAt(aim.aimpos.position);
+            audioSource.PlayOneShot(gunShot);
         }
 
         for (int i = 0; i < bulletsPerShot; i++)
