@@ -60,16 +60,21 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\WeaponManager.cs" />
-    <Compile Include="Assets\AimStates\HipFireState.cs" />
-    <Compile Include="Assets\AimStates\AimBaseState.cs" />
+    <Compile Include="Assets\Scripts\Weapon\WeaponAmmo.cs" />
+    <Compile Include="Assets\Scripts\ActionStates\ActionStateManager.cs" />
     <Compile Include="Assets\Scripts\WalkState.cs" />
+    <Compile Include="Assets\Scripts\ActionStates\ReloadState.cs" />
     <Compile Include="Assets\Scripts\MovementBaseState.cs" />
-    <Compile Include="Assets\AimStates\AimStateManager.cs" />
+    <Compile Include="Assets\Scripts\AimStates\HipFireState.cs" />
     <Compile Include="Assets\Scripts\RunState.cs" />
     <Compile Include="Assets\Scripts\MovementStateManager.cs" />
+    <Compile Include="Assets\Scripts\AimStates\AimStateManager.cs" />
+    <Compile Include="Assets\Scripts\AimStates\AimBaseState.cs" />
+    <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\CrouchingState.cs" />
-    <Compile Include="Assets\AimStates\AimState.cs" />
+    <Compile Include="Assets\Scripts\ActionStates\ActionBaseState.cs" />
+    <Compile Include="Assets\Scripts\ActionStates\DefaultState.cs" />
+    <Compile Include="Assets\Scripts\AimStates\AimState.cs" />
     <Compile Include="Assets\Scripts\IdleState.cs" />
     <Compile Include="Assets\Bullet.cs" />
   </ItemGroup>
