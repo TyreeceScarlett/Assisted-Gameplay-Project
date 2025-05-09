@@ -1768,6 +1768,9 @@ MonoBehaviour:
   clipSize: 0
   extraAmmo: 0
   currentAmmo: 0
+  magInSound: {fileID: 0}
+  magOutSound: {fileID: 0}
+  releaseSlideSound: {fileID: 0}
 --- !u!114 &1830003854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1784,7 +1787,7 @@ MonoBehaviour:
   ammo: {fileID: 0}
   anim: {fileID: 0}
   rHandAim: {fileID: 1507016897}
-  lhandIK: {fileID: 702136324}
+  lHandIK: {fileID: 0}
 --- !u!114 &1830003855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4319,6 +4322,9 @@ MonoBehaviour:
   clipSize: 30
   extraAmmo: 120
   currentAmmo: 0
+  magInSound: {fileID: 8300000, guid: dbc755e072d02bd41a520d26ded701d0, type: 3}
+  magOutSound: {fileID: 8300000, guid: 4442512457e037542982b7c4c89d827b, type: 3}
+  releaseSlideSound: {fileID: 8300000, guid: 3555abd15913bf446a419fcbfaf6da48, type: 3}
 --- !u!4 &3513025121715268462
 Transform:
   m_ObjectHideFlags: 0

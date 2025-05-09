@@ -12,17 +12,19 @@ public class ActionStateManager : MonoBehaviour
 
     public GameObject currentWeapon;
     [HideInInspector]public WeaponAmmo ammo;
+    AudioSource audioSource;
 
     [HideInInspector] public Animator anim;
 
     public MultiAimConstraint rHandAim;
-    public TwoBoneIKConstraint lhandIK;
+    public TwoBoneIKConstraint lHandIK;
 
     // Start is called before the first frame update
     void Start()
     {
         SwitchState(Default);
         ammo = currentWeapon.GetComponent<WeaponAmmo>();
+        audioSource = currentWeapon.GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
 
@@ -41,6 +43,21 @@ public class ActionStateManager : MonoBehaviour
     public void WeaponReloaded()
     {
         ammo.Reload();
+        rHandAim.weight = 1;
+        lHandIK.weight = 1;
         SwitchState(Default);
+    }
+    public void MagOut()
+    {
+        audioSource.PlayOneShot(ammo.magOutSound);
+    }
+
+    public void MagIn()
+    {
+        audioSource.PlayOneShot(ammo.magInSound);
+    }
+    public void ReleaseSlide()
+    {
+        audioSource.PlayOneShot(ammo.releaseSlideSound);
     }
 }
