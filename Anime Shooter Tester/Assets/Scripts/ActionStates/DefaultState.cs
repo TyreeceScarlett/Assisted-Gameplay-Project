@@ -6,10 +6,9 @@ public class DefaultState : ActionBaseState
 {
     public override void EnterState(ActionStateManager actions)
     {
-        actions.rHandAim.weight = 1;
-        actions.lhandIK.weight = 1;
-    }
 
+
+    }
     public override void UpdateState(ActionStateManager actions)
     {
         if (Input.GetKeyDown(KeyCode.R) && CanReload(actions))
@@ -17,7 +16,6 @@ public class DefaultState : ActionBaseState
             actions.SwitchState(actions.Reload);
         }
     }
-
     bool CanReload(ActionStateManager action)
     {
         if (action.ammo.currentAmmo == action.ammo.clipSize) return false;

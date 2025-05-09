@@ -65,10 +65,10 @@
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\UnityEditorSettingsValidator.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\JsonSchemaBaseExtensions.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\ExportDialogBase.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\Messages.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\AssetsPath.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Generator\SerializerWriter.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\ExtensionSerialization.cs" />
+    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\Messages.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\UnityColorSpaceSettingsValidator.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\InternalTPose.cs" />
     <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Animation\AnimationKeyframeData.cs" />

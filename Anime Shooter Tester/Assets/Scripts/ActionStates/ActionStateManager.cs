@@ -23,7 +23,7 @@ public class ActionStateManager : MonoBehaviour
     {
         SwitchState(Default);
         ammo = currentWeapon.GetComponent<WeaponAmmo>();
-        anim = currentWeapon.GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame

@@ -1584,9 +1584,10 @@ GameObject:
   - component: {fileID: 1830003848}
   - component: {fileID: 1830003847}
   - component: {fileID: 1830003849}
+  - component: {fileID: 1830003854}
   - component: {fileID: 1830003850}
   - component: {fileID: 1830003851}
-  - component: {fileID: 1830003852}
+  - component: {fileID: 1830003853}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -1751,7 +1752,22 @@ MonoBehaviour:
   - m_Rig: {fileID: 931739719}
     m_Active: 1
   m_Effectors: []
---- !u!114 &1830003852
+--- !u!114 &1830003853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830003842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae82372e8b829f440bf787eb2e0ea3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipSize: 0
+  extraAmmo: 0
+  currentAmmo: 0
+--- !u!114 &1830003854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1763,6 +1779,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b7e452b53f273409c8ba7788e11f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWeapon: {fileID: 919132148131231784}
+  ammo: {fileID: 0}
+  anim: {fileID: 0}
+  rHandAim: {fileID: 1507016897}
+  lhandIK: {fileID: 702136324}
 --- !u!1 &1888736786
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,7 +4194,7 @@ MonoBehaviour:
   barrelPos: {fileID: 845355700}
   bulletVelocity: 500
   bulletsPerShot: 1
-  gunShot: {fileID: 8300000, guid: f5cbde962ded05b4fb4e154441d87531, type: 3}
+  gunShot: {fileID: 8300000, guid: d1d08ebfa4c9c85428efb3dfbb5887c5, type: 3}
 --- !u!82 &3469287838606929209
 AudioSource:
   m_ObjectHideFlags: 0
