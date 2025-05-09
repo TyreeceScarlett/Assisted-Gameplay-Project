@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\ActionStates\ActionStateManager.cs" />
     <Compile Include="Assets\Scripts\WalkState.cs" />
     <Compile Include="Assets\Scripts\ActionStates\ReloadState.cs" />
+    <Compile Include="Assets\A Forver T-Pose in scene view\ForceTPoseInEditor.cs" />
     <Compile Include="Assets\Scripts\MovementBaseState.cs" />
     <Compile Include="Assets\Scripts\AimStates\HipFireState.cs" />
     <Compile Include="Assets\Scripts\RunState.cs" />
