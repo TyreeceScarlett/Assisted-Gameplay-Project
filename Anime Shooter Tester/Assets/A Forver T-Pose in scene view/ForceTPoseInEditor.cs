@@ -5,13 +5,30 @@ using UnityEditor;
 [ExecuteInEditMode]
 public class ForceTPoseInEditor : MonoBehaviour
 {
+    private Animator animator;
+
+    void OnEnable()
+    {
+        animator = GetComponent<Animator>();
+        ForceTPose();
+    }
+
     void Update()
     {
-        if (!Application.isPlaying)
+        ForceTPose();
+    }
+
+    void ForceTPose()
+    {
+        if (!EditorApplication.isPlaying && !EditorApplication.isPlayingOrWillChangePlaymode)
         {
-            Animator animator = GetComponent<Animator>();
-            if (animator)
-                animator.enabled = false;  // Force bind pose (T-Pose)
+            if (animator && animator.enabled)
+                animator.enabled = false;  // Disable animator in Scene View (edit mode only)
+        }
+        else
+        {
+            if (animator && !animator.enabled)
+                animator.enabled = true;  // Enable animator during Play Mode
         }
     }
 }
