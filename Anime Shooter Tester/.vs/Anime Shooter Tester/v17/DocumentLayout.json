@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\actionstates\\actionstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\scripts\\actionstates\\actionstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actionstates\\actionstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\scripts\\weapon\\weaponammo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\weaponammo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\weapon\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\actionstates\\actionbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actionstates\\actionbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\actionstates\\reloadstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actionstates\\reloadstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\actionstates\\defaultstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actionstates\\defaultstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\a forver t-pose in scene view\\forcetposeineditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\a forver t-pose in scene view\\forcetposeineditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\actionstates\\reloadstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actionstates\\reloadstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\actionstates\\actionbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\actionstates\\actionbasestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\weapon\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\weapon\\weaponammo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapon\\weaponammo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,16 +38,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "WeaponAmmo.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapon\\WeaponAmmo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon\\WeaponAmmo.cs",
               "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapon\\WeaponAmmo.cs",
               "RelativeToolTip": "Assets\\Scripts\\Weapon\\WeaponAmmo.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwCkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T20:46:41.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T20:46:41.7Z"
             },
             {
               "$type": "Document",
@@ -61,38 +56,27 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\ActionStates\\ActionStateManager.cs",
               "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\ActionStates\\ActionStateManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ActionStates\\ActionStateManager.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T20:36:54.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ForceTPoseInEditor.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\A Forver T-Pose in scene view\\ForceTPoseInEditor.cs",
-              "RelativeDocumentMoniker": "Assets\\A Forver T-Pose in scene view\\ForceTPoseInEditor.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\A Forver T-Pose in scene view\\ForceTPoseInEditor.cs",
-              "RelativeToolTip": "Assets\\A Forver T-Pose in scene view\\ForceTPoseInEditor.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAIwDMAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T19:50:53.357Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "DefaultState.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\ActionStates\\DefaultState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ActionStates\\DefaultState.cs",
               "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\ActionStates\\DefaultState.cs",
               "RelativeToolTip": "Assets\\Scripts\\ActionStates\\DefaultState.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T19:04:45.452Z"
+              "WhenOpened": "2025-05-09T19:04:45.452Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ReloadState.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\ActionStates\\ReloadState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ActionStates\\ReloadState.cs",
@@ -116,13 +100,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "WeaponManager.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapon\\WeaponManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapon\\WeaponManager.cs",
               "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapon\\WeaponManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Weapon\\WeaponManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T12:39:54.504Z"
             }

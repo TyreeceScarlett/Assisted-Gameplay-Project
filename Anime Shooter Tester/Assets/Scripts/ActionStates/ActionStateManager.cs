@@ -1,17 +1,17 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
 public class ActionStateManager : MonoBehaviour
 {
-    ActionBaseState currentState;
+    public ActionBaseState currentState;
 
     public ReloadState Reload = new ReloadState();
     public DefaultState Default = new DefaultState();
 
     public GameObject currentWeapon;
-    [HideInInspector]public WeaponAmmo ammo;
+    [HideInInspector] public WeaponAmmo ammo;
     AudioSource audioSource;
 
     [HideInInspector] public Animator anim;
@@ -19,19 +19,36 @@ public class ActionStateManager : MonoBehaviour
     public MultiAimConstraint rHandAim;
     public TwoBoneIKConstraint lHandIK;
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Auto-assign rig constraints if not set in inspector
+        if (rHandAim == null)
+            rHandAim = GetComponentInChildren<MultiAimConstraint>();
+
+        if (lHandIK == null)
+            lHandIK = GetComponentInChildren<TwoBoneIKConstraint>();
+
         SwitchState(Default);
-        ammo = currentWeapon.GetComponent<WeaponAmmo>();
-        audioSource = currentWeapon.GetComponent<AudioSource>();
+
+        if (currentWeapon != null)
+        {
+            ammo = currentWeapon.GetComponent<WeaponAmmo>();
+            audioSource = currentWeapon.GetComponent<AudioSource>();
+        }
+        else
+        {
+            Debug.LogError("Current weapon is not assigned in ActionStateManager!");
+        }
+
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        currentState.UpdateState(this);
+        if (currentState != null)
+            currentState.UpdateState(this);
+        else
+            Debug.LogError("Current state is null in ActionStateManager!");
     }
 
     public void SwitchState(ActionBaseState state)
@@ -42,22 +59,39 @@ public class ActionStateManager : MonoBehaviour
 
     public void WeaponReloaded()
     {
-        ammo.Reload();
-        rHandAim.weight = 1;
-        lHandIK.weight = 1;
+        if (ammo != null)
+            ammo.Reload();
+
+        if (rHandAim != null)
+            rHandAim.weight = 1;
+
+        if (lHandIK != null)
+            lHandIK.weight = 1;
+
         SwitchState(Default);
     }
+
     public void MagOut()
     {
-        audioSource.PlayOneShot(ammo.magOutSound);
+        if (audioSource != null && ammo != null)
+            audioSource.PlayOneShot(ammo.magOutSound);
     }
 
     public void MagIn()
     {
-        audioSource.PlayOneShot(ammo.magInSound);
+        if (audioSource != null && ammo != null)
+            audioSource.PlayOneShot(ammo.magInSound);
     }
+
     public void ReleaseSlide()
     {
-        audioSource.PlayOneShot(ammo.releaseSlideSound);
+        if (audioSource != null && ammo != null)
+            audioSource.PlayOneShot(ammo.releaseSlideSound);
+    }
+
+    // ✅ Safe check to avoid null crash in WeaponManager
+    public bool IsReloading()
+    {
+        return currentState == Reload;
     }
 }
