@@ -20,14 +20,24 @@ public class WeaponManager : MonoBehaviour
     AudioSource audioSource;
     WeaponAmmo ammo;
     ActionStateManager actions;
+    WeaponRecoil recoil;
 
-    // Start is called before this first frame update
+    Light muzzleFlashLight;
+    ParticleSystem muzzleFlashParticles;
+    float lightIntensity;
+    [SerializeField] float lightReturnSpeed = 20f;
+
     void Start()
     {
+        recoil = GetComponent<WeaponRecoil>();
         audioSource = GetComponent<AudioSource>();
         aim = GetComponentInParent<AimStateManager>();
         ammo = GetComponent<WeaponAmmo>();
         actions = GetComponentInParent<ActionStateManager>();
+        muzzleFlashLight = GetComponentInChildren<Light>();
+        lightIntensity = muzzleFlashLight.intensity;
+        muzzleFlashLight.intensity = 0f;
+        muzzleFlashParticles = GetComponentInChildren<ParticleSystem>();
         fireRateTimer = fireRate;
 
         if (aim == null)
@@ -43,6 +53,9 @@ public class WeaponManager : MonoBehaviour
             Fire();
             Debug.Log(ammo.currentAmmo);
         }
+
+        // Always fade light every frame
+        muzzleFlashLight.intensity = Mathf.Lerp(muzzleFlashLight.intensity, 0, lightReturnSpeed * Time.deltaTime);
     }
 
     bool ShouldFire()
@@ -50,7 +63,7 @@ public class WeaponManager : MonoBehaviour
         fireRateTimer += Time.deltaTime;
         if (fireRateTimer < fireRate) return false;
         if (ammo.currentAmmo == 0) return false;
-        if (actions.currentState==actions.Reload) return false;
+        if (actions.currentState == actions.Reload) return false;
         if (semiAuto && Input.GetKeyDown(KeyCode.Mouse0)) return true;
         if (!semiAuto && Input.GetKey(KeyCode.Mouse0)) return true;
         return false;
@@ -64,7 +77,9 @@ public class WeaponManager : MonoBehaviour
         {
             barrelPos.LookAt(aim.aimpos.position);
             audioSource.PlayOneShot(gunShot);
+            recoil.TriggerRecoil();
             ammo.currentAmmo--;
+
             for (int i = 0; i < bulletsPerShot; i++)
             {
                 GameObject currentBullet = Instantiate(bullet, barrelPos.position, barrelPos.rotation);
@@ -72,13 +87,23 @@ public class WeaponManager : MonoBehaviour
 
                 if (rb != null)
                 {
-                    rb.AddForce(barrelPos.forward * bulletVelocity, ForceMode.Impulse);
+                    rb.useGravity = false; // Fly straight
+                    rb.drag = 0f;          // No slow down
+                    rb.velocity = barrelPos.forward * bulletVelocity;
                 }
                 else
                 {
                     Debug.LogWarning("Bullet prefab is missing a Rigidbody component!");
                 }
             }
+
+            TriggerMuzzleFlash();
         }
+    }
+
+    void TriggerMuzzleFlash()
+    {
+        muzzleFlashParticles.Play();
+        muzzleFlashLight.intensity = lightIntensity;
     }
 }

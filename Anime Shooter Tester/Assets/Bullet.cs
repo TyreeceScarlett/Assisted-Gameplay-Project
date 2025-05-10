@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float timeToDestroy;
-    float timer;
-    // Start is called before the first frame update
+    [SerializeField] float timeToDestroy = 60f; // 1 minute lifetime
+    Rigidbody rb;
+
     void Start()
     {
-        
-    }
+        Destroy(gameObject, timeToDestroy);
+        rb = GetComponent<Rigidbody>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer >= timeToDestroy) Destroy(this.gameObject);
+        if (rb != null)
+        {
+            rb.useGravity = false; // Make bullet fly straight, no drop
+            rb.drag = 0f;          // No slowdown over time
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

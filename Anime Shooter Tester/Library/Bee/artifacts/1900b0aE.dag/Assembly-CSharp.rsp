@@ -376,6 +376,7 @@
 "Assets/Scripts/WalkState.cs"
 "Assets/Scripts/Weapon/WeaponAmmo.cs"
 "Assets/Scripts/Weapon/WeaponManager.cs"
+"Assets/WeaponRecoil.cs"
 -langversion:9.0
 /deterministic
 /optimize+

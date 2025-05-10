@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\AimStates\AimStateManager.cs" />
     <Compile Include="Assets\Scripts\AimStates\AimBaseState.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
+    <Compile Include="Assets\WeaponRecoil.cs" />
     <Compile Include="Assets\Scripts\CrouchingState.cs" />
     <Compile Include="Assets\Scripts\ActionStates\ActionBaseState.cs" />
     <Compile Include="Assets\Scripts\ActionStates\DefaultState.cs" />
