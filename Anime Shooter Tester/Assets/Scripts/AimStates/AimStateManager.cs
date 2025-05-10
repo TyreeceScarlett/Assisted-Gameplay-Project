@@ -25,9 +25,23 @@ public class AimStateManager : MonoBehaviour
     [SerializeField] float aimSmoothSpeed = 20f;
     [SerializeField] LayerMask aimMask;
 
+    float xFollowPos;
+    float yFollowPos, ogYPos;
+    [SerializeField] float crouchCamHeight = 0.6f;
+    [SerializeField] float shoulderSwapSpeed = 10;
+    MovementStateManager moving;
+
+    // ✅ New fields for proper shoulder swapping
+    [SerializeField] float shoulderOffset = 0.5f;
+    bool isRightShoulder = true;
+
     // Start is called before the first frame update
     void Start()
     {
+        moving = GetComponent<MovementStateManager>();
+        xFollowPos = camFollowPos.localPosition.x;
+        ogYPos = camFollowPos.localPosition.y;
+        yFollowPos = ogYPos;
         vCam = GetComponentInChildren<CinemachineVirtualCamera>();
         hipFov = vCam.m_Lens.FieldOfView; // default camera FOV
         currentFov = hipFov; // start with hipfire FOV
@@ -52,9 +66,10 @@ public class AimStateManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, aimMask))
         {
-            aimpos.position = Vector3.Lerp( aimpos.position, hit.point, aimSmoothSpeed * Time.deltaTime
-            );
+            aimpos.position = Vector3.Lerp(aimpos.position, hit.point, aimSmoothSpeed * Time.deltaTime);
         }
+
+        MoveCamera();
 
         currentState.UpdateState(this);
     }
@@ -78,5 +93,21 @@ public class AimStateManager : MonoBehaviour
     {
         currentState = newState;
         currentState.EnterState(this);
+    }
+
+    void MoveCamera()
+    {
+        // ✅ Proper shoulder swapping using fixed offset
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+            isRightShoulder = !isRightShoulder;
+
+        xFollowPos = isRightShoulder ? shoulderOffset : -shoulderOffset;
+
+        // Adjust camera height when crouching
+        if (moving.currentState == moving.crouch) yFollowPos = crouchCamHeight;
+        else yFollowPos = ogYPos;
+
+        Vector3 newFollowPos = new Vector3(xFollowPos, yFollowPos, camFollowPos.localPosition.z);
+        camFollowPos.localPosition = Vector3.Lerp(camFollowPos.localPosition, newFollowPos, shoulderSwapSpeed * Time.deltaTime);
     }
 }
