@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Weapon\WeaponAmmo.cs" />
     <Compile Include="Assets\Scripts\ActionStates\ActionStateManager.cs" />
+    <Compile Include="Assets\RagdollManager.cs" />
     <Compile Include="Assets\Scripts\WalkState.cs" />
     <Compile Include="Assets\Scripts\ActionStates\ReloadState.cs" />
     <Compile Include="Assets\A Forver T-Pose in scene view\ForceTPoseInEditor.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\CrouchingState.cs" />
     <Compile Include="Assets\Scripts\ActionStates\ActionBaseState.cs" />
     <Compile Include="Assets\Scripts\ActionStates\DefaultState.cs" />
+    <Compile Include="Assets\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\AimStates\AimState.cs" />
     <Compile Include="Assets\Scripts\IdleState.cs" />
     <Compile Include="Assets\Bullet.cs" />

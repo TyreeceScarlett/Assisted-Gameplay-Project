@@ -360,6 +360,8 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/A Forver T-Pose in scene view/ForceTPoseInEditor.cs"
 "Assets/Bullet.cs"
+"Assets/EnemyHealth.cs"
+"Assets/RagdollManager.cs"
 "Assets/Scripts/ActionStates/ActionBaseState.cs"
 "Assets/Scripts/ActionStates/ActionStateManager.cs"
 "Assets/Scripts/ActionStates/DefaultState.cs"

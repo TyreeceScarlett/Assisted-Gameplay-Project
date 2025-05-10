@@ -14,6 +14,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private Transform barrelPos;
     [SerializeField] private float bulletVelocity = 20f;
     [SerializeField] private int bulletsPerShot = 1;
+    public float damage = 20;
     AimStateManager aim;
 
     [SerializeField] AudioClip gunShot;
@@ -26,7 +27,9 @@ public class WeaponManager : MonoBehaviour
     Light muzzleFlashLight;
     ParticleSystem muzzleFlashParticles;
     float lightIntensity;
-    [SerializeField] float lightReturnSpeed = 20f;
+    [SerializeField] float lightReturnSpeed = 20;
+
+    public float enemyKickbackForce = 100;
 
     void Start()
     {
@@ -87,6 +90,12 @@ public class WeaponManager : MonoBehaviour
             for (int i = 0; i < bulletsPerShot; i++)
             {
                 GameObject currentBullet = Instantiate(bullet, barrelPos.position, barrelPos.rotation);
+
+                Bullet bulletScript = currentBullet.GetComponent<Bullet>();
+                bulletScript.weapon = this;
+
+                bulletScript.dir = barrelPos.transform.forward;
+
                 Rigidbody rb = currentBullet.GetComponent<Rigidbody>();
 
                 if (rb != null)
