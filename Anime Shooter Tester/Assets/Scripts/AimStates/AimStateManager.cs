@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class AimStateManager : MonoBehaviour
 {
-    AimBaseState currentState;
+    public AimBaseState currentState;
     public HipFireState Hip = new HipFireState();
     public AimState Aim = new AimState();
 

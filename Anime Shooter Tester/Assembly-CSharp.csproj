@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\MovementBaseState.cs" />
     <Compile Include="Assets\Scripts\AimStates\HipFireState.cs" />
     <Compile Include="Assets\Scripts\RunState.cs" />
+    <Compile Include="Assets\WeaponBloom.cs" />
     <Compile Include="Assets\Scripts\MovementStateManager.cs" />
     <Compile Include="Assets\Scripts\AimStates\AimStateManager.cs" />
     <Compile Include="Assets\Scripts\AimStates\AimBaseState.cs" />

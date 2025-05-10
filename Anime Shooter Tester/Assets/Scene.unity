@@ -2661,6 +2661,7 @@ GameObject:
   - component: {fileID: 3469287838606929209}
   - component: {fileID: 3469287838606929210}
   - component: {fileID: 3469287838606929211}
+  - component: {fileID: 3469287838606929212}
   m_Layer: 7
   m_Name: M4_Carbine
   m_TagString: Untagged
@@ -4564,6 +4565,23 @@ MonoBehaviour:
   kickBackAmount: -1
   kickBackSpeed: 10
   returnSpeed: 20
+--- !u!114 &3469287838606929212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148131231784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53eaa0fd3542b8449aa8df924468ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultBloomAngle: 3
+  walkBloomMultiplier: 1.5
+  crouchBloomMultiplier: 0.5
+  sprintBloomMultiplier: 2
+  adsBloomMultiplier: 0.5
 --- !u!4 &3513025121715268462
 Transform:
   m_ObjectHideFlags: 0
