@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,10 +11,15 @@ public class AimAssist : MonoBehaviour
     public LayerMask enemyLayer;
 
     Camera cam;
+    float detectionDistance = 20f; // How far ahead to search for targets
 
     void Start()
     {
-        cam = Camera.main;
+        // ✅ Cache main camera
+        if (Camera.main != null)
+            cam = Camera.main;
+        else
+            Debug.LogError("No main camera found! Assign a camera to the 'MainCamera' tag.");
     }
 
     void Update()
@@ -25,8 +30,10 @@ public class AimAssist : MonoBehaviour
 
     void AssistAim()
     {
+        if (cam == null) return; // ✅ Safety check
+
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Center of screen
-        Collider[] hits = Physics.OverlapSphere(ray.origin + ray.direction * 20f, assistRange, enemyLayer);
+        Collider[] hits = Physics.OverlapSphere(ray.origin + ray.direction * detectionDistance, assistRange, enemyLayer);
 
         if (hits.Length > 0)
         {
@@ -43,10 +50,13 @@ public class AimAssist : MonoBehaviour
                 }
             }
 
-            // Smoothly rotate camera a tiny bit toward target
+            // ✅ Smoothly rotate camera a tiny bit toward target
             Vector3 targetDir = (closestTarget.position - cam.transform.position).normalized;
             Quaternion targetRot = Quaternion.LookRotation(targetDir);
-            cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRot, assistStrength * Time.deltaTime);
+
+            // ✅ Smoothed rotation (so it feels soft)
+            float smoothFactor = Mathf.Clamp01(assistStrength * Time.deltaTime); // Clamp to avoid overshoot
+            cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRot, smoothFactor);
         }
     }
 
@@ -63,6 +73,6 @@ public class AimAssist : MonoBehaviour
 
     public void SetAssistStrength(float strength)
     {
-        assistStrength = strength;
+        assistStrength = Mathf.Clamp(strength, 0f, 10f); // ✅ Clamp to prevent crazy values
     }
 }

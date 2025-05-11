@@ -367,6 +367,7 @@
 "Assets/Scripts/ActionStates/DefaultState.cs"
 "Assets/Scripts/ActionStates/ReloadState.cs"
 "Assets/Scripts/Aim Assist/AimAssist.cs"
+"Assets/Scripts/Aim Assist/AimAssistUIManager.cs"
 "Assets/Scripts/AimStates/AimBaseState.cs"
 "Assets/Scripts/AimStates/AimState.cs"
 "Assets/Scripts/AimStates/AimStateManager.cs"
