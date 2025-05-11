@@ -5220,8 +5220,12 @@ MonoBehaviour:
   bulletsPerShot: 1
   damage: 20
   gunShot: {fileID: 8300000, guid: d1d08ebfa4c9c85428efb3dfbb5887c5, type: 3}
+  audioSource: {fileID: 0}
+  ammo: {fileID: 0}
   lightReturnSpeed: 20
   enemyKickbackForce: 100
+  leftHandTarget: {fileID: 3791463502737395826}
+  leftHandHint: {fileID: 3953692521771144719}
 --- !u!82 &2525107963629939274
 AudioSource:
   m_ObjectHideFlags: 0
