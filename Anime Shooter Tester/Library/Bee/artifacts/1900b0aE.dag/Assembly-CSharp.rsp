@@ -416,6 +416,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
 "Assets/WeaponBloom.cs"
+"Assets/WeaponClassManager.cs"
 "Assets/WeaponRecoil.cs"
 -langversion:9.0
 /deterministic
