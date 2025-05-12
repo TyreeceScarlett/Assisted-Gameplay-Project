@@ -118,6 +118,8 @@
     <Compile Include="Assets\Scripts\Player States\MovementStateManager.cs" />
     <Compile Include="Assets\Scripts\Enemy Health\RagdollManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\FloatingDamageText.cs" />
+    <Compile Include="Assets\CrosshairBump.cs" />
     <Compile Include="Assets\Scripts\ActionStates\DefaultState.cs" />
     <Compile Include="Assets\Scripts\Weapons\Bullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />

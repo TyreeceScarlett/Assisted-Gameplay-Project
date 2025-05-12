@@ -1,69 +1,187 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AimAssist : MonoBehaviour
 {
     [Header("Assist Settings")]
     public bool aimAssistEnabled = true;
-    public float assistRange = 5f; // How wide the assist cone is
-    public float assistStrength = 5f; // How strong the assist snaps toward target
+    public float assistRange = 5f;
+    public float assistStrength = 5f;
     public LayerMask enemyLayer;
 
     Camera cam;
-    float detectionDistance = 20f; // How far ahead to search for targets
+    float detectionDistance = 20f;
+
+    [Header("Head Lock-On Settings")]
+    public Transform enemyHeadTarget; // Drag your cube or enemy here
+    public float headLockOnRange = 2f;
+    public float headLockOnBonusStrength = 10f;
+
+    private bool isLockedOn = false;
+    private bool wasLockedOnLastFrame = false;
+
+    [Header("Crosshair UI")]
+    public Image crosshairImage;
+    public Color normalColor = Color.white;
+    public Color lockedColor = Color.red;
+    public float colorLerpSpeed = 10f;
+
+    [Header("Crosshair Bump Settings")]
+    public float bumpScale = 1.5f;
+    public float bumpDuration = 0.2f;
+
+    private RectTransform crosshairRect;
+    private Vector3 originalScale;
+    private bool isBumping = false;
+    private float bumpTimer = 0f;
 
     void Start()
     {
-        // ✅ Cache main camera
         if (Camera.main != null)
             cam = Camera.main;
         else
             Debug.LogError("No main camera found! Assign a camera to the 'MainCamera' tag.");
+
+        if (crosshairImage != null)
+        {
+            crosshairImage.color = normalColor;
+            crosshairRect = crosshairImage.GetComponent<RectTransform>();
+            originalScale = crosshairRect.localScale;
+        }
     }
 
     void Update()
     {
-        if (aimAssistEnabled)
-            AssistAim();
+        if (!aimAssistEnabled || cam == null)
+            return;
+
+        AssistAim();
+
+        // Lerp crosshair color and bump together
+        UpdateCrosshairFeedback();
+
+        if (Input.GetMouseButtonDown(2)) // Middle mouse button
+        {
+            UnlockHead();
+        }
     }
 
     void AssistAim()
     {
-        if (cam == null) return; // ✅ Safety check
+        if (enemyHeadTarget == null)
+            return;
 
-        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Center of screen
-        Collider[] hits = Physics.OverlapSphere(ray.origin + ray.direction * detectionDistance, assistRange, enemyLayer);
+        Vector3 headPos = enemyHeadTarget.position;
+        float distanceToHead = Vector3.Distance(cam.transform.position, headPos);
 
-        if (hits.Length > 0)
+        bool shouldLockOn = false;
+
+        if (distanceToHead <= detectionDistance)
         {
-            Transform closestTarget = hits[0].transform;
-            float closestAngle = Vector3.Angle(cam.transform.forward, closestTarget.position - cam.transform.position);
+            Vector3 viewportPoint = cam.WorldToViewportPoint(headPos);
+            float screenCenterDist = Vector2.Distance(
+                new Vector2(viewportPoint.x, viewportPoint.y),
+                new Vector2(0.5f, 0.5f)
+            );
 
-            foreach (Collider hit in hits)
+            if (screenCenterDist <= headLockOnRange / 10f)
             {
-                float angle = Vector3.Angle(cam.transform.forward, hit.transform.position - cam.transform.position);
-                if (angle < closestAngle)
-                {
-                    closestAngle = angle;
-                    closestTarget = hit.transform;
-                }
+                shouldLockOn = true;
+            }
+        }
+
+        if (shouldLockOn)
+        {
+            if (!isLockedOn)
+            {
+                StartCrosshairBump(); // Juicy bump!
             }
 
-            // ✅ Smoothly rotate camera a tiny bit toward target
+            isLockedOn = true;
+            MaintainLockOn();
+        }
+        else
+        {
+            isLockedOn = false;
+        }
+
+        // Optional soft aim assist
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Collider[] hits = Physics.OverlapSphere(ray.origin + ray.direction * detectionDistance, assistRange, enemyLayer);
+
+        Transform closestTarget = null;
+        float closestAngle = float.MaxValue;
+
+        foreach (Collider hit in hits)
+        {
+            float angle = Vector3.Angle(cam.transform.forward, hit.transform.position - cam.transform.position);
+
+            if (angle < closestAngle)
+            {
+                closestAngle = angle;
+                closestTarget = hit.transform;
+            }
+        }
+
+        if (closestTarget != null)
+        {
             Vector3 targetDir = (closestTarget.position - cam.transform.position).normalized;
             Quaternion targetRot = Quaternion.LookRotation(targetDir);
 
-            // ✅ Smoothed rotation (so it feels soft)
-            float smoothFactor = Mathf.Clamp01(assistStrength * Time.deltaTime); // Clamp to avoid overshoot
+            float smoothFactor = assistStrength * Time.deltaTime;
             cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRot, smoothFactor);
         }
     }
 
-    // These public methods can be called from UI sliders/buttons!
+    void MaintainLockOn()
+    {
+        Vector3 targetDir = (enemyHeadTarget.position - cam.transform.position).normalized;
+        Quaternion targetRot = Quaternion.LookRotation(targetDir);
+
+        float smoothFactor = headLockOnBonusStrength * Time.deltaTime;
+        cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRot, smoothFactor);
+    }
+
+    void UnlockHead()
+    {
+        isLockedOn = false;
+    }
+
+    void UpdateCrosshairFeedback()
+    {
+        if (crosshairImage == null || crosshairRect == null)
+            return;
+
+        // Smooth color fade
+        Color targetColor = isLockedOn ? lockedColor : normalColor;
+        crosshairImage.color = Color.Lerp(crosshairImage.color, targetColor, Time.deltaTime * colorLerpSpeed);
+
+        // Smooth bump scale
+        if (bumpTimer > 0f)
+        {
+            bumpTimer -= Time.deltaTime;
+            float t = 1f - (bumpTimer / bumpDuration);
+            float scale = Mathf.Lerp(bumpScale, 1f, t);
+            crosshairRect.localScale = originalScale * scale;
+        }
+        else
+        {
+            crosshairRect.localScale = originalScale;
+        }
+    }
+
+    void StartCrosshairBump()
+    {
+        bumpTimer = bumpDuration;
+    }
+
+    // Optional UI controls
     public void SetAssistEnabled(bool enabled)
     {
         aimAssistEnabled = enabled;
+        if (!enabled) UnlockHead();
     }
 
     public void SetAssistRange(float range)
@@ -73,6 +191,6 @@ public class AimAssist : MonoBehaviour
 
     public void SetAssistStrength(float strength)
     {
-        assistStrength = Mathf.Clamp(strength, 0f, 10f); // ✅ Clamp to prevent crazy values
+        assistStrength = Mathf.Clamp(strength, 0f, 10f);
     }
 }

@@ -1,44 +1,76 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float timeToDestroy;
-    [HideInInspector] public WeaponManager weapon;
-    [HideInInspector] public Vector3 dir;
+    [SerializeField] float timeToDestroy = 5f; // ✅ Bullet auto destroys after 5s
+    [HideInInspector] public WeaponManager weapon; // ✅ Reference to weapon
+    [HideInInspector] public Vector3 dir; // ✅ Bullet direction
+
     Rigidbody rb;
 
+    [Header("Popup Settings")]
+    public GameObject damagePopupPrefab; // ✅ Popup prefab
 
-    // Start is called before the first frame
     void Start()
     {
-        Destroy(gameObject, timeToDestroy); // Auto destroy after 1 minute
-        rb = GetComponent<Rigidbody>();
+        // ✅ Destroy bullet after timeout
+        Destroy(gameObject, timeToDestroy);
 
+        rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.useGravity = false; // Fly straight
-            rb.drag = 0f;          // No slowdown
+            rb.useGravity = false; // ✅ Fly straight
+            rb.drag = 0f;
             rb.angularDrag = 0f;
-            rb.constraints = RigidbodyConstraints.FreezeRotation; // Prevent tilting
+            rb.constraints = RigidbodyConstraints.FreezeRotation; // ✅ Prevent tilting
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponentInParent<EnemyHealth>())
+        // ✅ Check for EnemyHealth
+        EnemyHealth enemyHealth = collision.gameObject.GetComponentInParent<EnemyHealth>();
+        if (enemyHealth)
         {
-            EnemyHealth enemyHealth = collision.gameObject.GetComponentInParent<EnemyHealth>();
-            enemyHealth.TakeDamage(weapon.damage);
+            float damageDealt = weapon.damage;
 
-            if(enemyHealth.health<=0 && enemyHealth.isDead == false)
+            // ✅ Check if hit collider is head
+            if (collision.collider.name.ToLower().Contains("head"))
             {
-                Rigidbody rb = collision.gameObject.GetComponentInParent<Rigidbody>();
-                rb.AddForce(dir * weapon.enemyKickbackForce, ForceMode.Impulse);
+                damageDealt *= 2f; // ✅ Double damage for headshot
+            }
+
+            enemyHealth.TakeDamage(damageDealt);
+
+            // ✅ Apply knockback if enemy died
+            if (enemyHealth.health <= 0 && !enemyHealth.isDead)
+            {
+                Rigidbody enemyRb = enemyHealth.GetComponent<Rigidbody>();
+                if (enemyRb != null)
+                {
+                    enemyRb.AddForce(dir * weapon.enemyKickbackForce, ForceMode.Impulse);
+                }
                 enemyHealth.isDead = true;
             }
+
+            // ✅ Spawn damage popup
+            SpawnPopup(collision.contacts[0].point, damageDealt, collision.collider);
         }
-        Destroy(this.gameObject);
+
+        Destroy(gameObject); // ✅ Destroy bullet
+    }
+
+    void SpawnPopup(Vector3 position, float damage, Collider hitCollider)
+    {
+        if (damagePopupPrefab == null) return; // ✅ No popup prefab assigned
+
+        GameObject popup = Instantiate(damagePopupPrefab, position, Quaternion.identity);
+
+        // ✅ Face camera
+        popup.transform.LookAt(Camera.main.transform);
+
+        // ✅ Try DamagePopup component
     }
 }
