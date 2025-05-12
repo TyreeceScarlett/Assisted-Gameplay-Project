@@ -6,18 +6,15 @@ using UnityEngine.UI; // For UI controls
 public class EnemyHealth : MonoBehaviour
 {
     public float health;
-    public float maxHealth = 100f; // Max health value
+    public float maxHealth = 100f; // Max health for slider normalization
     [HideInInspector] public bool isDead = false;
 
     private RagdollManager ragdollManger;
     private Renderer[] renderers;
     private Transform enemyParent; // Reference to delete parent object
 
-    [Header("Health UI")]
-    public Image healthFillImage; // Reference to health bar image (fill)
-    public Transform healthBarCanvas; // Reference to health bar canvas object
-
-    private Camera mainCam;
+    [Header("UI")]
+    public Slider healthBarSlider; // Reference to the Slider component in Canvas
 
     private void Start()
     {
@@ -27,24 +24,14 @@ public class EnemyHealth : MonoBehaviour
         // Assume the top-level parent is the full "Enemy" object you want to delete
         enemyParent = transform.root;
 
-        // Cache the main camera
-        mainCam = Camera.main;
+        // Initialize health
+        if (health <= 0) health = maxHealth;
 
-        // Initialize health bar
-        UpdateHealthUI();
-    }
-
-    private void LateUpdate()
-    {
-        FaceHealthBarToPlayer();
-    }
-
-    void FaceHealthBarToPlayer()
-    {
-        if (healthBarCanvas && mainCam)
+        // Initialize health bar if assigned
+        if (healthBarSlider != null)
         {
-            // Make the canvas face the camera
-            healthBarCanvas.forward = mainCam.transform.forward;
+            healthBarSlider.maxValue = maxHealth;
+            healthBarSlider.value = health;
         }
     }
 
@@ -54,10 +41,14 @@ public class EnemyHealth : MonoBehaviour
 
         health -= damage;
 
-        // Clamp health between 0 and max
+        // Clamp health to zero minimum
         health = Mathf.Clamp(health, 0f, maxHealth);
 
-        UpdateHealthUI();
+        // Update health bar if assigned
+        if (healthBarSlider != null)
+        {
+            healthBarSlider.value = health;
+        }
 
         if (health <= 0)
         {
@@ -70,12 +61,6 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void UpdateHealthUI()
-    {
-        if (healthFillImage)
-            healthFillImage.fillAmount = health / maxHealth;
-    }
-
     void EnemyDeath()
     {
         ragdollManger.TriggerRagdoll();
@@ -83,10 +68,6 @@ public class EnemyHealth : MonoBehaviour
 
         // Start fading + sinking coroutine after 20 seconds
         StartCoroutine(FadeSinkAndDestroy(20f, 2f)); // wait 20s, fade+sink over 2s
-
-        // Hide health bar on death
-        if (healthBarCanvas)
-            healthBarCanvas.gameObject.SetActive(false);
     }
 
     IEnumerator FadeSinkAndDestroy(float waitTime, float fadeDuration)
