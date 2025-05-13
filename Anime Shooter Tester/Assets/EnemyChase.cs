@@ -6,6 +6,7 @@ public class EnemyChase : MonoBehaviour
     public Transform player;
     private NavMeshAgent agent;
     private Animator animator;
+    private EnemyHealth enemyHealth;
 
     [Header("Ground Check Settings")]
     public float groundCheckDistance = 0.2f;
@@ -17,13 +18,15 @@ public class EnemyChase : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        enemyHealth = GetComponent<EnemyHealth>(); // Get the health component
     }
 
     void Update()
     {
         CheckGrounded();
 
-        if (player != null && isGrounded)
+        // Make sure the enemy is alive, grounded, and player exists
+        if (player != null && isGrounded && enemyHealth != null && !enemyHealth.isDead)
         {
             agent.SetDestination(player.position);
 
@@ -32,7 +35,10 @@ public class EnemyChase : MonoBehaviour
         }
         else
         {
-            // Set speed to 0 if not grounded so animation stays idle
+            // Stop moving
+            if (agent.enabled)
+                agent.SetDestination(transform.position);
+
             animator.SetFloat("Speed", 0f);
         }
     }

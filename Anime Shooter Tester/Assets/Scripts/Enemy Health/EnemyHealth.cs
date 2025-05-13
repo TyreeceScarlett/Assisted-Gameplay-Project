@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // For UI controls
+using UnityEngine.AI; // Added for NavMeshAgent
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -12,14 +13,26 @@ public class EnemyHealth : MonoBehaviour
     private RagdollManager ragdollManger;
     private Renderer[] renderers;
     private Transform enemyParent; // Reference to delete parent object
+    private Color originalColor; // To store the original color of the enemy
 
     [Header("UI")]
     public Slider healthBarSlider; // Reference to the Slider component in Canvas
+
+    [Header("Effects")]
+    public AudioClip deathSound; // Optional sound effect
+    private AudioSource audioSource;
 
     private void Start()
     {
         ragdollManger = GetComponent<RagdollManager>();
         renderers = GetComponentsInChildren<Renderer>();
+        audioSource = GetComponent<AudioSource>();
+
+        // Store the original color of the enemy
+        if (renderers.Length > 0)
+        {
+            originalColor = renderers[0].material.color;
+        }
 
         // Assume the top-level parent is the full "Enemy" object you want to delete
         enemyParent = transform.root;
@@ -50,6 +63,9 @@ public class EnemyHealth : MonoBehaviour
             healthBarSlider.value = health;
         }
 
+        // Flash white when damage is taken
+        StartCoroutine(FlashWhite());
+
         if (health <= 0)
         {
             isDead = true;
@@ -61,8 +77,48 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    // Coroutine to flash white for a short duration
+    IEnumerator FlashWhite()
+    {
+        // Set all renderers to white
+        foreach (Renderer rend in renderers)
+        {
+            foreach (Material mat in rend.materials)
+            {
+                mat.color = Color.white;
+            }
+        }
+
+        // Wait for a brief moment (flash duration)
+        yield return new WaitForSeconds(0.1f);
+
+        // Restore original color
+        foreach (Renderer rend in renderers)
+        {
+            foreach (Material mat in rend.materials)
+            {
+                mat.color = originalColor;
+            }
+        }
+    }
+
     void EnemyDeath()
     {
+        // Disable Animator to allow ragdoll physics to take over
+        Animator anim = GetComponent<Animator>();
+        if (anim != null) anim.enabled = false;
+
+        // Disable NavMeshAgent to stop AI control
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        if (agent != null) agent.enabled = false;
+
+        // Optional: play sound
+        if (deathSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
+
+        // Activate ragdoll
         ragdollManger.TriggerRagdoll();
         Debug.Log("Enemy has Died");
 
