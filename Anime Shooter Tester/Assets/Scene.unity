@@ -758,7 +758,6 @@ MonoBehaviour:
   maxHealth: 500
   isDead: 0
   healthBarSlider: {fileID: 1461386820}
-  bloodEffectPrefab: {fileID: 0}
   deathSound: {fileID: 0}
 --- !u!95 &154118410
 Animator:
@@ -11566,7 +11565,6 @@ MonoBehaviour:
   maxHealth: 500
   isDead: 0
   healthBarSlider: {fileID: 1363262369}
-  bloodEffectPrefab: {fileID: 0}
   deathSound: {fileID: 0}
 --- !u!1 &1812415652
 GameObject:
@@ -11899,20 +11897,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimAssistEnabled: 1
-  assistRange: 5
-  assistStrength: 5
-  enemyLayer:
+  detectionRadius: 3
+  aimPullStrength: 3
+  detectionRange: 20
+  targetLayer:
     serializedVersion: 2
     m_Bits: 512
-  enemyHeadTarget: {fileID: 545074477}
-  headLockOnRange: 0.1
-  headLockOnBonusStrength: 20
   crosshairImage: {fileID: 352753163}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   lockedColor: {r: 1, g: 0, b: 0, a: 1}
   colorLerpSpeed: 10
-  bumpScale: 1.5
-  bumpDuration: 0.2
+  cameraFollowPos: {fileID: 908710871}
 --- !u!1 &1830702646
 GameObject:
   m_ObjectHideFlags: 0
