@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Animations.Rigging;
 
 public class AimStateManager : MonoBehaviour
 {
     public AimBaseState currentState;
     public HipFireState Hip = new HipFireState();
-    public AimState Aim = new AimState();
+    [HideInInspector] public AimState Aim = new AimState();
 
     [SerializeField] float mouseSense = 1;
     [SerializeField] Transform camFollowPos;
     float xAxis, yAxis;
 
     [HideInInspector] public Animator anim;
+
+    MultiAimConstraint[] multiAims;
+    WeightedTransform aimPosweightedTransform;
+
     [HideInInspector] public CinemachineVirtualCamera vCam;
-    public float adsFov = 30f; // ✅ Lowered to make zoom obvious
+    public float adsFov = 30f;
     [HideInInspector] public float hipFov;
     [HideInInspector] public float currentFov;
     public float fovSmoothSpeed = 10f;
@@ -31,11 +36,34 @@ public class AimStateManager : MonoBehaviour
     [SerializeField] float shoulderSwapSpeed = 10;
     MovementStateManager moving;
 
-    // ✅ New fields for proper shoulder swapping
     [SerializeField] float shoulderOffset = 0.5f;
     bool isRightShoulder = true;
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        // Create aim position object
+        aimpos = new GameObject("AimPosition").transform;
+
+        // Initialize WeightedTransform
+        aimPosweightedTransform = new WeightedTransform
+        {
+            transform = aimpos,
+            weight = 1f
+        };
+
+        // Get all MultiAimConstraints in children
+        multiAims = GetComponentsInChildren<MultiAimConstraint>();
+
+        // Assign aim position to all constraints
+        foreach (MultiAimConstraint constraint in multiAims)
+        {
+            var data = constraint.data.sourceObjects;
+            data.Clear();
+            data.Add(aimPosweightedTransform);
+            constraint.data.sourceObjects = data;
+        }
+    }
+
     void Start()
     {
         moving = GetComponent<MovementStateManager>();
@@ -43,13 +71,12 @@ public class AimStateManager : MonoBehaviour
         ogYPos = camFollowPos.localPosition.y;
         yFollowPos = ogYPos;
         vCam = GetComponentInChildren<CinemachineVirtualCamera>();
-        hipFov = vCam.m_Lens.FieldOfView; // default camera FOV
-        currentFov = hipFov; // start with hipfire FOV
+        hipFov = vCam.m_Lens.FieldOfView;
+        currentFov = hipFov;
         anim = GetComponent<Animator>();
         SwitchState(Hip);
     }
 
-    //update is called once per frame
     void Update()
     {
         // Mouse look
@@ -57,10 +84,10 @@ public class AimStateManager : MonoBehaviour
         yAxis -= Input.GetAxisRaw("Mouse Y") * mouseSense;
         yAxis = Mathf.Clamp(yAxis, -80, 80);
 
-        // ✅ Smooth FOV zoom
+        // Smooth FOV transition
         vCam.m_Lens.FieldOfView = Mathf.Lerp(vCam.m_Lens.FieldOfView, currentFov, fovSmoothSpeed * Time.deltaTime);
 
-        // Raycast aiming position
+        // Raycast to get aim position
         Vector2 screenCentre = new Vector2(Screen.width / 2, Screen.height / 2);
         Ray ray = Camera.main.ScreenPointToRay(screenCentre);
 
@@ -70,7 +97,6 @@ public class AimStateManager : MonoBehaviour
         }
 
         MoveCamera();
-
         currentState.UpdateState(this);
     }
 
@@ -97,15 +123,12 @@ public class AimStateManager : MonoBehaviour
 
     void MoveCamera()
     {
-        // ✅ Proper shoulder swapping using fixed offset
         if (Input.GetKeyDown(KeyCode.LeftAlt))
             isRightShoulder = !isRightShoulder;
 
         xFollowPos = isRightShoulder ? shoulderOffset : -shoulderOffset;
 
-        // Adjust camera height when crouching
-        if (moving.currentState == moving.crouch) yFollowPos = crouchCamHeight;
-        else yFollowPos = ogYPos;
+        yFollowPos = (moving.currentState == moving.crouch) ? crouchCamHeight : ogYPos;
 
         Vector3 newFollowPos = new Vector3(xFollowPos, yFollowPos, camFollowPos.localPosition.z);
         camFollowPos.localPosition = Vector3.Lerp(camFollowPos.localPosition, newFollowPos, shoulderSwapSpeed * Time.deltaTime);

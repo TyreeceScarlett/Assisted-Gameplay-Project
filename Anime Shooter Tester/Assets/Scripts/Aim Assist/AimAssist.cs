@@ -11,16 +11,15 @@ public class AimAssist : MonoBehaviour
     public float assistStrength = 5f;
     public LayerMask enemyLayer;
 
-    Camera cam;
-    float detectionDistance = 20f;
+    private Camera cam;
+    private float detectionDistance = 20f;
 
     [Header("Head Lock-On Settings")]
-    public Transform enemyHeadTarget; // Drag your cube or enemy here
+    public Transform enemyHeadTarget;
     public float headLockOnRange = 2f;
     public float headLockOnBonusStrength = 10f;
 
     private bool isLockedOn = false;
-    private bool wasLockedOnLastFrame = false;
 
     [Header("Crosshair UI")]
     public Image crosshairImage;
@@ -29,26 +28,32 @@ public class AimAssist : MonoBehaviour
     public float colorLerpSpeed = 10f;
 
     [Header("Crosshair Bump Settings")]
+    public AnimationCurve bumpCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     public float bumpScale = 1.5f;
-    public float bumpDuration = 0.2f;
+    public float bumpDuration = 0.25f;
 
     private RectTransform crosshairRect;
     private Vector3 originalScale;
-    private bool isBumping = false;
     private float bumpTimer = 0f;
+    private bool isBumping = false;
+
+    [Header("Optional Lock-On Sound")]
+    public AudioSource lockOnAudio;
+
+    private bool wasLockedLastFrame = false;
 
     void Start()
     {
         if (Camera.main != null)
             cam = Camera.main;
         else
-            Debug.LogError("No main camera found! Assign a camera to the 'MainCamera' tag.");
+            Debug.LogError("No main camera tagged as MainCamera!");
 
         if (crosshairImage != null)
         {
-            crosshairImage.color = normalColor;
             crosshairRect = crosshairImage.GetComponent<RectTransform>();
             originalScale = crosshairRect.localScale;
+            crosshairImage.color = normalColor;
         }
     }
 
@@ -57,46 +62,42 @@ public class AimAssist : MonoBehaviour
         if (!aimAssistEnabled || cam == null)
             return;
 
-        AssistAim();
+        HandleAimLogic();
+        UpdateCrosshairVisuals();
 
-        // Lerp crosshair color and bump together
-        UpdateCrosshairFeedback();
-
-        if (Input.GetMouseButtonDown(2)) // Middle mouse button
+        if (Input.GetMouseButtonDown(2)) // Middle click = manual unlock
         {
             UnlockHead();
         }
+
+        wasLockedLastFrame = isLockedOn;
     }
 
-    void AssistAim()
+    void HandleAimLogic()
     {
         if (enemyHeadTarget == null)
             return;
 
         Vector3 headPos = enemyHeadTarget.position;
-        float distanceToHead = Vector3.Distance(cam.transform.position, headPos);
+        float dist = Vector3.Distance(cam.transform.position, headPos);
 
         bool shouldLockOn = false;
 
-        if (distanceToHead <= detectionDistance)
+        if (dist <= detectionDistance)
         {
             Vector3 viewportPoint = cam.WorldToViewportPoint(headPos);
-            float screenCenterDist = Vector2.Distance(
-                new Vector2(viewportPoint.x, viewportPoint.y),
-                new Vector2(0.5f, 0.5f)
-            );
+            float centerDist = Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), new Vector2(0.5f, 0.5f));
 
-            if (screenCenterDist <= headLockOnRange / 10f)
-            {
+            if (centerDist <= headLockOnRange / 10f)
                 shouldLockOn = true;
-            }
         }
 
         if (shouldLockOn)
         {
-            if (!isLockedOn)
+            if (!wasLockedLastFrame)
             {
-                StartCrosshairBump(); // Juicy bump!
+                TriggerCrosshairBump();
+                if (lockOnAudio != null) lockOnAudio.Play();
             }
 
             isLockedOn = true;
@@ -107,41 +108,36 @@ public class AimAssist : MonoBehaviour
             isLockedOn = false;
         }
 
-        // Optional soft aim assist
+        // Soft aim (optional)
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         Collider[] hits = Physics.OverlapSphere(ray.origin + ray.direction * detectionDistance, assistRange, enemyLayer);
 
-        Transform closestTarget = null;
+        Transform closest = null;
         float closestAngle = float.MaxValue;
 
         foreach (Collider hit in hits)
         {
             float angle = Vector3.Angle(cam.transform.forward, hit.transform.position - cam.transform.position);
-
             if (angle < closestAngle)
             {
                 closestAngle = angle;
-                closestTarget = hit.transform;
+                closest = hit.transform;
             }
         }
 
-        if (closestTarget != null)
+        if (closest != null)
         {
-            Vector3 targetDir = (closestTarget.position - cam.transform.position).normalized;
-            Quaternion targetRot = Quaternion.LookRotation(targetDir);
-
-            float smoothFactor = assistStrength * Time.deltaTime;
-            cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRot, smoothFactor);
+            Vector3 dir = (closest.position - cam.transform.position).normalized;
+            Quaternion rot = Quaternion.LookRotation(dir);
+            cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, rot, assistStrength * Time.deltaTime);
         }
     }
 
     void MaintainLockOn()
     {
-        Vector3 targetDir = (enemyHeadTarget.position - cam.transform.position).normalized;
-        Quaternion targetRot = Quaternion.LookRotation(targetDir);
-
-        float smoothFactor = headLockOnBonusStrength * Time.deltaTime;
-        cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, targetRot, smoothFactor);
+        Vector3 dir = (enemyHeadTarget.position - cam.transform.position).normalized;
+        Quaternion rot = Quaternion.LookRotation(dir);
+        cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, rot, headLockOnBonusStrength * Time.deltaTime);
     }
 
     void UnlockHead()
@@ -149,35 +145,38 @@ public class AimAssist : MonoBehaviour
         isLockedOn = false;
     }
 
-    void UpdateCrosshairFeedback()
+    void UpdateCrosshairVisuals()
     {
         if (crosshairImage == null || crosshairRect == null)
             return;
 
-        // Smooth color fade
-        Color targetColor = isLockedOn ? lockedColor : normalColor;
-        crosshairImage.color = Color.Lerp(crosshairImage.color, targetColor, Time.deltaTime * colorLerpSpeed);
+        // Color fade
+        Color target = isLockedOn ? lockedColor : normalColor;
+        crosshairImage.color = Color.Lerp(crosshairImage.color, target, Time.deltaTime * colorLerpSpeed);
 
-        // Smooth bump scale
-        if (bumpTimer > 0f)
+        // Elastic bump using AnimationCurve
+        if (isBumping)
         {
-            bumpTimer -= Time.deltaTime;
-            float t = 1f - (bumpTimer / bumpDuration);
-            float scale = Mathf.Lerp(bumpScale, 1f, t);
-            crosshairRect.localScale = originalScale * scale;
-        }
-        else
-        {
-            crosshairRect.localScale = originalScale;
+            bumpTimer += Time.deltaTime;
+            float t = Mathf.Clamp01(bumpTimer / bumpDuration);
+            float curveScale = bumpCurve.Evaluate(t);
+            crosshairRect.localScale = originalScale * Mathf.Lerp(1f, bumpScale, curveScale);
+
+            if (t >= 1f)
+            {
+                crosshairRect.localScale = originalScale;
+                isBumping = false;
+            }
         }
     }
 
-    void StartCrosshairBump()
+    void TriggerCrosshairBump()
     {
-        bumpTimer = bumpDuration;
+        isBumping = true;
+        bumpTimer = 0f;
     }
 
-    // Optional UI controls
+    // Optional UI setters
     public void SetAssistEnabled(bool enabled)
     {
         aimAssistEnabled = enabled;
