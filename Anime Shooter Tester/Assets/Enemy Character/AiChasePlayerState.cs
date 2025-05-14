@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AiChasePlayerState : MonoBehaviour, AiState
+public class AiChasePlayerState : AiState
 {
     GameObject player;
 
@@ -29,21 +29,36 @@ public class AiChasePlayerState : MonoBehaviour, AiState
             agent.navMeshAgent.isStopped = false;
             agent.navMeshAgent.SetDestination(player.transform.position);
 
-            // Play walk animation
-            if (animator) animator.SetBool("IsWalking", true);
+            // Calculate local movement direction
+            Vector3 direction = (player.transform.position - agent.transform.position).normalized;
+            Vector3 localDirection = agent.transform.InverseTransformDirection(direction);
 
-            // Sensor color red = can see player
+            float hz = Mathf.Clamp(localDirection.x, -1f, 1f);
+            float v = Mathf.Clamp(localDirection.z, -1f, 1f);
+
+            // Update blend tree parameters
+            if (animator)
+            {
+                animator.SetFloat("hzInput", hz, 0.1f, Time.deltaTime);
+                animator.SetFloat("vInput", v, 0.1f, Time.deltaTime);
+            }
+
+            // Change sensor color to red (player detected)
             agent.sensor.meshColor = Color.red;
         }
         else
         {
-            // No player in sight
+            // Stop moving
             agent.navMeshAgent.isStopped = true;
 
-            // Stop walk animation
-            if (animator) animator.SetBool("IsWalking", false);
+            // Reset blend tree inputs to idle
+            if (animator)
+            {
+                animator.SetFloat("hzInput", 0f, 0.1f, Time.deltaTime);
+                animator.SetFloat("vInput", 0f, 0.1f, Time.deltaTime);
+            }
 
-            // Sensor color yellow = can't see player
+            // Change sensor color to yellow (no player)
             agent.sensor.meshColor = Color.yellow;
         }
     }
