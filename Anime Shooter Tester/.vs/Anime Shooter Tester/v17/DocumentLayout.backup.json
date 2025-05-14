@@ -3,27 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\playeraiming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\playeraiming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\enemy character\\aichaseplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aichaseplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\aimassistscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\aimassistscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aiagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aiagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\weapons\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\weaponmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\enemy character\\aiagentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aiagentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\enemy health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy health\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\ailocomotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\ailocomotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pokes\\Downloads\\AimAssistScript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aistatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aistatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\ailocomotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\ailocomotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aistate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aistate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aistatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aistatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,80 +38,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerAiming.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\PlayerAiming.cs",
-              "RelativeDocumentMoniker": "Assets\\PlayerAiming.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\PlayerAiming.cs",
-              "RelativeToolTip": "Assets\\PlayerAiming.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AiAgentConfig.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiAgentConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiAgentConfig.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiAgentConfig.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiAgentConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T04:20:13.614Z",
+              "WhenOpened": "2025-05-14T15:16:47.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnemyHealth.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Enemy Health\\EnemyHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Health\\EnemyHealth.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Enemy Health\\EnemyHealth.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy Health\\EnemyHealth.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAADwv88AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AiChasePlayerState.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiChasePlayerState.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiChasePlayerState.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiChasePlayerState.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiChasePlayerState.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T03:19:34.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AimAssistScript.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\Downloads\\AimAssistScript.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Downloads\\AimAssistScript.cs",
-              "ToolTip": "C:\\Users\\pokes\\Downloads\\AimAssistScript.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Downloads\\AimAssistScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T03:09:32.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AILocomotion.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\AILocomotion.cs",
-              "RelativeDocumentMoniker": "Assets\\AILocomotion.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\AILocomotion.cs",
-              "RelativeToolTip": "Assets\\AILocomotion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T21:26:54.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeaponManager.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapons\\WeaponManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\WeaponManager.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapons\\WeaponManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapons\\WeaponManager.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAswJAAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T21:15:02.617Z"
+              "WhenOpened": "2025-05-14T14:37:08.956Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AimAssistScript.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\AimAssistScript.cs",
-              "RelativeDocumentMoniker": "Assets\\AimAssistScript.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\AimAssistScript.cs",
-              "RelativeToolTip": "Assets\\AimAssistScript.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAUwLoAAAAAAAAAAAAAAA==",
+              "Title": "AiAgent.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiAgent.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiAgent.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiAgent.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiAgent.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wBEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T19:57:59.954Z"
+              "WhenOpened": "2025-05-14T09:04:13.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AiStateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiStateMachine.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiStateMachine.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiStateMachine.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiStateMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T09:06:31.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AiState.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiState.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiState.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiState.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T09:05:40.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AILocomotion.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AILocomotion.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AILocomotion.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AILocomotion.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AILocomotion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:43:39.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AiStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiStateManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiStateManager.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiStateManager.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiStateManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:57:41.697Z"
             }
           ]
         }
