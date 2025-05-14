@@ -9,19 +9,21 @@ public class AiAgent : MonoBehaviour
     public AiStateId initialState;
     public NavMeshAgent navMeshAgent;
     public AiAgentConfig config;
-    
-    // Start is called before the first frame update
-    void Start ()
+
+    void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         stateMachine = new AiStateMachine(this);
+
+        // Register all required states
         stateMachine.RegisterState(new AiChasePlayerState());
+
+        // Enter the initial state
         stateMachine.ChangeState(initialState);
     }
-    // Update is called once per frame
-    private void Update()
+
+    void Update()
     {
         stateMachine.Update();
     }
 }
-
