@@ -6,9 +6,10 @@ public class SmartAimAssist : MonoBehaviour
 {
     [Header("Assist Settings")]
     public bool aimAssistEnabled = true;
-    public float detectionRadius = 3f; // Radius in world space for nearby target detection
-    public float aimPullStrength = 3f; // How strong the aim pull is
-    public float detectionRange = 20f;
+    public float detectionRadius = 3f;
+    public float aimPullStrength = 3f;
+    public float minLockOnDistance = 0.1f;
+    public float maxLockOnDistance = 20f;
     public LayerMask targetLayer;
 
     [Header("Crosshair UI")]
@@ -18,7 +19,7 @@ public class SmartAimAssist : MonoBehaviour
     public float colorLerpSpeed = 10f;
 
     [Header("References")]
-    public Transform cameraFollowPos; // The object Cinemachine follows (e.g., player head or pivot)
+    public Transform cameraFollowPos;
     private Camera cam;
     private Transform detectedTarget;
     private RectTransform crosshairRect;
@@ -44,10 +45,8 @@ public class SmartAimAssist : MonoBehaviour
         if (!aimAssistEnabled || cam == null)
             return;
 
-        // 1. Find target near center of screen
-        detectedTarget = FindClosestTargetToScreenCenter();
+        detectedTarget = FindClosestTargetInRange();
 
-        // 2. Gently pull camera aim toward target
         if (detectedTarget != null)
         {
             Vector3 targetPoint = GetTargetCenter(detectedTarget);
@@ -55,34 +54,48 @@ public class SmartAimAssist : MonoBehaviour
             Vector3 currentDirection = cam.transform.forward;
 
             Vector3 newDirection = Vector3.Slerp(currentDirection, aimDirection, Time.deltaTime * aimPullStrength);
-
-            // Apply smoothed aim adjustment by rotating cameraFollowPos toward new direction
-            cameraFollowPos.forward = newDirection;
+            cameraFollowPos.rotation = Quaternion.Slerp(cameraFollowPos.rotation, Quaternion.LookRotation(newDirection), Time.deltaTime * aimPullStrength);
         }
 
-        // 3. Update UI
         UpdateCrosshairFeedback();
     }
 
-    Transform FindClosestTargetToScreenCenter()
+    Transform FindClosestTargetInRange()
     {
-        Collider[] candidates = Physics.OverlapSphere(cam.transform.position + cam.transform.forward * detectionRange / 2f, detectionRadius, targetLayer);
+        Collider[] candidates = Physics.OverlapSphere(
+            cam.transform.position + cam.transform.forward * (maxLockOnDistance * 0.5f),
+            detectionRadius,
+            targetLayer
+        );
 
-        float closestDistance = Mathf.Infinity;
+        float closestDistanceToCenter = Mathf.Infinity;
         Transform bestTarget = null;
 
         foreach (Collider col in candidates)
         {
-            Vector3 screenPoint = cam.WorldToScreenPoint(GetTargetCenter(col.transform));
+            Transform target = col.transform;
+            Vector3 targetCenter = GetTargetCenter(target);
+            float distance = Vector3.Distance(cameraFollowPos.position, targetCenter);
 
-            if (screenPoint.z < 0) continue; // Behind the camera
+            // Skip if out of lock-on range
+            if (distance < minLockOnDistance || distance > maxLockOnDistance)
+                continue;
+
+            // NEW: Check if enemy has health and is alive
+            EnemyHealth enemyHealth = target.GetComponentInParent<EnemyHealth>();
+            if (enemyHealth == null || enemyHealth.isDead)
+                continue;
+
+            // Check if in view
+            Vector3 screenPoint = cam.WorldToScreenPoint(targetCenter);
+            if (screenPoint.z < 0) continue;
 
             float distanceToCenter = Vector2.Distance(screenPoint, new Vector2(Screen.width / 2f, Screen.height / 2f));
 
-            if (distanceToCenter < closestDistance)
+            if (distanceToCenter < closestDistanceToCenter)
             {
-                closestDistance = distanceToCenter;
-                bestTarget = col.transform;
+                closestDistanceToCenter = distanceToCenter;
+                bestTarget = target;
             }
         }
 
@@ -92,11 +105,7 @@ public class SmartAimAssist : MonoBehaviour
     Vector3 GetTargetCenter(Transform target)
     {
         Collider col = target.GetComponent<Collider>();
-        if (col != null)
-        {
-            return col.bounds.center;
-        }
-        return target.position;
+        return col != null ? col.bounds.center : target.position;
     }
 
     void UpdateCrosshairFeedback()

@@ -11899,7 +11899,8 @@ MonoBehaviour:
   aimAssistEnabled: 1
   detectionRadius: 3
   aimPullStrength: 3
-  detectionRange: 20
+  minLockOnDistance: 0.1
+  maxLockOnDistance: 20
   targetLayer:
     serializedVersion: 2
     m_Bits: 512
