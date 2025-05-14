@@ -397,6 +397,7 @@
 "Assets/Enemy Character/AiAgentConfig.cs"
 "Assets/Enemy Character/AiChasePlayerState.cs"
 "Assets/Enemy Character/AILocomotion.cs"
+"Assets/Enemy Character/AiSensor.cs"
 "Assets/Enemy Character/AiState.cs"
 "Assets/Enemy Character/AiStateMachine.cs"
 "Assets/Enemy Character/AiStateManager.cs"

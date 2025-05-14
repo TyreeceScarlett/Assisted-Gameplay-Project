@@ -1,24 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class AiAgent : MonoBehaviour
 {
-    public AiStateMachine stateMachine;
-    public AiStateId initialState;
-    public NavMeshAgent navMeshAgent;
     public AiAgentConfig config;
+    public AiStateMachine stateMachine;
+    public NavMeshAgent navMeshAgent;
+    public AiStateId initialState;
+    public AiSensor sensor;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         stateMachine = new AiStateMachine(this);
+        sensor = GetComponent<AiSensor>();
 
-        // Register all required states
+        // Register states
         stateMachine.RegisterState(new AiChasePlayerState());
 
-        // Enter the initial state
+        // Set initial state
         stateMachine.ChangeState(initialState);
     }
 
