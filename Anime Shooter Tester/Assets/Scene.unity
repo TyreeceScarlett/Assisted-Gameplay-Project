@@ -3206,7 +3206,7 @@ Transform:
   m_GameObject: {fileID: 545074472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.84, y: 0.178, z: 4.72}
+  m_LocalPosition: {x: -10, y: 0.178, z: 4.72}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10068,7 +10068,7 @@ Transform:
   m_GameObject: {fileID: 1601828415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.27, y: 1.62, z: 4.72}
+  m_LocalPosition: {x: 10, y: 1.62, z: 4.72}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11898,13 +11898,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimAssistEnabled: 1
   detectionRadius: 3
-  aimPullStrength: 3
+  aimPullStrength: 50
   minLockOnDistance: 0.1
   maxLockOnDistance: 20
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  crosshairImage: {fileID: 352753163}
+  targets:
+  - {fileID: 5737995251226907152}
+  crosshairRect: {fileID: 352753162}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   lockedColor: {r: 1, g: 0, b: 0, a: 1}
   colorLerpSpeed: 10
@@ -12628,7 +12627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6607510073682618838, guid: 8ce7a598ce8a85d4fa99635294fd9f67, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25550,7 +25549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3897627679461290243
 MonoBehaviour:
   m_ObjectHideFlags: 0
