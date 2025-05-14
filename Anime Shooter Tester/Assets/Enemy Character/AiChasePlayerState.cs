@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class AiChasePlayerState : AiState
+public class AiChasePlayerState : MonoBehaviour, AiState
 {
     GameObject player;
 
-    public override AiStateId GetId()
+    public AiStateId GetId()
     {
         return AiStateId.ChasePlayer;
     }
 
-    public override void Enter(AiAgent agent)
+    public void Enter(AiAgent agent)
     {
         player = null;
     }
 
-    public override void Update(AiAgent agent)
+    public void Update(AiAgent agent)
     {
         GameObject[] buffer = new GameObject[10];
         int count = agent.sensor.Filter(buffer, "Player");
@@ -48,7 +48,7 @@ public class AiChasePlayerState : AiState
         }
     }
 
-    public override void Exit(AiAgent agent)
+    public void Exit(AiAgent agent)
     {
         agent.navMeshAgent.isStopped = true;
     }

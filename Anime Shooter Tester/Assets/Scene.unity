@@ -852,7 +852,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: e29441ea3cea1d6419e64afbf83f24d5, type: 2}
   navMeshAgent: {fileID: 154118407}
   initialState: 0
-  sensor: {fileID: 0}
+  sensor: {fileID: 154118418}
 --- !u!114 &154118416
 MonoBehaviour:
   m_ObjectHideFlags: 0
