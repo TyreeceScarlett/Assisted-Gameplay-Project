@@ -1,6 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WeaponManager : MonoBehaviour
 {
@@ -17,13 +18,12 @@ public class WeaponManager : MonoBehaviour
     public float damage = 20;
 
     AimStateManager aim;
-
     [SerializeField] AudioClip gunShot;
     [HideInInspector] public AudioSource audioSource;
-    [HideInInspector] public WeaponAmmo ammo;         // Changed from Ammo to WeaponAmmo
+    [HideInInspector] public WeaponAmmo ammo;
     WeaponBloom bloom;
     ActionStateManager actions;
-    WeaponRecoil recoil;                             // Changed from Recoil to WeaponRecoil
+    WeaponRecoil recoil;
 
     Light muzzleFlashLight;
     ParticleSystem muzzleFlashParticles;
@@ -34,6 +34,10 @@ public class WeaponManager : MonoBehaviour
 
     public Transform leftHandTarget, leftHandHint;
     WeaponClassManager weaponClass;
+
+    [Header("UI Blocking")]
+    [Tooltip("Add any canvases that should block firing when the mouse is over them")]
+    public List<Transform> blockedCanvases = new List<Transform>(); // 🔹 Drag multiple canvases here
 
     void Start()
     {
@@ -66,11 +70,11 @@ public class WeaponManager : MonoBehaviour
         if (weaponClass == null)
         {
             weaponClass = GetComponentInParent<WeaponClassManager>();
-            ammo = GetComponent<WeaponAmmo>();    // Ensure WeaponAmmo component reference
+            ammo = GetComponent<WeaponAmmo>();
             if (ammo == null) Debug.LogError("WeaponAmmo script missing on weapon!");
 
             audioSource = GetComponent<AudioSource>();
-            recoil = GetComponent<WeaponRecoil>();  // Ensure WeaponRecoil component reference
+            recoil = GetComponent<WeaponRecoil>();
 
             if (recoil != null && weaponClass != null)
                 recoil.recoilFollowPos = weaponClass.recoilFollowPos;
@@ -99,6 +103,8 @@ public class WeaponManager : MonoBehaviour
         if (ammo == null || ammo.currentAmmo == 0) return false;
         if (actions != null && actions.IsReloading()) return false;
         if (actions.currentState == actions.Swap) return false;
+        if (IsPointerOverBlockedUI()) return false; // 🔹 Updated method
+
         if (semiAuto && Input.GetKeyDown(KeyCode.Mouse0)) return true;
         if (!semiAuto && Input.GetKey(KeyCode.Mouse0)) return true;
 
@@ -157,5 +163,30 @@ public class WeaponManager : MonoBehaviour
 
         if (muzzleFlashLight != null)
             muzzleFlashLight.intensity = lightIntensity;
+    }
+
+    bool IsPointerOverBlockedUI()
+    {
+        if (blockedCanvases == null || blockedCanvases.Count == 0)
+            return false;
+
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        foreach (var result in results)
+        {
+            foreach (var canvasTransform in blockedCanvases)
+            {
+                if (canvasTransform != null && result.gameObject.transform.IsChildOf(canvasTransform))
+                    return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -86,6 +86,10 @@ public class SmartAimAssist : MonoBehaviour
         {
             UnlockTarget();
             lockoutTimer = lockoutDuration;
+
+            // Ensure cursor stays visible and unlocked when pressing middle mouse button
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
