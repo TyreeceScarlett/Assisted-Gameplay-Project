@@ -24,8 +24,6 @@ public class WeaponRecoil : MonoBehaviour
         }
     }
 
-    public void TriggerRecoil()
-    {
-        currentRecoilPosition += kickBackAmount;
-    }
+    public void TriggerRecoil() => currentRecoilPosition += kickBackAmount;
+
 }
