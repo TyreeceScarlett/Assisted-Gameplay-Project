@@ -410,6 +410,7 @@
 "Assets/EnemyChase.cs"
 "Assets/FloatingDamageText.cs"
 "Assets/GameManager.cs"
+"Assets/Player Related/PlayerHealth.cs"
 "Assets/Scripts/ActionStates/ActionBaseState.cs"
 "Assets/Scripts/ActionStates/ActionStateManager.cs"
 "Assets/Scripts/ActionStates/DefaultState.cs"
