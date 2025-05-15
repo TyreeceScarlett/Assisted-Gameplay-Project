@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,22 +6,30 @@ public class SmartAimAssist : MonoBehaviour
 {
     [Header("Assist Settings")]
     public bool aimAssistEnabled = true;
-    public float detectionRadius = 5f;
-    public float aimPullStrength = 5f; // Lower strength for smooth subtle movement
+    public float detectionRadius = 20f;
+    public float aimPullStrength = 5f;
     public float minLockOnDistance = 1f;
-    public float maxLockOnDistance = 15f;
+    public float maxLockOnDistance = 25f;
+    public float maxTargetAngle = 45f;
+    public float predictionTime = 0.25f;
 
-    [Header("Target Objects")]
-    public Transform[] targets;
+    [Header("Target Detection")]
+    public string targetTag = "Enemy";
+    private List<Transform> dynamicTargets = new List<Transform>();
+    private float targetRefreshRate = 1f;
+    private float targetRefreshTimer = 0f;
 
     [Header("Crosshair UI")]
     public RectTransform crosshairRect;
     public Color normalColor = Color.white;
     public Color lockedColor = Color.red;
     public float colorLerpSpeed = 10f;
+    public bool snapToTarget = false;
 
-    [Header("Camera and Target")]
+    [Header("References")]
     public Transform cameraFollowPos;
+    public MovementStateManager playerMovement;
+    public AimStateManager aimStateManager;
     private Camera cam;
     private Transform detectedTarget;
 
@@ -36,46 +44,88 @@ public class SmartAimAssist : MonoBehaviour
 
     void Update()
     {
-        if (!aimAssistEnabled || cam == null)
-            return;
+        if (!aimAssistEnabled || cam == null) return;
 
+        // Periodically refresh target list
+        targetRefreshTimer += Time.deltaTime;
+        if (targetRefreshTimer >= targetRefreshRate)
+        {
+            UpdateTargetList();
+            targetRefreshTimer = 0f;
+        }
+
+        // Lockout timer prevents relocking
         if (lockoutTimer > 0f)
             lockoutTimer -= Time.deltaTime;
 
-        detectedTarget = lockoutTimer <= 0f ? FindClosestTargetInRange() : null;
+        if (lockoutTimer <= 0f)
+            detectedTarget = FindClosestTargetInRange();
+        else
+            detectedTarget = null;
 
         UpdateCrosshairFeedback();
 
-        if (Input.GetMouseButtonDown(2)) // Middle mouse button unlock
+        if (detectedTarget != null)
+        {
+            Vector3 aimPoint = PredictTargetPosition(detectedTarget);
+            aimStateManager.overrideAimRotation = true;
+            aimStateManager.overrideLookPos = aimPoint;
+
+            playerMovement.RotateToward(aimPoint);
+        }
+        else
+        {
+            if (aimStateManager != null)
+                aimStateManager.overrideAimRotation = false;
+        }
+
+        if (Input.GetMouseButtonDown(2)) // Middle click to unlock
         {
             UnlockTarget();
             lockoutTimer = lockoutDuration;
         }
     }
 
+    void UpdateTargetList()
+    {
+        dynamicTargets.Clear();
+        GameObject[] foundTargets = GameObject.FindGameObjectsWithTag(targetTag);
+        foreach (var obj in foundTargets)
+        {
+            if (obj != null) dynamicTargets.Add(obj.transform);
+        }
+    }
+
     Transform FindClosestTargetInRange()
     {
         Transform closestTarget = null;
-        float closestDistance = Mathf.Infinity;
+        float closestScreenDistance = Mathf.Infinity;
 
-        foreach (Transform target in targets)
+        foreach (Transform target in dynamicTargets)
         {
             if (target == null) continue;
 
             Vector3 targetCenter = GetTargetCenter(target);
             float distance = Vector3.Distance(cameraFollowPos.position, targetCenter);
 
-            if (distance < minLockOnDistance || distance > maxLockOnDistance)
-                continue;
+            if (distance < minLockOnDistance || distance > maxLockOnDistance) continue;
+
+            float angle = Vector3.Angle(cam.transform.forward, targetCenter - cam.transform.position);
+            if (angle > maxTargetAngle) continue;
+
+            if (Physics.Linecast(cameraFollowPos.position, targetCenter, out RaycastHit hit))
+            {
+                if (hit.transform != target) continue;
+            }
 
             Vector3 screenPoint = cam.WorldToScreenPoint(targetCenter);
-            if (screenPoint.z < 0) continue;
+            if (screenPoint.z < 0f) continue;
 
-            float distanceToCenter = Vector2.Distance(screenPoint, new Vector2(Screen.width / 2f, Screen.height / 2f));
+            float distanceToScreenCenter = Vector2.Distance(screenPoint, new Vector2(Screen.width / 2f, Screen.height / 2f));
 
-            if (distanceToCenter < closestDistance)
+            if (distanceToScreenCenter < closestScreenDistance)
             {
-                closestDistance = distanceToCenter;
+                closestScreenDistance = distanceToScreenCenter;
                 closestTarget = target;
             }
         }
@@ -89,13 +139,21 @@ public class SmartAimAssist : MonoBehaviour
         return col != null ? col.bounds.center : target.position;
     }
 
+    Vector3 PredictTargetPosition(Transform target)
+    {
+        Rigidbody rb = target.GetComponent<Rigidbody>();
+        Vector3 velocity = rb ? rb.velocity : Vector3.zero;
+        return GetTargetCenter(target) + velocity * predictionTime;
+    }
+
     void UnlockTarget()
     {
         detectedTarget = null;
         if (crosshairRect != null)
-        {
             crosshairRect.anchoredPosition = Vector2.zero;
-        }
+
+        if (aimStateManager != null)
+            aimStateManager.overrideAimRotation = false;
     }
 
     void UpdateCrosshairFeedback()
@@ -107,18 +165,18 @@ public class SmartAimAssist : MonoBehaviour
 
         if (detectedTarget != null)
         {
-            Vector3 worldPos = GetTargetCenter(detectedTarget);
+            Vector3 worldPos = PredictTargetPosition(detectedTarget);
             Vector3 screenPos = cam.WorldToScreenPoint(worldPos);
 
             if (screenPos.z > 0f)
             {
-                Vector2 localPoint;
                 RectTransform canvasRect = crosshairRect.parent as RectTransform;
-
-                if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPos, null, out localPoint))
+                if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPos, null, out Vector2 localPoint))
                 {
-                    // Smoothly move the crosshair toward the target screen position
-                    crosshairRect.anchoredPosition = Vector2.Lerp(crosshairRect.anchoredPosition, localPoint, Time.deltaTime * aimPullStrength);
+                    if (snapToTarget)
+                        crosshairRect.anchoredPosition = localPoint;
+                    else
+                        crosshairRect.anchoredPosition = Vector2.Lerp(crosshairRect.anchoredPosition, localPoint, Time.deltaTime * aimPullStrength);
                 }
 
                 crosshairImage.color = Color.Lerp(crosshairImage.color, lockedColor, Time.deltaTime * colorLerpSpeed);
@@ -128,6 +186,15 @@ public class SmartAimAssist : MonoBehaviour
         {
             crosshairRect.anchoredPosition = Vector2.Lerp(crosshairRect.anchoredPosition, Vector2.zero, Time.deltaTime * aimPullStrength);
             crosshairImage.color = Color.Lerp(crosshairImage.color, normalColor, Time.deltaTime * colorLerpSpeed);
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (cameraFollowPos != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(cameraFollowPos.position, detectionRadius);
         }
     }
 }

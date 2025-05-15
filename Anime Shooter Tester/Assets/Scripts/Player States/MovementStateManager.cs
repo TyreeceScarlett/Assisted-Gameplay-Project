@@ -4,35 +4,42 @@ using UnityEngine;
 
 public class MovementStateManager : MonoBehaviour
 {
-    public float walkSpeed = 3, walkBackSpeed = 2;
-    public float runSpeed = 7, runBackSpeed = 5;
-    public float crouchSpeed = 2, crouchBackSpeed = 1;
+    [Header("Speed Settings")]
+    public float walkSpeed = 3f;
+    public float walkBackSpeed = 2f;
+    public float runSpeed = 7f;
+    public float runBackSpeed = 5f;
+    public float crouchSpeed = 2f;
+    public float crouchBackSpeed = 1f;
 
+    [Header("State System")]
     public MovementBaseState currentState;
-
     public IdleState Idle = new IdleState();
     public WalkState walk = new WalkState();
     public CrouchingState crouch = new CrouchingState();
     public RunState run = new RunState();
 
-    [HideInInspector] public Animator anim;
-    [HideInInspector] public Vector3 dir;
-    private float hzInput, vInput;
-    CharacterController controller;
-
+    [Header("Movement and Gravity")]
+    [SerializeField] float gravity = -9.81f;
     [SerializeField] float groundYOffset = 0.2f;
     [SerializeField] LayerMask groundMask;
+    [HideInInspector] public Vector3 dir;
+    Vector3 velocity;
     Vector3 spherePos;
 
-    [SerializeField] float gravity = -9.81f;
-    Vector3 velocity;
+    [Header("References")]
+    [HideInInspector] public Animator anim;
+    CharacterController controller;
 
-    public float moveSpeed = 3;
-
-    // Public read-only property for input
+    [Header("State Info")]
+    public bool isCrouching = false;
+    public float moveSpeed = 3f;
     public float VInput => vInput;
     public bool IsRunning { get; private set; }
     public bool IsMoving => dir.magnitude > 0.1f;
+
+    private float hzInput, vInput;
+
     public bool IsGrounded
     {
         get
@@ -42,18 +49,14 @@ public class MovementStateManager : MonoBehaviour
         }
     }
 
-    public bool isCrouching = false; // 🔥 New toggle variable
-
     void Start()
     {
         anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
-        SwitchState(Idle);
-
         if (controller != null)
-        {
             controller.center = new Vector3(0, controller.height / 2, 0);
-        }
+
+        SwitchState(Idle);
     }
 
     void Update()
@@ -66,7 +69,6 @@ public class MovementStateManager : MonoBehaviour
         anim.SetFloat("vInput", vInput);
 
         currentState.UpdateState(this);
-
         HandleStateSwitching();
     }
 
@@ -74,11 +76,11 @@ public class MovementStateManager : MonoBehaviour
     {
         hzInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
-        dir = transform.forward * vInput + transform.right * hzInput;
 
+        dir = transform.forward * vInput + transform.right * hzInput;
         IsRunning = Input.GetKey(KeyCode.LeftShift);
 
-        // Toggle crouch when LeftControl is pressed once
+        // Toggle crouch on Left Ctrl
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             isCrouching = !isCrouching;
@@ -110,20 +112,10 @@ public class MovementStateManager : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    public void SwitchState(MovementBaseState state)
-    {
-        currentState?.ExitState(this);
-        currentState = state;
-        currentState.EnterState(this);
-    }
-
     void HandleStateSwitching()
     {
-        // Prevent state switching if crouching
-        if (isCrouching)
-            return;
+        if (isCrouching) return;
 
-        // Running
         if (IsRunning && IsMoving)
         {
             if (currentState != run)
@@ -131,7 +123,6 @@ public class MovementStateManager : MonoBehaviour
             return;
         }
 
-        // Walking
         if (!IsRunning && IsMoving)
         {
             if (currentState != walk)
@@ -139,11 +130,28 @@ public class MovementStateManager : MonoBehaviour
             return;
         }
 
-        // Idle
-        if (!IsMoving)
+        if (!IsMoving && currentState != Idle)
         {
-            if (currentState != Idle)
-                SwitchState(Idle);
+            SwitchState(Idle);
+        }
+    }
+
+    public void SwitchState(MovementBaseState state)
+    {
+        currentState?.ExitState(this);
+        currentState = state;
+        currentState.EnterState(this);
+    }
+
+    public void RotateToward(Vector3 worldPosition)
+    {
+        Vector3 directionToTarget = worldPosition - transform.position;
+        directionToTarget.y = 0f;
+
+        if (directionToTarget.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
     }
 

@@ -39,6 +39,10 @@ public class AimStateManager : MonoBehaviour
     [SerializeField] float shoulderOffset = 0.5f;
     bool isRightShoulder = true;
 
+    // New fields for aim assist rotation override
+    [HideInInspector] public bool overrideAimRotation = false;
+    [HideInInspector] public Vector3 overrideLookPos;
+
     private void Awake()
     {
         // Create aim position object
@@ -108,11 +112,26 @@ public class AimStateManager : MonoBehaviour
             camFollowPos.localEulerAngles.z
         );
 
-        transform.eulerAngles = new Vector3(
-            transform.eulerAngles.x,
-            xAxis,
-            transform.eulerAngles.z
-        );
+        if (overrideAimRotation)
+        {
+            Vector3 lookDir = overrideLookPos - transform.position;
+            lookDir.y = 0f;
+
+            if (lookDir.sqrMagnitude > 0.01f)
+            {
+                Quaternion targetRot = Quaternion.LookRotation(lookDir);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * 10f);
+                xAxis = transform.eulerAngles.y; // Update mouse axis to match assist
+            }
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(
+                transform.eulerAngles.x,
+                xAxis,
+                transform.eulerAngles.z
+            );
+        }
     }
 
     public void SwitchState(AimBaseState newState)
