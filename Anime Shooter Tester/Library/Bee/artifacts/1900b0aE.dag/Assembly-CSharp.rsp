@@ -405,6 +405,7 @@
 "Assets/Enemy Character/AiStateMachine.cs"
 "Assets/Enemy Character/AiStateManager.cs"
 "Assets/Enemy Character/BillboardUI.cs"
+"Assets/Enemy Character/DamagePopup.cs"
 "Assets/Enemy Character/EnemyHealth.cs"
 "Assets/Enemy Character/RagdollManager.cs"
 "Assets/EnemyChase.cs"

@@ -15,36 +15,36 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        // ✅ Destroy bullet after timeout
         Destroy(gameObject, timeToDestroy);
 
         rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.useGravity = false; // ✅ Fly straight
+            rb.useGravity = false;
             rb.drag = 0f;
             rb.angularDrag = 0f;
-            rb.constraints = RigidbodyConstraints.FreezeRotation; // ✅ Prevent tilting
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        // ✅ Check for EnemyHealth
+        // ✅ Check for EnemyHealth on hit object or parent
         EnemyHealth enemyHealth = collision.gameObject.GetComponentInParent<EnemyHealth>();
-        if (enemyHealth)
+        if (enemyHealth != null && !enemyHealth.isDead)
         {
             float damageDealt = weapon.damage;
 
-            // ✅ Check if hit collider is head
+            // ✅ Headshot detection
             if (collision.collider.name.ToLower().Contains("head"))
             {
-                damageDealt *= 2f; // ✅ Double damage for headshot
+                damageDealt *= 2f;
             }
 
+            // ✅ Deal damage
             enemyHealth.TakeDamage(damageDealt);
 
-            // ✅ Apply knockback if enemy died
+            // ✅ Knockback if dead
             if (enemyHealth.health <= 0 && !enemyHealth.isDead)
             {
                 Rigidbody enemyRb = enemyHealth.GetComponent<Rigidbody>();
@@ -55,22 +55,28 @@ public class Bullet : MonoBehaviour
                 enemyHealth.isDead = true;
             }
 
-            // ✅ Spawn damage popup
+            // ✅ Popup
             SpawnPopup(collision.contacts[0].point, damageDealt, collision.collider);
         }
 
-        Destroy(gameObject); // ✅ Destroy bullet
+        Destroy(gameObject); // ✅ Bullet disappears on impact
     }
 
     void SpawnPopup(Vector3 position, float damage, Collider hitCollider)
     {
-        if (damagePopupPrefab == null) return; // ✅ No popup prefab assigned
+        if (damagePopupPrefab == null) return;
 
         GameObject popup = Instantiate(damagePopupPrefab, position, Quaternion.identity);
 
-        // ✅ Face camera
+        // ✅ Face the popup toward camera
         popup.transform.LookAt(Camera.main.transform);
+        popup.transform.Rotate(0, 180, 0); // ✅ Correct direction if needed
 
-        // ✅ Try DamagePopup component
+        // ✅ If it has a DamagePopup component, send damage info
+        DamagePopup dp = popup.GetComponent<DamagePopup>();
+        if (dp != null)
+        {
+            dp.Setup((int)damage, hitCollider.name.ToLower().Contains("head"));
+        }
     }
 }
