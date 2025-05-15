@@ -15,14 +15,15 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] private float bulletVelocity = 20f;
     [SerializeField] private int bulletsPerShot = 1;
     public float damage = 20;
+
     AimStateManager aim;
 
     [SerializeField] AudioClip gunShot;
     [HideInInspector] public AudioSource audioSource;
-    [HideInInspector] public WeaponAmmo ammo;
+    [HideInInspector] public WeaponAmmo ammo;         // Changed from Ammo to WeaponAmmo
     WeaponBloom bloom;
     ActionStateManager actions;
-    WeaponRecoil recoil;
+    WeaponRecoil recoil;                             // Changed from Recoil to WeaponRecoil
 
     Light muzzleFlashLight;
     ParticleSystem muzzleFlashParticles;
@@ -34,7 +35,6 @@ public class WeaponManager : MonoBehaviour
     public Transform leftHandTarget, leftHandHint;
     WeaponClassManager weaponClass;
 
-    // Start is called before the first frame update
     void Start()
     {
         aim = GetComponentInParent<AimStateManager>();
@@ -66,11 +66,11 @@ public class WeaponManager : MonoBehaviour
         if (weaponClass == null)
         {
             weaponClass = GetComponentInParent<WeaponClassManager>();
-            ammo = GetComponent<WeaponAmmo>();
+            ammo = GetComponent<WeaponAmmo>();    // Ensure WeaponAmmo component reference
             if (ammo == null) Debug.LogError("WeaponAmmo script missing on weapon!");
 
             audioSource = GetComponent<AudioSource>();
-            recoil = GetComponent<WeaponRecoil>();
+            recoil = GetComponent<WeaponRecoil>();  // Ensure WeaponRecoil component reference
 
             if (recoil != null && weaponClass != null)
                 recoil.recoilFollowPos = weaponClass.recoilFollowPos;
@@ -80,7 +80,6 @@ public class WeaponManager : MonoBehaviour
             weaponClass.SetCurrentWeapon(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (ShouldFire())
@@ -89,7 +88,6 @@ public class WeaponManager : MonoBehaviour
             Debug.Log(ammo?.currentAmmo);
         }
 
-        // Always fade light every frame
         if (muzzleFlashLight != null)
             muzzleFlashLight.intensity = Mathf.Lerp(muzzleFlashLight.intensity, 0, lightReturnSpeed * Time.deltaTime);
     }
@@ -131,13 +129,13 @@ public class WeaponManager : MonoBehaviour
 
                 Bullet bulletScript = currentBullet.GetComponent<Bullet>();
                 bulletScript.weapon = this;
-                bulletScript.dir = barrelPos.transform.forward;
+                bulletScript.dir = barrelPos.forward;
 
                 Rigidbody rb = currentBullet.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
-                    rb.useGravity = false; // Fly straight
-                    rb.drag = 0f;          // No slow down
+                    rb.useGravity = false;
+                    rb.drag = 0f;
                     rb.velocity = barrelPos.forward * bulletVelocity;
                 }
                 else
@@ -145,7 +143,7 @@ public class WeaponManager : MonoBehaviour
                     Debug.LogWarning("Bullet prefab is missing a Rigidbody component!");
                 }
 
-                Destroy(currentBullet, 5f); // Auto cleanup bullet
+                Destroy(currentBullet, 5f);
             }
 
             TriggerMuzzleFlash();

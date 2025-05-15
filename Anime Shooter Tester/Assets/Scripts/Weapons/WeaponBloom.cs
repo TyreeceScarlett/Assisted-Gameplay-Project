@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponBloom : MonoBehaviour
 {
-    [SerializeField] float defaultBloomAngle = 3;
+    [SerializeField] float defaultBloomAngle = 3f;
     [SerializeField] float walkBloomMultiplier = 1.5f;
     [SerializeField] float crouchBloomMultiplier = 0.5f;
     [SerializeField] float sprintBloomMultiplier = 2f;
@@ -15,7 +15,6 @@ public class WeaponBloom : MonoBehaviour
 
     float currentBloom;
 
-    // Start is called before the first frame update
     void Start()
     {
         movement = GetComponentInParent<MovementStateManager>();
@@ -24,16 +23,20 @@ public class WeaponBloom : MonoBehaviour
 
     public Vector3 BloomAngle(Transform barrelPos)
     {
+        if (movement == null || aiming == null)
+            return barrelPos.localEulerAngles; // fallback, no bloom
+
         if (movement.currentState == movement.Idle) currentBloom = defaultBloomAngle;
         else if (movement.currentState == movement.walk) currentBloom = defaultBloomAngle * walkBloomMultiplier;
-        else if (movement.currentState == movement.run) currentBloom = currentBloom = defaultBloomAngle * sprintBloomMultiplier;
+        else if (movement.currentState == movement.run) currentBloom = defaultBloomAngle * sprintBloomMultiplier;
         else if (movement.currentState == movement.crouch)
         {
             if (movement.dir.magnitude == 0) currentBloom = defaultBloomAngle * crouchBloomMultiplier;
             else currentBloom = defaultBloomAngle * crouchBloomMultiplier * walkBloomMultiplier;
         }
 
-        if (aiming.currentState == aiming.Aim) currentBloom *= adsBloomMultiplier;
+        if (aiming.currentState == aiming.Aim)
+            currentBloom *= adsBloomMultiplier;
 
         float randX = Random.Range(-currentBloom, currentBloom);
         float randY = Random.Range(-currentBloom, currentBloom);
