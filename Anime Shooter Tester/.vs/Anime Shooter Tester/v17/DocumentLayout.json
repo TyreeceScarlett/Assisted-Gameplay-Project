@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\aimassistscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\aimassistscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\aimstates\\aimstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\aimstates\\aimstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\player states\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player states\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\weapons\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\weapons\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\damagepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\damagepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\player related\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\player related\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\scripts\\aim assist\\aimassistscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\aim assist\\aimassistscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,86 +20,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AimAssistScript.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\AimAssistScript.cs",
-              "RelativeDocumentMoniker": "Assets\\AimAssistScript.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\AimAssistScript.cs",
-              "RelativeToolTip": "Assets\\AimAssistScript.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAuwEYAAAA3AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Aim Assist\\AimAssistScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Aim Assist\\AimAssistScript.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Aim Assist\\AimAssistScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Aim Assist\\AimAssistScript.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAUwNEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T13:06:36.913Z",
+              "WhenOpened": "2025-05-15T16:35:30.999Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AimStateManager.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\AimStates\\AimStateManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AimStates\\AimStateManager.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\AimStates\\AimStateManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AimStates\\AimStateManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T13:04:43.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MovementStateManager.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Player States\\MovementStateManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player States\\MovementStateManager.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Player States\\MovementStateManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player States\\MovementStateManager.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAQwKYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:58:22.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DamagePopup.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\DamagePopup.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemy Character\\DamagePopup.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\DamagePopup.cs",
-              "RelativeToolTip": "Assets\\Enemy Character\\DamagePopup.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAqwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T07:01:56.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapons\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Bullet.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapons\\Bullet.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Weapons\\Bullet.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAIBJwEoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T06:58:09.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EnemyHealth.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\EnemyHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemy Character\\EnemyHealth.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\EnemyHealth.cs",
-              "RelativeToolTip": "Assets\\Enemy Character\\EnemyHealth.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAAiwMcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T06:56:46.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlayerHealth.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Player Related\\PlayerHealth.cs",
-              "RelativeDocumentMoniker": "Assets\\Player Related\\PlayerHealth.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Player Related\\PlayerHealth.cs",
-              "RelativeToolTip": "Assets\\Player Related\\PlayerHealth.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAuwK8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T04:40:41.658Z"
             }
           ]
         }

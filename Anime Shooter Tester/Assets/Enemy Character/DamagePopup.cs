@@ -3,54 +3,51 @@ using UnityEngine;
 
 public class DamagePopup : MonoBehaviour
 {
-    [Header("Popup Settings")]
-    public float moveUpSpeed = 30f;
+    public float moveUpSpeed = 1f;
     public float fadeOutSpeed = 2f;
-    public float lifetime = 1f;
+    public float lifetime = 1.2f;
 
     private TextMeshProUGUI text;
-    private RectTransform rectTransform;
-    private Color startColor;
+    private Color originalColor;
     private float timer;
 
     void Awake()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        rectTransform = GetComponent<RectTransform>();
-        startColor = text.color;
+        text = GetComponentInChildren<TextMeshProUGUI>();
+        if (text != null)
+        {
+            originalColor = text.color;
+        }
     }
 
-    public void Setup(int damageAmount, bool isHeadshot)
+    public void Setup(float damageAmount, bool isHeadshot)
     {
-        text.text = damageAmount.ToString();
+        if (text == null) return;
+
+        text.text = damageAmount.ToString("F0");
+        text.color = isHeadshot ? Color.red : originalColor;
 
         if (isHeadshot)
-        {
-            text.color = Color.red;
-            text.fontSize += 6;
-        }
-        else
-        {
-            text.color = startColor;
-        }
+            text.fontSize += 6f;
 
         timer = lifetime;
     }
 
     void Update()
     {
-        // Move up
-        rectTransform.anchoredPosition += Vector2.up * moveUpSpeed * Time.deltaTime;
+        transform.LookAt(Camera.main.transform);
+        transform.Rotate(0, 180, 0); // So it's not mirrored
 
-        // Fade out
+        transform.position += Vector3.up * moveUpSpeed * Time.deltaTime;
+
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
-            Color color = text.color;
-            color.a -= fadeOutSpeed * Time.deltaTime;
-            text.color = color;
+            Color c = text.color;
+            c.a -= fadeOutSpeed * Time.deltaTime;
+            text.color = c;
 
-            if (color.a <= 0f)
+            if (c.a <= 0f)
                 Destroy(gameObject);
         }
     }
