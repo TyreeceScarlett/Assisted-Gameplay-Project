@@ -89,6 +89,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\SmartAimAssistUI.cs" />
     <Compile Include="Assets\EnemyChase.cs" />
     <Compile Include="Assets\Enemy Character\DamagePopup.cs" />
     <Compile Include="Assets\DynamicCrosshair.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\Aim Assist\AimAssistScript.cs" />
+    <Compile Include="Assets\SmartAimAssistUIManager.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Scripts\Player Related\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ActionStates\DefaultState.cs" />

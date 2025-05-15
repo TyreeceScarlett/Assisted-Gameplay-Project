@@ -173,7 +173,7 @@ public class PlayerHealth : MonoBehaviour
             ammoText.color = ammoEmpty;
             if (!ammoWarningPlayed)
             {
-                Debug.LogWarning("No ammo!");
+                Debug.Log("No ammo!");
                 PlayWarningSound(lowAmmoSound);
                 ammoWarningPlayed = true;
             }
@@ -183,7 +183,7 @@ public class PlayerHealth : MonoBehaviour
             ammoText.color = ammoLow;
             if (!ammoWarningPlayed)
             {
-                Debug.LogWarning("Low ammo!");
+                Debug.Log("Low ammo!");
                 PlayWarningSound(lowAmmoSound);
                 ammoWarningPlayed = true;
             }
