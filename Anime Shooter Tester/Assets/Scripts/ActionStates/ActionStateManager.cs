@@ -22,77 +22,76 @@ public class ActionStateManager : MonoBehaviour
     // Rig Constraints
     public MultiAimConstraint rHandAim;
     public TwoBoneIKConstraint lHandIK;
-    public RigBuilder rigBuilder; // ✅ New: reference to RigBuilder
 
+    //start is called before the first frame update
     void Start()
     {
         // Start in Default State
-        anim = GetComponent<Animator>();
-        if (rigBuilder == null)
-            rigBuilder = GetComponent<RigBuilder>();
-
         SwitchState(Default);
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        // Update current active state
         if (currentState != null)
-        {
             currentState.UpdateState(this);
-        }
         else
-        {
             Debug.LogError("Current state is null in ActionStateManager!");
-        }
     }
 
-    public void SwitchState(ActionBaseState newState)
+    public void SwitchState(ActionBaseState state)
     {
-        if (newState == null)
+        if (state == null)
         {
             Debug.LogError("Trying to switch to a null state!");
             return;
         }
 
-        if (currentState != null)
-            currentState.ExitState(this); // ✅ Ensure current state exits cleanly
-
-        currentState = newState;
+        // Switch state and call EnterState
+        currentState = state;
         currentState.EnterState(this);
     }
 
     public void WeaponReloaded()
     {
+        // Ammo reload logic
         if (ammo != null)
             ammo.Reload();
 
+        // Reset Rig weights
         if (rHandAim != null)
             rHandAim.weight = 1;
 
         if (lHandIK != null)
             lHandIK.weight = 1;
 
+        // Back to default
         SwitchState(Default);
     }
 
     public void MagOut()
     {
+        // Play mag out sound
         if (audioSource != null && ammo != null && ammo.magOutSound != null)
             audioSource.PlayOneShot(ammo.magOutSound);
     }
 
     public void MagIn()
     {
+        // Play mag in sound
         if (audioSource != null && ammo != null && ammo.magInSound != null)
             audioSource.PlayOneShot(ammo.magInSound);
     }
 
     public void ReleaseSlide()
     {
+        // Play slide release sound
         if (audioSource != null && ammo != null && ammo.releaseSlideSound != null)
             audioSource.PlayOneShot(ammo.releaseSlideSound);
     }
 
+    // ✅ Safe check to avoid null crash in WeaponManager
     public bool IsReloading()
     {
         return currentState == Reload;
@@ -106,6 +105,7 @@ public class ActionStateManager : MonoBehaviour
             return;
         }
 
+        // Set current weapon refs
         currentWeapon = weapon.gameObject;
         audioSource = weapon.audioSource;
         ammo = weapon.ammo;

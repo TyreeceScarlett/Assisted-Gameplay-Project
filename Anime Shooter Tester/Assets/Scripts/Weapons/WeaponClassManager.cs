@@ -42,16 +42,15 @@ public class WeaponClassManager : MonoBehaviour
             if (currentWeaponIndex == weapons.Length - 1) currentWeaponIndex = 0;
             else currentWeaponIndex++;
         }
-        weapons[currentWeaponIndex].gameObject.SetActive(true);
     }
 
     public void WeaponPutAway()
     {
-        ChangeWeapon(actions.Default.scrollDirection);
+
     }
 
     public void WeaponPulledOut()
     {
-        actions.SwitchState(actions.Default);
+
     }
 }

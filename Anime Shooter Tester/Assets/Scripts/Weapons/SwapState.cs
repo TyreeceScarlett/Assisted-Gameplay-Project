@@ -1,24 +1,19 @@
-﻿public class SwapState : ActionBaseState
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SwapState : ActionBaseState
 {
-    public override void EnterState(ActionStateManager manager)
+    public override void EnterState(ActionStateManager actions)
     {
-        // Disable rig builder to prevent IK interference during swap
-        if (manager.rigBuilder != null)
-            manager.rigBuilder.enabled = false;
-
-        // ✅ Use the correct parameter to play the swap animation
-        manager.anim.SetTrigger("SwapWeapon");
+        actions.anim.SetTrigger("SwapWeapon");
+        actions.lHandIK.weight = 0;
+        actions.rHandAim.weight = 0;
     }
 
-    public override void UpdateState(ActionStateManager manager)
+    public override void UpdateState(ActionStateManager actions)
     {
-        // Optional: Add logic to transition back to Default state when animation ends
-    }
-
-    public override void ExitState(ActionStateManager manager)
-    {
-        // Re-enable rig builder after swap
-        if (manager.rigBuilder != null)
-            manager.rigBuilder.enabled = true;
+        // Return to default after swapping
+        actions.SwitchState(actions.Default);
     }
 }
