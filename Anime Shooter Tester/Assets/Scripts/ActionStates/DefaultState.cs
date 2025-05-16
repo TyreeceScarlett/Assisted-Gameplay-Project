@@ -14,7 +14,7 @@ public class DefaultState : ActionBaseState
     public override void UpdateState(ActionStateManager actions)
     {
         actions.rHandAim.weight = Mathf.Lerp(actions.rHandAim.weight, 1, 10 * Time.deltaTime);
-        actions.lHandIK.weight = Mathf.Lerp(actions.lHandIK.weight, 1, 10 * Time.deltaTime);
+        if (actions.lHandIK.weight==0) actions.lHandIK.weight = 1;
 
         if (Input.GetKeyDown(KeyCode.R) && CanReload(actions))
         {

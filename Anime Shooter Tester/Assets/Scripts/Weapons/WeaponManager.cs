@@ -102,7 +102,7 @@ public class WeaponManager : MonoBehaviour
         if (fireRateTimer < fireRate) return false;
         if (ammo == null || ammo.currentAmmo == 0) return false;
         if (actions != null && actions.IsReloading()) return false;
-        if (actions.currentState == actions.Swap) return false;
+        if(actions.currentState == actions.Swap) return false;
         if (IsPointerOverBlockedUI()) return false; // 🔹 Updated method
 
         if (semiAuto && Input.GetKeyDown(KeyCode.Mouse0)) return true;
