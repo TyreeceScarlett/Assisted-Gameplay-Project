@@ -5224,8 +5224,8 @@ MonoBehaviour:
   ammo: {fileID: 0}
   lightReturnSpeed: 20
   enemyKickbackForce: 100
-  leftHandTarget: {fileID: 0}
-  leftHandHint: {fileID: 0}
+  leftHandTarget: {fileID: 8047042859327983168}
+  leftHandHint: {fileID: 5350338851445562192}
   blockedCanvases:
   - {fileID: 0}
 --- !u!82 &9008946175146056184

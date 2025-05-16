@@ -5,7 +5,7 @@ using UnityEngine.Animations.Rigging;
 
 public class ActionStateManager : MonoBehaviour
 {
-    public ActionBaseState currentState;
+    [HideInInspector] public ActionBaseState currentState;
 
     // States
     public ReloadState Reload = new ReloadState();
@@ -23,6 +23,7 @@ public class ActionStateManager : MonoBehaviour
     public MultiAimConstraint rHandAim;
     public TwoBoneIKConstraint lHandIK;
 
+    //start is called before the first frame update
     void Start()
     {
         // Start in Default State
