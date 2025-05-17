@@ -60,12 +60,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\Utils\CachedEnum\CachedEnumType.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\Utils\TransformState.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\Utils\CachedEnum\CachedEnum.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\Utils\ForceTransformUniqueName.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\Utils\TransformState.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\Utils\EuclideanTransform.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\Utils\CachedEnum\CachedEnum.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\Utils\CachedEnum\CachedEnumType.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\Utils\UniGLTFLogger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\Utils\UniGLTF.Utils.asmdef" />
+    <None Include="Assets\UniGLTF\Runtime\Utils\UniGLTF.Utils.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

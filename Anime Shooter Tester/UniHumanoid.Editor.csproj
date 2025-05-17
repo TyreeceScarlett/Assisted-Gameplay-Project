@@ -60,14 +60,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniHumanoid\HumanoidEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniHumanoid\BoneMappingEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniHumanoid\HumanPoseTransferEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniHumanoid\MuscleInspectorEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniHumanoid\bvhAssetPostprocessor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniHumanoid\bvhAssetPostprocessor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniHumanoid\MuscleInspectorEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniHumanoid\HumanPoseTransferEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniHumanoid\BoneMappingEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniHumanoid\HumanoidEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniHumanoid\UniHumanoid.Editor.asmdef" />
+    <None Include="Assets\UniGLTF\Editor\UniHumanoid\UniHumanoid.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -975,6 +975,10 @@
     <ProjectReference Include="UniHumanoid.csproj">
       <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
       <Name>UniHumanoid</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniGLTF.Utils.csproj">
+      <Project>{939C4486-BC9F-CC9F-2A3B-E93FA61E6862}</Project>
+      <Name>UniGLTF.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

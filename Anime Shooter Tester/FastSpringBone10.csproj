@@ -60,27 +60,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\InputPorts\FastSpringBoneSpring.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableSpring.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\InputPorts\FastSpringBoneJoint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableCollider.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\System\PushTransformJob.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableJoint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableExternalData.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableSpan.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\System\FastSpringBoneScheduler.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableLogic.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\InputPorts\FastSpringBoneCollider.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableColliderType.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\InputPorts\FastSpringBoneBuffer.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\System\UpdateFastSpringBoneJob.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\System\FastSpringBoneService.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\System\CopyToNativeArrayTransformJob.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\Blittables\BlittableTransform.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\System\FastSpringBoneBufferCombiner.cs" />
+    <Compile Include="Assets\VRM10\Runtime\FastSpringBone\FastSpringBoneService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\FastSpringBone\FastSpringBone10.asmdef" />
+    <None Include="Assets\VRM10\Runtime\FastSpringBone\FastSpringBone10.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -961,6 +944,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SpringBoneJobs.csproj">
+      <Project>{76969F73-E305-9A28-49D5-1C246FA8AC08}</Project>
+      <Name>SpringBoneJobs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

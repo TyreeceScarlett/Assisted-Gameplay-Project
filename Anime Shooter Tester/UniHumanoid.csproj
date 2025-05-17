@@ -60,34 +60,39 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\BvhBone.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\BoneMapping.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\Extensions\EnumExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\MuscleDebug.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\SkeletonMeshUtility.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\IO\BvhImporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\Skeleton.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\Humanoid.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\HumanPoseClip.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\AvatarDescription.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\MuscleInspector.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\HumanoidLoader.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\PoseModifier\IPoseModifier.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\PoseModifier\HandPose.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\BoneGizmoDrawer.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\SkeletonEstimator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\HumanPoseTransfer.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\PoseModifier\HandRig.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\IO\BvhImporterContext.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\IO\Extensions\UnityExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\Format\Bvh.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\IO\BvhAnimationClip.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\IBone.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\AnimationClipUtility.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\IO\Extensions\BvhExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Format\BvhChannelCurve.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\MuscleInspector.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\BoneGizmoDrawer.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Format\BvhException.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\AvatarDescription.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Format\BvhChannel.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Skeleton.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Format\BvhEndSite.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\SkeletonEstimator.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\IO\Extensions\BvhExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\AnimationClipUtility.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Extensions\EnumExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Format\Bvh.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\HumanPoseTransfer.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\MuscleDebug.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\PoseModifier\IPoseModifier.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\IBone.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\HumanoidLoader.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\BoneMapping.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\IO\Extensions\UnityExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\PoseModifier\HandRig.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\IO\BvhImporter.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Humanoid.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\BvhBone.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\SkeletonMeshUtility.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\IO\BvhAnimationClip.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\IO\BvhImporterContext.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\HumanPoseClip.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\PoseModifier\HandPose.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniHumanoid\Format\BvhNode.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Runtime\UniHumanoid\UniHumanoid.asmdef" />
+    <None Include="Assets\UniGLTF\Runtime\UniHumanoid\UniHumanoid.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

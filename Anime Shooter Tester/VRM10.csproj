@@ -60,136 +60,177 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Material\URP\Import\UrpVrm10MaterialDescriptorGenerator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Migrator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\StringExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Vrm0Meta.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\IExpressionValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshVertexUtility.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Material\BuiltInRP\Export\Materials\BuiltInVrm10MToonMaterialExporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Vrm0XVersion.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Version\VRMSpecVersion.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeLookAt.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\Vrm10RotationConstraint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\Vrm10RollConstraint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeExpression.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\ExpressionPreset.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\ILookAtEyeDirectionProvider.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Texture\Vrm10TextureDescriptorGenerator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Texture\Vrm10MToonTextureImporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Constraints\Format.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\PrefabRelatedScriptableObject.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Material\BuiltInRP\Import\Materials\BuiltInVrm10MToonMaterialImporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Constraints\Serializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrmMeta.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\ArrayExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\MorphTargetBinding.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Version\VRMVersion.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\MigrationPbrMaterial.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\MaterialValueBindingMerger.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\Preview\PreviewMaterialUtil.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneColliderGroup.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Deserializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10ObjectMeta.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\MaterialUVBinding.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\Vrm10Runtime.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\FirstPerson\Vrm10FirstPersonLayerSettings.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10Exception.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshImporterShared.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10ImportData.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\SpringBone\Serializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Instance\Vrm10InstanceSpringBone.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10Object.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\ExpressionExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\MigrationLegacyUnlitMaterial.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MeshUpdater.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshWriter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\RotateY180.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\ModelExporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\InterleaveMeshVerticesJob.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Format.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\MaterialsMToon\Deserializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\ExpressionKey.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Version\VRMVersionPartial.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstraintAxes.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrmHumanoid.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\LookAt\LookAtEyeDirectionApplicableToBone.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10ObjectFirstPerson.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\TransformExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\MaterialsMToon\Serializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\Vrm10ConstraintUtil.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshVertex0.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\UnityExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneCollider.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Vrm\Serializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneJoint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10ObjectLookAt.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\Constraints\Deserializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\IExpressionValidatorFactory.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\VRM10Object\VRM10ObjectExpression.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\DefaultExpressionValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\ExpressionMerger.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Material\BuiltInRP\Import\BuiltInVrm10MaterialDescriptorGenerator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\Preview\PreviewSceneManager.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVector3.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationMaterials.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstRaintException.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshVertex2.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshVertex1.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Material\BuiltInRP\Export\BuiltInVrm10MaterialExporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\LookAtEyeDirection.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\UnityExtension.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Instance\Vrm10Instance.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\FirstPerson\RendererFirstPersonFlags.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\MigrationMaterialUtil.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\IVrm10Constraint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\LookAt\Matrix4x4Extensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshReader.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\IndexExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10Data.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\LookAt\CurveMapper.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\TR.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Rigs\Vrm0XCompatibleRig.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10ControlBone.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstraintSource.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationException.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\Vrm0XMToonTextureIndexMap.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\MorphTargetBindingMerger.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\MeshImporterDivided.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\Vrm10AimConstraint.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Rigs\ControlRigGenerationOption.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\MigrationData.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\VRM10Expression.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10Exporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\SpringBone\Deserializer.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrmSpringBone.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\EnumFlagsAttribute.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\Preview\PreviewMeshItem.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\CopyIndicesJob.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\MigrationUnlitTransparentZWriteMaterial.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Format\SpringBone\Format.g.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Scenes\Sample.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Constraint\ConstraintDestination.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrmExpression.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\MigrationMToonMaterial.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrm.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeControlRig.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\SpringBone\VRM10SpringUtility.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Model\ModelReader.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Material\Vrm10MaterialExportUtils.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\PreviewMaterialItem.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationCheck.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Rigs\XR_EXT_hand_tracking.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\IO\Vrm10Importer.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\LookAt\LookAtEyeDirectionApplicableToExpression.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\MigrationVrmFirstPersonAndLookAt.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Migration\Materials\Vrm0XMToonValue.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\ILookAtEyeDirectionApplicable.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\Components\Expression\MaterialColorBinding.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrm.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeExpression.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\BuiltInRP\Export\BuiltInVrm10MaterialExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Constraints\Deserializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\MeshUtility\Vrm10MeshUtility.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Animation\Deserializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrmHumanoid.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MaterialColorBinding.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10ControlBone.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\MaterialsMToon\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Animation\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\VRM10Expression.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneCollider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\LookAtEyeDirectionApplicableToBone.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MaterialValueBindingMerger.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\MeshReader.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\IVrm10Constraint.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationMaterials.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MeshUpdater.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Version\VRMSpecVersionPartial.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\Vrm0XMToonTextureIndexMap.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBone\Deserializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MorphTargetBindingMerger\RuntimeMorphTargetBinding.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\Vrm10Retarget.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBone\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrmFirstPersonAndLookAt.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10ImportData.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\ExpressionExtensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VRM10Object\VRM10ObjectExpression.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\MeshVertex0.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\DefaultExpressionValidator.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\TransformExtensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\FirstPerson\RendererFirstPersonFlags.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\VrmHumanoidBones\Vrm10HumanoidBoneAttribute.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\VrmHumanoidBones\Vrm10HumanoidBoneSpecification.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10GeometryBackup.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\IVrm10SpringBoneRuntime.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\URP\Import\Materials\UrpVrm10MToonMaterialImporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\MaterialsMToon\Format.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\MigrationPbrMaterial.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Constraints\Format.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrmMeta.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\ModelReader.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10FastSpringboneRuntimeStandaloneProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\VrmAnimationImporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\UnityExtensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\ConstraintSource.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\IndexExtensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\MeshVertex2.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\URP\Export\Materials\UrpVrm10MToonMaterialExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MorphTargetBindingMerger\MorphTargetBindingMerger.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Texture\Vrm10TextureDescriptorGenerator.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Constraints\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\FastSpringBoneBufferFactory.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVector3.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VrmAnimationInstance\IVrm10Animation.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Instance\Vrm10InstanceSpringBone.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationCheck.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VRM10Object\VRM10ObjectMeta.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\ExpressionMerger.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\ExpressionKey.cs" />
+    <Compile Include="Assets\VRM10\Runtime\EnumFlagsAttribute.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\Vrm10MaterialExportUtils.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneColliderGroup.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\ConstRaintException.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Animation\Format.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VRM10Object\VRM10Object.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\FirstPerson\Vrm10FirstPersonLayerSettings.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\MigrationData.cs" />
+    <Compile Include="Assets\VRM10\Runtime\StringExtensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\PreviewMaterialItem.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\IExpressionValidatorFactory.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\MeshWriter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\InterleaveMeshVerticesJob.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\ModelExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10FastSpringboneRuntimeStandalone.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\MigrationMaterialUtil.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\CopyIndicesJob.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\MigrationLegacyUnlitMaterial.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\Vrm10RuntimeControlRig.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\PrefabRelatedScriptableObject.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\ConstraintAxes.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\ArrayExtensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\Preview\PreviewMaterialUtil.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\IVrm10SpringBoneRuntimeProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\URP\Import\UrpVrm10MaterialDescriptorGenerator.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Migrator.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\BuiltInRP\Import\Materials\BuiltInVrm10MToonMaterialImporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\VrmAnimationData.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Vrm\Format.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\VrmAnimationUtil.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Vrm0XVersion.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10FastSpringboneRuntime.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\AnimatorPoseProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Instance\Vrm10Instance.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\BuiltInRP\Export\Materials\BuiltInVrm10MToonMaterialExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Deserializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Scenes\Sample.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBone\Format.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\ILookAtEyeDirectionApplicable.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VrmAnimationInstance\Vrm10TPose.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\ExpressionPreset.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\SpringBone\VRM10SpringUtility.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\MaterialsMToon\Deserializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10Exporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\InitialRotations\XR_FB_body_tracking.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\INormalizedPoseApplicable.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\ILookAtEyeDirectionProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\URP\Export\UrpVrm10MaterialExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrmSpringBone.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\TR.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10Importer.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\MeshVertex1.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\Vrm10ConstraintUtil.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VRM10Object\VRM10ObjectLookAt.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\ConstraintDestination.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VrmAnimationInstance\Vrm10PoseLoader.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\VrmHumanoidBones\Vrm10HumanoidBones.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\Vrm10MaterialExporterUtility.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Vrm\Serializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Format.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MorphTargetBindingMerger\MorphTargetIdentifier.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\Vrm10RotationConstraint.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\Preview\PreviewSceneManager.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\InitialRotationPoseProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MorphTargetBinding.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Texture\Vrm10MToonTextureImporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\VrmAnimationExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10Data.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\SpringBone\VRM10SpringBoneJoint.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationException.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10NopSpringboneRuntime.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\Vrm10AimConstraint.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\MigrationMToonMaterial.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\LookAtEyeDirection.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\Preview\PreviewMeshItem.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\CurveMapper.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\LookAtEyeDirectionApplicableToExpression.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\BoneInitialRotation.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\MigrationVrmExpression.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\RotateY180.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10Runtime.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Version\VRMSpecVersion.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Model\MeshVertexUtility.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\Matrix4x4Extensions.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\Vrm10MaterialDescriptorGeneratorUtility.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\ITPoseProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\Vrm0XMToonValue.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VRM10Object\VRM10ObjectFirstPerson.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Materials\MigrationUnlitTransparentZWriteMaterial.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10FastSpringboneRuntimeProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\IExpressionValidator.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Constraint\Vrm10RollConstraint.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\INormalizedPoseProvider.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\VrmAnimationInstance\Vrm10AnimationInstance.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\ControlRig\ControlRigGenerationOption.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Expression\MaterialUVBinding.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\UnityExtension.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\LookAt\LookAtInput.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Material\BuiltInRP\Import\BuiltInVrm10MaterialDescriptorGenerator.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10RuntimeLookAt.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Migration\Vrm0Meta.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Format\Vrm\Deserializer.g.cs" />
+    <Compile Include="Assets\VRM10\Runtime\IO\Vrm10Exception.cs" />
+    <Compile Include="Assets\VRM10\Runtime\ControlRig\InitialRotations\XR_EXT_hand_tracking.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Runtime\VRM10.asmdef" />
+    <None Include="Assets\VRM10\Runtime\VRM10.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1060,6 +1101,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
       <Private>False</Private>
@@ -1074,25 +1119,13 @@
       <Project>{ED0F47AE-26C5-3108-FCB6-8DF6098EB33F}</Project>
       <Name>VrmLib</Name>
     </ProjectReference>
-    <ProjectReference Include="MToon.csproj">
-      <Project>{3F4ABFA8-37DF-1008-FC7D-3292A4CCB108}</Project>
-      <Name>MToon</Name>
-    </ProjectReference>
     <ProjectReference Include="UniGLTF.csproj">
       <Project>{048850FC-4EB9-5417-BCB2-A8C27D95C56D}</Project>
       <Name>UniGLTF</Name>
     </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Runtime.csproj">
-      <Project>{13B34DC3-685C-CBF2-D1C5-EC6B9974310B}</Project>
-      <Name>VRMShaders.GLTF.IO.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="VRMShaders.VRM10.Format.Runtime.csproj">
-      <Project>{617F6038-4466-6654-1A4E-6212A31B08FC}</Project>
-      <Name>VRMShaders.VRM10.Format.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="VRMShaders.VRM10.MToon10.Runtime.csproj">
-      <Project>{9A79076E-A39A-0516-382F-243F5F89C8EF}</Project>
-      <Name>VRMShaders.VRM10.MToon10.Runtime</Name>
+    <ProjectReference Include="VRM10.MToon10.csproj">
+      <Project>{F369992A-5DD3-ACC4-50C7-87B7F71FDB88}</Project>
+      <Name>VRM10.MToon10</Name>
     </ProjectReference>
     <ProjectReference Include="UniHumanoid.csproj">
       <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
@@ -1105,6 +1138,10 @@
     <ProjectReference Include="UniGLTF.Utils.csproj">
       <Project>{939C4486-BC9F-CC9F-2A3B-E93FA61E6862}</Project>
       <Name>UniGLTF.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="SpringBoneJobs.csproj">
+      <Project>{76969F73-E305-9A28-49D5-1C246FA8AC08}</Project>
+      <Name>SpringBoneJobs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

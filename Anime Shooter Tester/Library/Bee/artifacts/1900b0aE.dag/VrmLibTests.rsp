@@ -339,8 +339,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VrmLib.ref.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Plugins/UniVRM 1 v0.108.0/VRM10/vrmlib/Tests/HumanoidTests.cs"
-"Assets/Plugins/UniVRM 1 v0.108.0/VRM10/vrmlib/Tests/ModelTests.cs"
+"Assets/VRM10/vrmlib/Tests/HumanoidTests.cs"
+"Assets/VRM10/vrmlib/Tests/ModelTests.cs"
 -langversion:9.0
 /deterministic
 /optimize+

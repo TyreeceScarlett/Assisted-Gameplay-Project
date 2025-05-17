@@ -60,97 +60,102 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\ExportDialogBase.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\Messages.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\DeserializerGenerator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Animation\AnimationCurveData.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Generator\Generator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\GltfScriptedImporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\TopMenu.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Animation\AnimationExporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\IUnitySettingsValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\DictionaryJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\PrimitiveJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\GlbScriptedImporterEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Gizmo\BoneInfo.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Generator\DeserializerWriter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\ZipArchivedGltfScriptedImporterEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\EnumSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\MeshProcessDialog.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapEditorMaterial.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Animation\EditorAnimationExporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\MeshExportValidatorEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\ObjectSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\JsonSchemaBaseExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\AssetsPath.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\UnityColorSpaceSettingsValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Animation\AnimationKeyframeData.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\ObjectJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\ScriptedImporterAxes.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Animation\AnimationValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\StringJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\TopMenuImplementation.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\ListSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\MaterialValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\TabBar.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\SaveFileDialog.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\GltfScriptedImporterBase.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\CollectionSerializationBase.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\StringExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\TextureExtractor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\ArrayJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\ArraySerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\SerializerGenerator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\PrimitiveSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\TabMeshIntegrator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\ExtensionJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\ExtensionSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\InternalTPose.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\M17N.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\UniGLTFPreference.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\MeshProcessDialogEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\JsonSchemaType.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Validation\HierarchyValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\TabBoneMeshRemover.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\ZipArchivedGltfScriptedImporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Generator\FormatWriter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\GameObjectType.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\JsonSchemaBase.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\MeshExportValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Gizmo\BoneInfoDrawer.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\FieldSerializationInfo.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\JsonSchemaParser.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\GlbScriptedImporter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\UnityEditorSettingsValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\Generator\SerializerWriter.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\TabMeshSeparator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\EnumJsonSchema.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\GltfScriptedImporterEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\MeshProcessDialogTabs.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapEditorAnimation.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Validation\HumanoidValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\IndexTargets.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Validation\ValidationExtensions.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\EnabledScope.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Gizmo\BoneSelector.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\NullableSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\GltfExportWindow.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\JsonSchemaSource.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\StringKeyDictionarySerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\EditorProgress.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ExportDialog\ExportDialogState.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\EditorSettingsValidator\UnityEditorSettingsValidatorWindow.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\JsonSchema\Schemas\TraverseContext.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Validation\NameValidator.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\MeshUtility\MeshProcessingMessages.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapEditorBase.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\SerializedPropertyEditor.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Serialization\IValueSerialization.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapScriptedImporterEditorBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\IO\Texture\EditorTextureUtility.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\IndexTargets.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\GltfScriptedImporter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Validation\HumanoidValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\FieldSerializationInfo.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\NullableSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\JsonSchemaType.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\ExportDialogState.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Gizmo\BoneSelector.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\EnabledScope.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\Splitter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\JsonSchemaSource.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapScriptedImporterEditorBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\StringExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\EditorSettingsValidator\Messages.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\UniGLTFPreference.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\ObjectSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Validation\HierarchyValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\MeshExportValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\ScriptedImporterAxes.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\TopMenu.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\SerializedPropertyEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\IO\Texture\Importer\TextureImporterConfigurator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\ListSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\GltfScriptedImporterEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\DeserializerGenerator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\TraverseContext.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\IO\Texture\Exporter\EditorTextureSerializer.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\ExportDialogBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Animation\AnimationKeyframeData.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\EnumSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\DictionaryJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Validation\NameValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Generator\Generator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\ExtensionSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\EnumJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\MeshUtilityDialog.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\JsonSchemaBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\ZipArchivedGltfScriptedImporterEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\InternalTPose.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\GlbScriptedImporterEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\SerializerGenerator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\GlbScriptedImporter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\StringKeyDictionarySerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\IValueSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\ObjectJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\EditorSettingsValidator\UnityColorSpaceSettingsValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\MeshIntegrationTab.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Gizmo\BoneInfoDrawer.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\GltfScriptedImporterBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapEditorBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\TabMeshSeparator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\TestRunner\TestRunner.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\GltfExportWindow.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\PrimitiveJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\CollectionSerializationBase.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Animation\EditorAnimationExporter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\ArrayJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\EditorProgress.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\MaterialValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\PrimitiveSerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Gizmo\BoneInfo.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Generator\SerializerWriter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\GltfImportMenu.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\EditorSettingsValidator\IUnitySettingsValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\TabBoneMeshRemover.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\EditorSettingsValidator\UnityEditorSettingsValidatorWindow.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Generator\FormatWriter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\M17N.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\JsonSchemaBaseExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Generator\DeserializerWriter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\EditorSettingsValidator\UnityEditorSettingsValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\StringJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGltfEditorDialog.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Serialization\ArraySerialization.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\TabBar.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\ImporterRenderPipelineTypes.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapEditorMaterial.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Animation\AnimationExporter.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\Validation\ValidationExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\GameObjectType.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\PrefabContext.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ExportDialog\MeshExportValidatorEditor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Animation\AnimationValidator.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\Schemas\ExtensionJsonSchema.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\MeshUtilityMessages.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\RemapEditorAnimation.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\MeshUtility\UndoContext.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\JsonSchema\JsonSchemaParser.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\Animation\AnimationCurveData.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\TextureExtractor.cs" />
+    <Compile Include="Assets\UniGLTF\Editor\UniGLTF\ScriptedImporter\ZipArchivedGltfScriptedImporter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF\Gizmo\Models\OverlayGizmo.shader" />
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\UniGLTF\Editor\UniGLTF.Editor.asmdef" />
+    <None Include="Assets\UniGLTF\Editor\UniGLTF\Gizmo\Models\OverlayGizmo.shader" />
+    <None Include="Assets\UniGLTF\Editor\UniGLTF.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1059,17 +1064,13 @@
       <Project>{048850FC-4EB9-5417-BCB2-A8C27D95C56D}</Project>
       <Name>UniGLTF</Name>
     </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Runtime.csproj">
-      <Project>{13B34DC3-685C-CBF2-D1C5-EC6B9974310B}</Project>
-      <Name>VRMShaders.GLTF.IO.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Editor.csproj">
-      <Project>{6053D892-C420-32C4-4C4A-600780175AD4}</Project>
-      <Name>VRMShaders.GLTF.IO.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="UniGLTF.Utils.csproj">
       <Project>{939C4486-BC9F-CC9F-2A3B-E93FA61E6862}</Project>
       <Name>UniGLTF.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniHumanoid.csproj">
+      <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
+      <Name>UniHumanoid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

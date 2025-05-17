@@ -91,11 +91,13 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\SmartAimAssistUI.cs" />
     <Compile Include="Assets\EnemyChase.cs" />
+    <Compile Include="Assets\1. Spit Screen Testing location\New Script location\Vroid Texture\MultiVRoidMToonColorChanger.cs" />
     <Compile Include="Assets\Enemy Character\DamagePopup.cs" />
     <Compile Include="Assets\DynamicCrosshair.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponClassManager.cs" />
     <Compile Include="Assets\Enemy Character\AiStateManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\1. Spit Screen Testing location\New Script location\PlayerMovement\AnimePlayerController.cs" />
     <Compile Include="Assets\Scripts\AimStates\AimBaseState.cs" />
     <Compile Include="Assets\ControlsHintToggle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
@@ -140,10 +142,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\Player States\RunState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\1. Spit Screen Testing location\New Script location\PlayerMovement\AnimeCameraFollow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Player States\WalkState.cs" />
     <Compile Include="Assets\Scripts\Player States\MovementStateManager.cs" />
+    <Compile Include="Assets\1. Spit Screen Testing location\New Script location\PlayerMovement\SplitScreenManager.cs" />
     <Compile Include="Assets\A Other Animation Rigging\LookAtObjectAnimation.cs" />
     <Compile Include="Assets\CrosshairBump.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
@@ -151,32 +155,57 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_attribute.hlsl" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_geometry_vertex.hlsl" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_geometry_uv.hlsl" />
+    <None Include="Assets\UniGLTF\Resources\UniGLTF\NormalMapExporter.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_depthnormals_fragment.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_lighting_mtoon.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_shadowcaster_vertex.hlsl" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_forward_vertex.hlsl" />
+    <None Include="Assets\UniGLTF\Resources\UniGLTF\StandardMapExporter.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_depthnormals_vertex.hlsl" />
     <None Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Magic Effects\Shaders\Ice.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_urp.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_forward_fragment.hlsl" />
     <None Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Shaders\Respawn.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_geometry_alpha.hlsl" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_input.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_lighting_unity.hlsl" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_depthonly_fragment.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_depthonly_vertex.hlsl" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_utility.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\UniGLTF\Resources\UniGLTF\StandardMapImporter.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_render_pipeline.hlsl" />
+    <None Include="Assets\UniGLTF\UniUnlit\Shaders\UniUnlit.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_geometry_normal.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_shadowcaster_fragment.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Shaders\Dissolve.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_define.hlsl" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -1230,21 +1259,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UniGLTF.csproj">
-      <Project>{048850FC-4EB9-5417-BCB2-A8C27D95C56D}</Project>
-      <Name>UniGLTF</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniHumanoid.csproj">
-      <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
-      <Name>UniHumanoid</Name>
-    </ProjectReference>
     <ProjectReference Include="VRM10.csproj">
       <Project>{6FF2CBEE-60F3-8945-5048-81EF5B892C20}</Project>
       <Name>VRM10</Name>
     </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Runtime.csproj">
-      <Project>{13B34DC3-685C-CBF2-D1C5-EC6B9974310B}</Project>
-      <Name>VRMShaders.GLTF.IO.Runtime</Name>
+    <ProjectReference Include="UniGLTF.csproj">
+      <Project>{048850FC-4EB9-5417-BCB2-A8C27D95C56D}</Project>
+      <Name>UniGLTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="SpringBoneJobs.csproj">
+      <Project>{76969F73-E305-9A28-49D5-1C246FA8AC08}</Project>
+      <Name>SpringBoneJobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniHumanoid.csproj">
+      <Project>{621B9D11-DD3D-0FD8-14E6-5BF85953B7F9}</Project>
+      <Name>UniHumanoid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

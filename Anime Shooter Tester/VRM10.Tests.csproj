@@ -60,16 +60,19 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.34f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\LoadTests.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\SerializationTests.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\MaterialImportTests.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\ExpressionTests.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\TestAsset.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\ApiSampleTests.cs" />
-    <Compile Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\MigrationTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\MigrationTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\ApiSampleTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\SerializationTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\ExpressionTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\Vrm10ApiTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\TestAsset.cs" />
+    <Compile Include="Assets\VRM10\Tests\MaterialImportTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\TestVrm10.cs" />
+    <Compile Include="Assets\VRM10\Tests\LoadTests.cs" />
+    <Compile Include="Assets\VRM10\Tests\ExpressionKeyTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniVRM 1 v0.108.0\VRM10\Tests\VRM10.Tests.asmdef" />
+    <None Include="Assets\VRM10\Tests\VRM10.Tests.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -950,13 +953,13 @@
       <Project>{048850FC-4EB9-5417-BCB2-A8C27D95C56D}</Project>
       <Name>UniGLTF</Name>
     </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Runtime.csproj">
-      <Project>{13B34DC3-685C-CBF2-D1C5-EC6B9974310B}</Project>
-      <Name>VRMShaders.GLTF.IO.Runtime</Name>
+    <ProjectReference Include="UniGLTF.Editor.csproj">
+      <Project>{E5899015-AF6D-F740-2779-71C1197C57C0}</Project>
+      <Name>UniGLTF.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="VRMShaders.GLTF.IO.Editor.csproj">
-      <Project>{6053D892-C420-32C4-4C4A-600780175AD4}</Project>
-      <Name>VRMShaders.GLTF.IO.Editor</Name>
+    <ProjectReference Include="UniGLTF.Tests.csproj">
+      <Project>{15CA87D4-8E8A-E8C0-52F2-139396C2BD97}</Project>
+      <Name>UniGLTF.Tests</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
