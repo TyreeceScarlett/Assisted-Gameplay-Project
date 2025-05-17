@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/1. Spit Screen Testing location/Anime Split Screen.unity
+- path: Assets/AnimeShooterScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

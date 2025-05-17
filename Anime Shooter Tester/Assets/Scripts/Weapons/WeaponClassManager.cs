@@ -46,11 +46,11 @@ public class WeaponClassManager : MonoBehaviour
 
     public void WeaponPutAway()
     {
-
+        ChangeWeapon(actions.Default.scrollDirection);
     }
 
     public void WeaponPulledOut()
     {
-
+        actions.SwitchState(actions.Default);
     }
 }

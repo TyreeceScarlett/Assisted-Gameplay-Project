@@ -155,8 +155,8 @@
     <Compile Include="Assets\VRM10\Runtime\Migration\Vrm0XVersion.cs" />
     <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Runtime\Vrm10FastSpringboneRuntime.cs" />
     <Compile Include="Assets\VRM10\Runtime\ControlRig\AnimatorPoseProvider.cs" />
-    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Instance\Vrm10Instance.cs" />
     <Compile Include="Assets\VRM10\Runtime\IO\Material\BuiltInRP\Export\Materials\BuiltInVrm10MToonMaterialExporter.cs" />
+    <Compile Include="Assets\VRM10\Runtime\Components\Vrm10Instance\Vrm10Instance.cs" />
     <Compile Include="Assets\VRM10\Runtime\Format\SpringBoneExtendedCollider\Deserializer.g.cs" />
     <Compile Include="Assets\VRM10\Runtime\Scenes\Sample.cs" />
     <Compile Include="Assets\VRM10\Runtime\Format\SpringBone\Format.g.cs" />

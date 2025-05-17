@@ -89,8 +89,8 @@
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\GltfUtility.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniJSON\Json\JsonParser.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\TextureIO\Import\KtxTextureDeserializer.cs" />
-    <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\UniGLTFVersion.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\TextureIO\Export\TextureExportParam.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\UniGLTFVersion.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\Export\MaterialExporterUtility.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\MeshUtility\MeshIntegrator.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\glbImporter.cs" />
@@ -183,8 +183,8 @@
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\ArrayPin.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\ProgressInfo.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\Format\ExtensionsAndExtras\EmissiveMultiplier\Serializer.g.cs" />
-    <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\AwaitCaller\RuntimeOnlyNoThreadAwaitCaller.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\MaterialIO\URP\ShaderUtil\Lit\UrpLitContext.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\AwaitCaller\RuntimeOnlyNoThreadAwaitCaller.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\MeshIO\MeshData.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\Format\glTFBuffer.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniJSON\ConcreteCast.g.cs" />
@@ -278,8 +278,8 @@
     <Compile Include="Assets\UniGLTF\Runtime\Extensions\NumericsExtensions.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\Format\ExtensionsAndExtras\KHR_materials_emissive_strength.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\Extensions\StringExtensions.cs" />
-    <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\MeshIO\SkinningInfo.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniJSON\Extensions\DateTimeOffsetExtensions.cs" />
+    <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\MeshIO\SkinningInfo.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\Format\ExtensionsAndExtras\EmissiveMultiplier\Format.g.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\UniGLTFException.cs" />
     <Compile Include="Assets\UniGLTF\Runtime\UniGLTF\IO\AnimationIO\Import\AnimationImporterUtil.cs" />

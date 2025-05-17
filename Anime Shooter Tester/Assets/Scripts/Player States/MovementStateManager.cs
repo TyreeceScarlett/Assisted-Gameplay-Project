@@ -20,7 +20,7 @@ public class MovementStateManager : MonoBehaviour
     public RunState run = new RunState();
 
     [Header("Movement and Gravity")]
-    [SerializeField] float gravity = -9.81f;
+    [SerializeField] protected float gravity = -9.81f;  // Changed to protected for subclass access
     [SerializeField] float groundYOffset = 0.2f;
     [SerializeField] LayerMask groundMask;
     [HideInInspector] public Vector3 dir;
@@ -29,16 +29,19 @@ public class MovementStateManager : MonoBehaviour
 
     [Header("References")]
     [HideInInspector] public Animator anim;
-    CharacterController controller;
+    protected CharacterController controller;  // protected for inheritance
 
     [Header("State Info")]
     public bool isCrouching = false;
     public float moveSpeed = 3f;
     public float VInput => vInput;
-    public bool IsRunning { get; private set; }
+
+    // setter changed to protected so subclasses can set it
+    public bool IsRunning { get; protected set; }
     public bool IsMoving => dir.magnitude > 0.1f;
 
-    private float hzInput, vInput;
+    // Changed from private to protected for subclass access
+    protected float hzInput, vInput;
 
     public bool IsGrounded
     {
@@ -72,7 +75,7 @@ public class MovementStateManager : MonoBehaviour
         HandleStateSwitching();
     }
 
-    void GetInputs()
+    protected virtual void GetInputs()
     {
         hzInput = Input.GetAxis("Horizontal");
         vInput = Input.GetAxis("Vertical");
@@ -112,7 +115,7 @@ public class MovementStateManager : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void HandleStateSwitching()
+    protected void HandleStateSwitching()
     {
         if (isCrouching) return;
 
