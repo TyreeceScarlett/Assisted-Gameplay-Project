@@ -1294,7 +1294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &242719523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2276,7 +2276,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Aim Assist Pannel
+  m_Text: 'Aim Assist Panel
 
 
 '
@@ -8192,7 +8192,12 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'J_Bip_R_LowerArm'\n\tTransform 'J_Bip_C_Neck'\n\tTransform
+    'J_Bip_L_UpperArm'\n\tTransform 'J_Bip_R_Hand'\n\tTransform 'J_Bip_C_Head'\n\tTransform
+    'J_Bip_C_Spine'\n\tTransform 'J_Bip_C_Hips'\n\tTransform 'J_Bip_L_Hand'\n\tTransform
+    'J_Bip_L_LowerArm'\n\tTransform 'J_Bip_R_LowerArm'\n\tand more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -10821,8 +10826,8 @@ MonoBehaviour:
   ammo: {fileID: 0}
   lightReturnSpeed: 20
   enemyKickbackForce: 100
-  leftHandTarget: {fileID: 0}
-  leftHandHint: {fileID: 0}
+  leftHandTarget: {fileID: 6482770091373432233}
+  leftHandHint: {fileID: 8942885538111936697}
   blockedCanvases:
   - {fileID: 1493816831}
   - {fileID: 242719523}

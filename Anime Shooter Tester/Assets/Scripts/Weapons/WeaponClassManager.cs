@@ -29,6 +29,7 @@ public class WeaponClassManager : MonoBehaviour
         leftHandIK.data.hint = weapon.leftHandHint;
         actions.SetWeapon(weapon);
     }
+
     public void ChangeWeapon(float direction)
     {
         weapons[currentWeaponIndex].gameObject.SetActive(false);
@@ -42,6 +43,7 @@ public class WeaponClassManager : MonoBehaviour
             if (currentWeaponIndex == weapons.Length - 1) currentWeaponIndex = 0;
             else currentWeaponIndex++;
         }
+        weapons[currentWeaponIndex].gameObject.SetActive(true);
     }
 
     public void WeaponPutAway()
