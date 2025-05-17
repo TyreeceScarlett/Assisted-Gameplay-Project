@@ -144,6 +144,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Player States\WalkState.cs" />
     <Compile Include="Assets\Scripts\Player States\MovementStateManager.cs" />
+    <Compile Include="Assets\A Other Animation Rigging\LookAtObjectAnimation.cs" />
     <Compile Include="Assets\CrosshairBump.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>

@@ -37,7 +37,7 @@ public class WeaponManager : MonoBehaviour
 
     [Header("UI Blocking")]
     [Tooltip("Add any canvases that should block firing when the mouse is over them")]
-    public List<Transform> blockedCanvases = new List<Transform>(); // 🔹 Drag multiple canvases here
+    public List<Transform> blockedCanvases = new List<Transform>();
 
     void Start()
     {
@@ -102,8 +102,8 @@ public class WeaponManager : MonoBehaviour
         if (fireRateTimer < fireRate) return false;
         if (ammo == null || ammo.currentAmmo == 0) return false;
         if (actions != null && actions.IsReloading()) return false;
-        if(actions.currentState == actions.Swap) return false;
-        if (IsPointerOverBlockedUI()) return false; // 🔹 Updated method
+        if (actions.currentState == actions.Swap) return false;
+        if (IsPointerOverBlockedUI()) return false;
 
         if (semiAuto && Input.GetKeyDown(KeyCode.Mouse0)) return true;
         if (!semiAuto && Input.GetKey(KeyCode.Mouse0)) return true;
@@ -167,12 +167,21 @@ public class WeaponManager : MonoBehaviour
 
     bool IsPointerOverBlockedUI()
     {
-        if (blockedCanvases == null || blockedCanvases.Count == 0)
+        if (EventSystem.current == null || blockedCanvases == null || blockedCanvases.Count == 0)
             return false;
+
+        Vector3 mousePos = Input.mousePosition;
+
+        if (float.IsNaN(mousePos.x) || float.IsNaN(mousePos.y) ||
+            mousePos.x < 0 || mousePos.y < 0 ||
+            mousePos.x > Screen.width || mousePos.y > Screen.height)
+        {
+            return false;
+        }
 
         PointerEventData pointerData = new PointerEventData(EventSystem.current)
         {
-            position = Input.mousePosition
+            position = mousePos
         };
 
         List<RaycastResult> results = new List<RaycastResult>();

@@ -12,20 +12,38 @@ public class WeaponAmmo : MonoBehaviour
     public AudioClip magOutSound;
     public AudioClip releaseSlideSound;
 
-    // Start is called before the first frame update
+    private bool infiniteAmmo = false;
+    private int defaultExtraAmmo = 300;
+
     void Start()
     {
         currentAmmo = clipSize;
+        extraAmmo = defaultExtraAmmo;
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) Reload();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            infiniteAmmo = !infiniteAmmo;
+            extraAmmo = infiniteAmmo ? int.MaxValue : defaultExtraAmmo;
+            Debug.Log("Infinite Ammo: " + infiniteAmmo);
+        }
     }
 
     public void Reload()
     {
-        if (extraAmmo >= clipSize)
+        if (infiniteAmmo)
+        {
+            int ammoToReload = clipSize - currentAmmo;
+            currentAmmo += ammoToReload;
+        }
+        else if (extraAmmo >= clipSize)
         {
             int ammoToReload = clipSize - currentAmmo;
             extraAmmo -= ammoToReload;

@@ -61,10 +61,10 @@ public class ActionStateManager : MonoBehaviour
 
         // Reset Rig weights
         if (rHandAim != null)
-            rHandAim.weight = 1;
+            rHandAim.weight = 0;
 
         if (lHandIK != null)
-            lHandIK.weight = 1;
+            lHandIK.weight = 0;
 
         // Back to default
         SwitchState(Default);

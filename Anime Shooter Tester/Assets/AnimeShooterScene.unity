@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!195 &154118407
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6226,7 +6226,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "[Controls]\r\nWASD - Move  \r\nShift - Sprint  \r\nRight Click - Aim 
     \r\nLeft Click - Shoot  \r\n\r\n[F4] - Hide This Controls Hint Menu  \r\n[F5]
-    - Show/Hide Aim Assist Menu  \r\n[F6] - Toggle Enemy Debug"
+    - Show/Hide Aim Assist Menu  \r\n[F6] - Toggle Enemy Debug\n[F12] - Max Intiger
+    of ammo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11954,7 +11955,7 @@ RectTransform:
   m_Father: {fileID: 1461386821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17916,7 +17917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clipSize: 30
-  extraAmmo: 120
+  extraAmmo: 300
   currentAmmo: 0
   magInSound: {fileID: 8300000, guid: dbc755e072d02bd41a520d26ded701d0, type: 3}
   magOutSound: {fileID: 8300000, guid: 4442512457e037542982b7c4c89d827b, type: 3}
