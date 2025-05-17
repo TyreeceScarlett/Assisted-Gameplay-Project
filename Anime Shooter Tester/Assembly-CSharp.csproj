@@ -99,6 +99,7 @@
     <Compile Include="Assets\Enemy Character\AiStateManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\AimStates\AimBaseState.cs" />
+    <Compile Include="Assets\A Render Texture Minimap\MinimapCoordinatesDisplay.cs" />
     <Compile Include="Assets\ControlsHintToggle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\GameManager.cs" />
