@@ -1,8 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using TMPro; // ✅ Add this for TMP_Text support
 
 [RequireComponent(typeof(AudioSource))]
 public class EnemyHealth : MonoBehaviour
@@ -14,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("UI")]
     public Slider healthBarSlider;
+    public TMP_Text healthText; // ✅ Use TMP_Text instead of Text
 
     [Header("Effects")]
     public AudioClip deathSound;
@@ -51,6 +53,11 @@ public class EnemyHealth : MonoBehaviour
             healthBarSlider.maxValue = maxHealth;
             healthBarSlider.value = health;
         }
+
+        if (healthText != null)
+        {
+            healthText.text = $"{health} / {maxHealth}";
+        }
     }
 
     public void TakeDamage(float damage)
@@ -63,6 +70,11 @@ public class EnemyHealth : MonoBehaviour
         if (healthBarSlider != null)
         {
             healthBarSlider.value = health;
+        }
+
+        if (healthText != null)
+        {
+            healthText.text = $"{health} / {maxHealth}";
         }
 
         StartCoroutine(FlashWhite());
@@ -84,10 +96,14 @@ public class EnemyHealth : MonoBehaviour
         if (navMeshAgent != null) navMeshAgent.enabled = false;
         if (aiAgent != null) aiAgent.enabled = false;
 
-        // Hide health bar immediately
         if (healthBarSlider != null)
         {
             healthBarSlider.gameObject.SetActive(false);
+        }
+
+        if (healthText != null)
+        {
+            healthText.gameObject.SetActive(false);
         }
 
         if (deathSound != null && audioSource != null)
@@ -102,7 +118,6 @@ public class EnemyHealth : MonoBehaviour
 
         Debug.Log("Enemy has died.");
 
-        // Disappear after 3 seconds (1s wait + 2s fade)
         StartCoroutine(FadeSinkAndDestroy(1f, 2f));
     }
 

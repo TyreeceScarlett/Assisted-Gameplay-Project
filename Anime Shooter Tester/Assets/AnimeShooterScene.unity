@@ -10734,7 +10734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da7349e9370af041a8037d6efc33fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7010676505249769449, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
+  enemyPrefab: {fileID: 1844726916397675298, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
   inputX: {fileID: 883750097}
   inputZ: {fileID: 2134217918}
   enemySpawnScrollView: {fileID: 512142677}
@@ -23007,6 +23007,71 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &8042109664723255299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1576564839985679619, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 1844726916397675298, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_Name
+      value: Idle and Walking  Enemy (once the player is detected)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076062664079161112, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814521612043239205, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
 --- !u!1 &8055476477101735042
 GameObject:
   m_ObjectHideFlags: 0
@@ -23254,71 +23319,6 @@ MonoBehaviour:
   m_gravityDir: {x: -0, y: -1, z: 0}
   m_dragForce: 0.4
   m_jointRadius: 0.020039763
---- !u!1001 &8403124959776576844
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1273642678003941542, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 963194227}
-    - target: {fileID: 2750884396688303399, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548203152164410729, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7010676505249769449, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
-      propertyPath: m_Name
-      value: Idle and Walking  Enemy (once the player is detected)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
 --- !u!1 &8431155772317309010
 GameObject:
   m_ObjectHideFlags: 0
@@ -23532,7 +23532,7 @@ SceneRoots:
   - {fileID: 1743615270}
   - {fileID: 1737732048}
   - {fileID: 1403590548}
-  - {fileID: 8403124959776576844}
+  - {fileID: 8042109664723255299}
   - {fileID: 946473627}
   - {fileID: 545074477}
   - {fileID: 1062054952}
