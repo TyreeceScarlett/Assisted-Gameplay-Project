@@ -30,7 +30,6 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
-        // Component references
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         audioSource = GetComponent<AudioSource>();
@@ -38,16 +37,13 @@ public class EnemyHealth : MonoBehaviour
         aiAgent = GetComponent<AiAgent>();
         renderers = GetComponentsInChildren<Renderer>();
 
-        // Setup enemy parent for destruction
         enemyParent = transform.root;
 
-        // Store original color
         if (renderers.Length > 0)
         {
             originalColor = renderers[0].material.color;
         }
 
-        // Initialize health
         health = maxHealth;
 
         if (healthBarSlider != null)
@@ -84,18 +80,21 @@ public class EnemyHealth : MonoBehaviour
 
     private void EnemyDeath()
     {
-        // Disable AI-related components
         if (animator != null) animator.enabled = false;
         if (navMeshAgent != null) navMeshAgent.enabled = false;
         if (aiAgent != null) aiAgent.enabled = false;
 
-        // Play death sound
+        // Hide health bar immediately
+        if (healthBarSlider != null)
+        {
+            healthBarSlider.gameObject.SetActive(false);
+        }
+
         if (deathSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(deathSound);
         }
 
-        // Activate ragdoll
         if (ragdollManager != null)
         {
             ragdollManager.TriggerRagdoll();
@@ -103,8 +102,8 @@ public class EnemyHealth : MonoBehaviour
 
         Debug.Log("Enemy has died.");
 
-        // Begin fade and sink
-        StartCoroutine(FadeSinkAndDestroy(20f, 2f));
+        // Disappear after 3 seconds (1s wait + 2s fade)
+        StartCoroutine(FadeSinkAndDestroy(1f, 2f));
     }
 
     IEnumerator FlashWhite()

@@ -23312,7 +23312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010676505249769449, guid: d4a28160474d7ad4f8f151479a9ab5ef, type: 3}
       propertyPath: m_Name
-      value: Idle and Walking Enemy
+      value: Idle and Walking  Enemy (once the player is detected)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
