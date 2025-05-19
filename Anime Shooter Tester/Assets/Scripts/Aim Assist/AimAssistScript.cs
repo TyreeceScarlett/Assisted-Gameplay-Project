@@ -87,7 +87,6 @@ public class SmartAimAssist : MonoBehaviour
             UnlockTarget();
             lockoutTimer = lockoutDuration;
 
-            // Ensure cursor stays visible and unlocked when pressing middle mouse button
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
@@ -112,6 +111,10 @@ public class SmartAimAssist : MonoBehaviour
         {
             if (target == null) continue;
 
+            // 🛑 Skip dead enemies using GetComponentInParent
+            EnemyHealth enemyHealth = target.GetComponentInParent<EnemyHealth>();
+            if (enemyHealth != null && enemyHealth.isDead) continue;
+
             Vector3 targetCenter = GetTargetCenter(target);
             float distance = Vector3.Distance(cameraFollowPos.position, targetCenter);
 
@@ -122,7 +125,7 @@ public class SmartAimAssist : MonoBehaviour
 
             if (Physics.Linecast(cameraFollowPos.position, targetCenter, out RaycastHit hit))
             {
-                if (hit.transform != target) continue;
+                if (hit.transform != target && hit.transform.root != target.root) continue;
             }
 
             Vector3 screenPoint = cam.WorldToScreenPoint(targetCenter);
@@ -205,7 +208,6 @@ public class SmartAimAssist : MonoBehaviour
         }
     }
 
-    // Optional: Expose for runtime UI control
     public void SetLockoutDuration(float duration)
     {
         lockoutDuration = duration;
