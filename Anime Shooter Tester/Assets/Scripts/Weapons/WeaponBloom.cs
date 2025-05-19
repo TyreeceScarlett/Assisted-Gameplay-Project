@@ -21,20 +21,23 @@ public class WeaponBloom : MonoBehaviour
         aiming = GetComponentInParent<AimStateManager>();
     }
 
-    public Vector3 BloomAngle(Transform barrelPos)
+    public Vector3 BloomAngle(Transform inputTransform)
     {
         if (movement == null || aiming == null)
-            return barrelPos.localEulerAngles; // fallback, no bloom
+            return inputTransform.eulerAngles;
 
+        // Determine bloom amount based on movement
         if (movement.currentState == movement.Idle) currentBloom = defaultBloomAngle;
         else if (movement.currentState == movement.walk) currentBloom = defaultBloomAngle * walkBloomMultiplier;
         else if (movement.currentState == movement.run) currentBloom = defaultBloomAngle * sprintBloomMultiplier;
         else if (movement.currentState == movement.crouch)
         {
-            if (movement.dir.magnitude == 0) currentBloom = defaultBloomAngle * crouchBloomMultiplier;
-            else currentBloom = defaultBloomAngle * crouchBloomMultiplier * walkBloomMultiplier;
+            currentBloom = defaultBloomAngle * crouchBloomMultiplier;
+            if (movement.dir.magnitude > 0)
+                currentBloom *= walkBloomMultiplier;
         }
 
+        // Apply ADS reduction
         if (aiming.currentState == aiming.Aim)
             currentBloom *= adsBloomMultiplier;
 
@@ -43,6 +46,6 @@ public class WeaponBloom : MonoBehaviour
         float randZ = Random.Range(-currentBloom, currentBloom);
 
         Vector3 randomRotation = new Vector3(randX, randY, randZ);
-        return barrelPos.localEulerAngles + randomRotation;
+        return inputTransform.eulerAngles + randomRotation;
     }
 }

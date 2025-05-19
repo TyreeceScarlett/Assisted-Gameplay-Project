@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AiStateMachine
@@ -27,7 +25,8 @@ public class AiStateMachine
         return states[index];
     }
 
-    public void Update(){
+    public void Update()
+    {
         GetState(currentState)?.Update(agent);
     }
 

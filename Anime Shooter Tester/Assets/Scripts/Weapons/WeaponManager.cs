@@ -117,8 +117,18 @@ public class WeaponManager : MonoBehaviour
 
         if (aim != null && aim.aimpos != null)
         {
-            barrelPos.LookAt(aim.aimpos.position);
-            barrelPos.localEulerAngles = bloom.BloomAngle(barrelPos);
+            Vector3 aimDirection = (aim.aimpos.position - barrelPos.position).normalized;
+            Quaternion aimRotation = Quaternion.LookRotation(aimDirection);
+
+            // Apply bloom using a temporary object
+            if (bloom != null)
+            {
+                GameObject temp = new GameObject("TempBloomDir");
+                temp.transform.rotation = aimRotation;
+                Vector3 bloomedAngles = bloom.BloomAngle(temp.transform);
+                aimRotation = Quaternion.Euler(bloomedAngles);
+                Destroy(temp);
+            }
 
             if (audioSource != null)
                 audioSource.PlayOneShot(gunShot);
@@ -131,18 +141,18 @@ public class WeaponManager : MonoBehaviour
 
             for (int i = 0; i < bulletsPerShot; i++)
             {
-                GameObject currentBullet = Instantiate(bullet, barrelPos.position, barrelPos.rotation);
+                GameObject currentBullet = Instantiate(bullet, barrelPos.position, aimRotation);
 
                 Bullet bulletScript = currentBullet.GetComponent<Bullet>();
                 bulletScript.weapon = this;
-                bulletScript.dir = barrelPos.forward;
+                bulletScript.dir = aimRotation * Vector3.forward;
 
                 Rigidbody rb = currentBullet.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
                     rb.useGravity = false;
                     rb.drag = 0f;
-                    rb.velocity = barrelPos.forward * bulletVelocity;
+                    rb.velocity = bulletScript.dir * bulletVelocity;
                 }
                 else
                 {

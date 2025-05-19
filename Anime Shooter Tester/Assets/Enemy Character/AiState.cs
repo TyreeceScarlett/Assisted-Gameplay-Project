@@ -5,6 +5,7 @@ using UnityEngine;
 // Enum representing AI state identifiers
 public enum AiStateId
 {
+    Patrol,
     ChasePlayer
 }
 
