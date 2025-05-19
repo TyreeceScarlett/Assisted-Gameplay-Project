@@ -252,3 +252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 60
+  weapon: {fileID: 0}
+  dir: {x: 0, y: 0, z: 0}
+  damagePopupPrefab: {fileID: 3415613619341887792, guid: 06563a08949ce4c47ab7d84bbf7890aa, type: 3}

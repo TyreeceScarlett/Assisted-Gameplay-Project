@@ -10,13 +10,19 @@ public class DamagePopup : MonoBehaviour
     private TextMeshProUGUI text;
     private Color originalColor;
     private float timer;
+    private CanvasGroup canvasGroup;
 
     void Awake()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
+        canvasGroup = GetComponent<CanvasGroup>();
+
         if (text != null)
-        {
             originalColor = text.color;
+
+        if (canvasGroup == null)
+        {
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
     }
 
@@ -35,19 +41,19 @@ public class DamagePopup : MonoBehaviour
 
     void Update()
     {
+        // Billboard toward camera
         transform.LookAt(Camera.main.transform);
-        transform.Rotate(0, 180, 0); // So it's not mirrored
+        transform.Rotate(0, 180, 0); // prevent mirrored text
 
+        // Move up
         transform.position += Vector3.up * moveUpSpeed * Time.deltaTime;
 
+        // Fade out over time
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
-            Color c = text.color;
-            c.a -= fadeOutSpeed * Time.deltaTime;
-            text.color = c;
-
-            if (c.a <= 0f)
+            canvasGroup.alpha -= fadeOutSpeed * Time.deltaTime;
+            if (canvasGroup.alpha <= 0f)
                 Destroy(gameObject);
         }
     }

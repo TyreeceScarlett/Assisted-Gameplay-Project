@@ -165,12 +165,14 @@
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_geometry_uv.hlsl" />
     <None Include="Assets\UniGLTF\Resources\UniGLTF\NormalMapExporter.shader" />
+    <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_depthnormals_fragment.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
     <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_lighting_mtoon.hlsl" />
+    <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_shadowcaster_vertex.hlsl" />
     <None Include="Assets\VRM10\MToon10\Shaders\vrmc_materials_mtoon_forward_vertex.hlsl" />
