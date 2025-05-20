@@ -36,8 +36,8 @@ public class BetterAimAssist : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 50f;
 
-    [Header("UI Settings")] // [Added]
-    public List<Transform> blockedCanvases = new List<Transform>(); // [Added]
+    [Header("UI Settings")]
+    public List<Transform> blockedCanvases = new List<Transform>();
 
     // Internal states
     public Transform stickyTarget { get; private set; }
@@ -46,6 +46,7 @@ public class BetterAimAssist : MonoBehaviour
     public Transform bulletMagnetTarget { get; private set; }
 
     private bool isStickyActive = false;
+    private bool isCursorLocked = true; // New toggle state
 
     void Start()
     {
@@ -58,11 +59,15 @@ public class BetterAimAssist : MonoBehaviour
             Debug.LogError("BetterAimAssist: No main camera found!");
         if (barrelTransform == null)
             Debug.LogError("BetterAimAssist: Barrel transform not assigned!");
+
+        // Start with locked cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        HandleCursor(); // [Added]
+        HandleCursor();
 
         if (enableStickyView)
             UpdateStickyView();
@@ -76,21 +81,26 @@ public class BetterAimAssist : MonoBehaviour
             adsTarget = null;
     }
 
-    void HandleCursor() // [Added]
+    void HandleCursor()
     {
-        if (Input.GetMouseButtonDown(2) || IsPointerOverBlockedUI())
+        if (Input.GetMouseButtonDown(2)) // Middle click toggles lock state
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            isCursorLocked = !isCursorLocked;
         }
-        else if (!IsPointerOverBlockedUI() && !Input.GetMouseButton(2))
+
+        if (isCursorLocked && !IsPointerOverBlockedUI())
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 
-    bool IsPointerOverBlockedUI() // [Added]
+    bool IsPointerOverBlockedUI()
     {
         if (EventSystem.current == null || blockedCanvases == null || blockedCanvases.Count == 0)
             return false;
