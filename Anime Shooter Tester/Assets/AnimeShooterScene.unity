@@ -10146,6 +10146,7 @@ GameObject:
   - component: {fileID: 1830003854}
   - component: {fileID: 1830003855}
   - component: {fileID: 1830003857}
+  - component: {fileID: 1830003858}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -10380,6 +10381,39 @@ MonoBehaviour:
   lowHealthColorBright: {r: 1, g: 0, b: 0, a: 1}
   lowHealthColorDark: {r: 0.5, g: 0, b: 0, a: 1}
   flashSpeed: 4
+--- !u!114 &1830003858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830003842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136c4cebb4ef5fc4481d6f94cd66968a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 963194227}
+  cameraTransform: {fileID: 908710871}
+  barrelTransform: {fileID: 6140610192070373210}
+  enemyTag: EnemyHead
+  enableStickyView: 1
+  stickyDetectionRadius: 20
+  stickySlowDownFactor: 0.3
+  stickyMaxAngle: 10
+  enableAssistedTracking: 1
+  trackingDetectionRadius: 20
+  trackingSpeed: 5
+  trackingMaxAngle: 30
+  enableADSSnapping: 1
+  isADS: 0
+  adsDetectionRadius: 30
+  adsSnapSpeed: 10
+  enableBulletMagnetism: 1
+  magnetRadius: 2
+  magnetStrength: 1000
+  bulletPrefab: {fileID: 3695707246129032359, guid: acf6b24a160f5d44abc11af6896a9773, type: 3}
+  bulletSpeed: 50
 --- !u!1 &1837163542
 GameObject:
   m_ObjectHideFlags: 0

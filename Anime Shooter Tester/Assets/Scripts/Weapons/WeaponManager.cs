@@ -115,55 +115,64 @@ public class WeaponManager : MonoBehaviour
     {
         fireRateTimer = 0f;
 
-        if (aim != null && aim.aimpos != null)
+        Vector3 fireDirection;
+        Quaternion aimRotation;
+
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Vector3 aimDirection = (aim.aimpos.position - barrelPos.position).normalized;
-            Quaternion aimRotation = Quaternion.LookRotation(aimDirection);
-
-            // Apply bloom using a temporary object
-            if (bloom != null)
-            {
-                GameObject temp = new GameObject("TempBloomDir");
-                temp.transform.rotation = aimRotation;
-                Vector3 bloomedAngles = bloom.BloomAngle(temp.transform);
-                aimRotation = Quaternion.Euler(bloomedAngles);
-                Destroy(temp);
-            }
-
-            if (audioSource != null)
-                audioSource.PlayOneShot(gunShot);
-
-            if (recoil != null)
-                recoil.TriggerRecoil();
-
-            if (ammo != null)
-                ammo.currentAmmo--;
-
-            for (int i = 0; i < bulletsPerShot; i++)
-            {
-                GameObject currentBullet = Instantiate(bullet, barrelPos.position, aimRotation);
-
-                Bullet bulletScript = currentBullet.GetComponent<Bullet>();
-                bulletScript.weapon = this;
-                bulletScript.dir = aimRotation * Vector3.forward;
-
-                Rigidbody rb = currentBullet.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.useGravity = false;
-                    rb.drag = 0f;
-                    rb.velocity = bulletScript.dir * bulletVelocity;
-                }
-                else
-                {
-                    Debug.LogWarning("Bullet prefab is missing a Rigidbody component!");
-                }
-
-                Destroy(currentBullet, 5f);
-            }
-
-            TriggerMuzzleFlash();
+            fireDirection = (hit.point - barrelPos.position).normalized;
         }
+        else
+        {
+            fireDirection = ray.direction;
+        }
+
+        aimRotation = Quaternion.LookRotation(fireDirection);
+
+        // Apply bloom using a temporary object
+        if (bloom != null)
+        {
+            GameObject temp = new GameObject("TempBloomDir");
+            temp.transform.rotation = aimRotation;
+            Vector3 bloomedAngles = bloom.BloomAngle(temp.transform);
+            aimRotation = Quaternion.Euler(bloomedAngles);
+            Destroy(temp);
+        }
+
+        if (audioSource != null)
+            audioSource.PlayOneShot(gunShot);
+
+        if (recoil != null)
+            recoil.TriggerRecoil();
+
+        if (ammo != null)
+            ammo.currentAmmo--;
+
+        for (int i = 0; i < bulletsPerShot; i++)
+        {
+            GameObject currentBullet = Instantiate(bullet, barrelPos.position, aimRotation);
+
+            Bullet bulletScript = currentBullet.GetComponent<Bullet>();
+            bulletScript.weapon = this;
+            bulletScript.dir = aimRotation * Vector3.forward;
+
+            Rigidbody rb = currentBullet.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.useGravity = false;
+                rb.drag = 0f;
+                rb.velocity = bulletScript.dir * bulletVelocity;
+            }
+            else
+            {
+                Debug.LogWarning("Bullet prefab is missing a Rigidbody component!");
+            }
+
+            Destroy(currentBullet, 5f);
+        }
+
+        TriggerMuzzleFlash();
     }
 
     void TriggerMuzzleFlash()
