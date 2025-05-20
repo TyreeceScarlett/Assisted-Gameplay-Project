@@ -105,9 +105,24 @@ public class BetterAimAssist : MonoBehaviour
         if (EventSystem.current == null || blockedCanvases == null || blockedCanvases.Count == 0)
             return false;
 
+        // When cursor locked, skip UI check to avoid invalid mouse positions causing errors
+        if (Cursor.lockState == CursorLockMode.Locked)
+            return false;
+
+        Vector3 mousePos = Input.mousePosition;
+
+        // Validate mouse position to prevent NaN or out-of-screen values
+        if (float.IsNaN(mousePos.x) || float.IsNaN(mousePos.y) ||
+            mousePos.x < 0 || mousePos.x > Screen.width ||
+            mousePos.y < 0 || mousePos.y > Screen.height)
+        {
+            // Fallback to center of screen
+            mousePos = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
+        }
+
         PointerEventData pointerData = new PointerEventData(EventSystem.current)
         {
-            position = Input.mousePosition
+            position = mousePos
         };
 
         List<RaycastResult> results = new List<RaycastResult>();

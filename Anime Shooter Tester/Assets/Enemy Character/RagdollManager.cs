@@ -4,16 +4,29 @@ using UnityEngine;
 
 public class RagdollManager : MonoBehaviour
 {
-    Rigidbody[] rbs;
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody[] rbs;
+    private Animator animator;
+
+    void Awake()
     {
         rbs = GetComponentsInChildren<Rigidbody>();
-        foreach (Rigidbody rb in rbs) rb.isKinematic = true;
+        animator = GetComponent<Animator>();
+
+        foreach (Rigidbody rb in rbs)
+        {
+            rb.isKinematic = true;
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
+            rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        }
     }
 
-    public void  TriggerRagdoll()
+    public void TriggerRagdoll()
     {
-        foreach (Rigidbody rb in rbs) rb.isKinematic = false;
+        if (animator != null) animator.enabled = false;
+
+        foreach (Rigidbody rb in rbs)
+        {
+            rb.isKinematic = false;
+        }
     }
 }

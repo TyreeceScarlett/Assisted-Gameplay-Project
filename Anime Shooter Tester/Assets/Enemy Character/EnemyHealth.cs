@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
-using TMPro; // ✅ Add this for TMP_Text support
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 public class EnemyHealth : MonoBehaviour
@@ -15,7 +15,7 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("UI")]
     public Slider healthBarSlider;
-    public TMP_Text healthText; // ✅ Use TMP_Text instead of Text
+    public TMP_Text healthText;
 
     [Header("Effects")]
     public AudioClip deathSound;
@@ -38,44 +38,32 @@ public class EnemyHealth : MonoBehaviour
         ragdollManager = GetComponent<RagdollManager>();
         aiAgent = GetComponent<AiAgent>();
         renderers = GetComponentsInChildren<Renderer>();
-
         enemyParent = transform.root;
 
         if (renderers.Length > 0)
-        {
             originalColor = renderers[0].material.color;
-        }
 
         health = maxHealth;
-
         if (healthBarSlider != null)
         {
             healthBarSlider.maxValue = maxHealth;
             healthBarSlider.value = health;
         }
-
         if (healthText != null)
         {
             healthText.text = $"{health} / {maxHealth}";
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Transform hitPart = null)
     {
         if (isDead) return;
 
         health -= damage;
         health = Mathf.Clamp(health, 0f, maxHealth);
 
-        if (healthBarSlider != null)
-        {
-            healthBarSlider.value = health;
-        }
-
-        if (healthText != null)
-        {
-            healthText.text = $"{health} / {maxHealth}";
-        }
+        if (healthBarSlider != null) healthBarSlider.value = health;
+        if (healthText != null) healthText.text = $"{health} / {maxHealth}";
 
         StartCoroutine(FlashWhite());
 
@@ -83,10 +71,6 @@ public class EnemyHealth : MonoBehaviour
         {
             isDead = true;
             EnemyDeath();
-        }
-        else
-        {
-            Debug.Log("Enemy hit, health remaining: " + health);
         }
     }
 
@@ -96,28 +80,14 @@ public class EnemyHealth : MonoBehaviour
         if (navMeshAgent != null) navMeshAgent.enabled = false;
         if (aiAgent != null) aiAgent.enabled = false;
 
-        if (healthBarSlider != null)
-        {
-            healthBarSlider.gameObject.SetActive(false);
-        }
+        if (healthBarSlider != null) healthBarSlider.gameObject.SetActive(false);
+        if (healthText != null) healthText.gameObject.SetActive(false);
 
-        if (healthText != null)
-        {
-            healthText.gameObject.SetActive(false);
-        }
+        if (deathSound != null) audioSource.PlayOneShot(deathSound);
 
-        if (deathSound != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(deathSound);
-        }
-
-        if (ragdollManager != null)
-        {
-            ragdollManager.TriggerRagdoll();
-        }
+        if (ragdollManager != null) ragdollManager.TriggerRagdoll();
 
         Debug.Log("Enemy has died.");
-
         StartCoroutine(FadeSinkAndDestroy(1f, 2f));
     }
 
@@ -126,9 +96,7 @@ public class EnemyHealth : MonoBehaviour
         foreach (Renderer rend in renderers)
         {
             foreach (Material mat in rend.materials)
-            {
                 mat.color = Color.white;
-            }
         }
 
         yield return new WaitForSeconds(0.1f);
@@ -136,9 +104,7 @@ public class EnemyHealth : MonoBehaviour
         foreach (Renderer rend in renderers)
         {
             foreach (Material mat in rend.materials)
-            {
                 mat.color = originalColor;
-            }
         }
     }
 
@@ -153,17 +119,14 @@ public class EnemyHealth : MonoBehaviour
         while (timer < fadeDuration)
         {
             float t = timer / fadeDuration;
-
             SetAlpha(Mathf.Lerp(1f, 0f, t));
             enemyParent.position = Vector3.Lerp(startPos, endPos, t);
-
             timer += Time.deltaTime;
             yield return null;
         }
 
         SetAlpha(0f);
         enemyParent.position = endPos;
-
         Destroy(enemyParent.gameObject);
     }
 
@@ -178,7 +141,6 @@ public class EnemyHealth : MonoBehaviour
                     Color color = mat.color;
                     color.a = alpha;
                     mat.color = color;
-
                     SetMaterialToTransparent(mat);
                 }
             }
