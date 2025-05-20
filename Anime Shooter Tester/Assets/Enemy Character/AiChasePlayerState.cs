@@ -2,43 +2,52 @@ using UnityEngine;
 
 public class AiChasePlayerState : AiState
 {
+    private GameObject player;
+
     public AiStateId GetId() => AiStateId.ChasePlayer;
 
     public void Enter(AiAgent agent)
     {
         agent.navMeshAgent.isStopped = false;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void Update(AiAgent agent)
     {
-        if (agent.target == null)
+        if (player == null)
         {
             agent.stateMachine.ChangeState(AiStateId.Patrol);
             return;
         }
 
-        agent.navMeshAgent.SetDestination(agent.target.position);
+        // Chase the player
+        agent.navMeshAgent.SetDestination(player.transform.position);
 
-        // Smooth rotation toward movement
-        if (agent.navMeshAgent.desiredVelocity != Vector3.zero)
+        // Lost sight of the player
+        if (agent.sensor.Objects.Count == 0)
         {
-            Quaternion lookRotation = Quaternion.LookRotation(agent.navMeshAgent.desiredVelocity.normalized);
-            agent.transform.rotation = Quaternion.Slerp(agent.transform.rotation, lookRotation, Time.deltaTime * 5f);
-        }
-
-        float distanceToPlayer = Vector3.Distance(agent.transform.position, agent.target.position);
-        if (distanceToPlayer > agent.sensor.distance)
-        {
+            Debug.Log("Player lost — returning to patrol");
+            Vector3 fallbackPoint = agent.GetRandomPatrolPoint();
+            agent.navMeshAgent.SetDestination(fallbackPoint);
             agent.stateMachine.ChangeState(AiStateId.Patrol);
+            return;
         }
 
-        // Animation
-        agent.animator.SetFloat("vInput", 1);
-        agent.animator.SetFloat("hzInput", 0);
+        // Rotate toward movement direction
+        Vector3 velocity = agent.navMeshAgent.velocity;
+        if (velocity.sqrMagnitude > 0.01f)
+        {
+            Quaternion rotation = Quaternion.LookRotation(velocity.normalized);
+            agent.transform.rotation = Quaternion.Slerp(agent.transform.rotation, rotation, Time.deltaTime * 5f);
+        }
+
+        // Animate
+        agent.animator.SetFloat("vInput", 1f);
+        agent.animator.SetFloat("hzInput", 0f);
     }
 
     public void Exit(AiAgent agent)
     {
-        agent.navMeshAgent.isStopped = true;
+        agent.animator.SetFloat("vInput", 0f);
     }
 }

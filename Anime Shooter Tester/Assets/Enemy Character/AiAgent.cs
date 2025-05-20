@@ -7,17 +7,16 @@ using UnityEngine.AI;
 public class AiAgent : MonoBehaviour
 {
     public AiAgentConfig config;
-    public AiStateMachine stateMachine;
-    public NavMeshAgent navMeshAgent;
-    public AiSensor sensor;
-    public Animator animator;
+
+    [HideInInspector] public AiStateMachine stateMachine;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public AiSensor sensor;
+    [HideInInspector] public Animator animator;
 
     public AiStateId initialState = AiStateId.Patrol;
-    public Vector3 patrolPointOffsetA = new Vector3(-5, 0, 0);
-    public Vector3 patrolPointOffsetB = new Vector3(5, 0, 0);
 
-    [HideInInspector]
-    public Transform target;
+    public Vector3 patrolCenter;
+    public float patrolRadius = 5f;
 
     void Start()
     {
@@ -25,12 +24,11 @@ public class AiAgent : MonoBehaviour
         sensor = GetComponent<AiSensor>();
         animator = GetComponent<Animator>();
 
+        patrolCenter = transform.position;
+
         stateMachine = new AiStateMachine(this);
 
-        Vector3 patrolPointA = transform.position + patrolPointOffsetA;
-        Vector3 patrolPointB = transform.position + patrolPointOffsetB;
-
-        stateMachine.RegisterState(new AiPatrolState(patrolPointA, patrolPointB));
+        stateMachine.RegisterState(new AiPatrolState());
         stateMachine.RegisterState(new AiChasePlayerState());
 
         stateMachine.ChangeState(initialState);
@@ -40,9 +38,24 @@ public class AiAgent : MonoBehaviour
     {
         stateMachine.Update();
 
-        // Keep enemy at ground level
+        // Keep grounded
         Vector3 pos = transform.position;
         pos.y = 0f;
         transform.position = pos;
+
+        UpdateAnimator();
+    }
+
+    public Vector3 GetRandomPatrolPoint()
+    {
+        Vector2 randomPoint = Random.insideUnitCircle * patrolRadius;
+        return patrolCenter + new Vector3(randomPoint.x, 0f, randomPoint.y);
+    }
+
+    private void UpdateAnimator()
+    {
+        // Instead of velocity, use fixed input values to animate walking forward
+        animator.SetFloat("vInput", 1f);    // forward movement input
+        animator.SetFloat("hzInput", 0f);   // horizontal input zero for no strafing
     }
 }

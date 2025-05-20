@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\ActionStates\ReloadState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Enemy Character\AiStateMachine.cs" />
+    <Compile Include="Assets\Assist Scripts\BetterAimAssistUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Enemy Character\AiChasePlayerState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -87,13 +88,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Enemy Character\AiAgentConfig.cs" />
     <Compile Include="Assets\Scripts\Player States\MovementBaseState.cs" />
+    <Compile Include="Assets\Assist Scripts\SmartAimAssistUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-    <Compile Include="Assets\SmartAimAssistUI.cs" />
     <Compile Include="Assets\Scripts\Aim Assist\SmartAimAssist.cs" />
     <Compile Include="Assets\Spawn Enemy At Location\EnemySpawnerCustom.cs" />
-    <Compile Include="Assets\EnemyChase.cs" />
     <Compile Include="Assets\Enemy Character\DamagePopup.cs" />
     <Compile Include="Assets\DynamicCrosshair.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponClassManager.cs" />
@@ -104,7 +104,6 @@
     <Compile Include="Assets\ControlsHintToggle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\SmartAimAssistUIManager.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Scripts\Player Related\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ActionStates\DefaultState.cs" />
@@ -121,6 +120,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\1. WIP Spit Screen Testing location\New Script location\PlayerMovement\SplitScreenManager.cs" />
+    <Compile Include="Assets\Assist Scripts\BetterAimAssist.cs" />
     <Compile Include="Assets\DebugNavMeshAgent.cs" />
     <Compile Include="Assets\Scripts\AimStates\HipFireState.cs" />
     <Compile Include="Assets\CubeBob.cs" />
@@ -141,6 +141,7 @@
     <Compile Include="Assets\Scripts\ActionStates\ActionStateManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\1. WIP Spit Screen Testing location\New Script location\PlayerMovement\AnimeCameraFollow.cs" />
+    <Compile Include="Assets\A Enemy Controller\EnemyChase.cs" />
     <Compile Include="Assets\UnityTechnologies\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Weapons\SwapState.cs" />
@@ -153,7 +154,9 @@
     <Compile Include="Assets\1. WIP Spit Screen Testing location\A Other Animation Rigging\LookAtObjectAnimation.cs" />
     <Compile Include="Assets\Scripts\Player States\WalkState.cs" />
     <Compile Include="Assets\Scripts\Player States\MovementStateManager.cs" />
+    <Compile Include="Assets\Assist Scripts\AimAssistVisualizer.cs" />
     <Compile Include="Assets\CrosshairBump.cs" />
+    <Compile Include="Assets\Assist Scripts\SmartAimAssistUIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
   </ItemGroup>
   <ItemGroup>
