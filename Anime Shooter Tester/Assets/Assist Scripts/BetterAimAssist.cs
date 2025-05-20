@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 public class BetterAimAssist : MonoBehaviour
@@ -35,6 +36,9 @@ public class BetterAimAssist : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 50f;
 
+    [Header("UI Settings")] // [Added]
+    public List<Transform> blockedCanvases = new List<Transform>(); // [Added]
+
     // Internal states
     public Transform stickyTarget { get; private set; }
     public Transform trackingTarget { get; private set; }
@@ -58,6 +62,8 @@ public class BetterAimAssist : MonoBehaviour
 
     void Update()
     {
+        HandleCursor(); // [Added]
+
         if (enableStickyView)
             UpdateStickyView();
 
@@ -70,8 +76,46 @@ public class BetterAimAssist : MonoBehaviour
             adsTarget = null;
     }
 
-    #region Sticky View
+    void HandleCursor() // [Added]
+    {
+        if (Input.GetMouseButtonDown(2) || IsPointerOverBlockedUI())
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else if (!IsPointerOverBlockedUI() && !Input.GetMouseButton(2))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
 
+    bool IsPointerOverBlockedUI() // [Added]
+    {
+        if (EventSystem.current == null || blockedCanvases == null || blockedCanvases.Count == 0)
+            return false;
+
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        foreach (var result in results)
+        {
+            foreach (var canvasTransform in blockedCanvases)
+            {
+                if (canvasTransform != null && result.gameObject.transform.IsChildOf(canvasTransform))
+                    return true;
+            }
+        }
+
+        return false;
+    }
+
+    #region Sticky View
     public float GetModifiedRotationSpeed(float originalSpeed)
     {
         if (!enableStickyView || !isStickyActive)
@@ -100,11 +144,9 @@ public class BetterAimAssist : MonoBehaviour
             }
         }
     }
-
     #endregion
 
     #region Assisted Tracking
-
     void UpdateAssistedTracking()
     {
         trackingTarget = FindClosestTarget(cameraTransform.position, trackingDetectionRadius, trackingMaxAngle);
@@ -115,11 +157,9 @@ public class BetterAimAssist : MonoBehaviour
             cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, desiredRot, Time.deltaTime * trackingSpeed);
         }
     }
-
     #endregion
 
     #region ADS Snapping
-
     void UpdateADSSnapping()
     {
         adsTarget = FindClosestTarget(cameraTransform.position, adsDetectionRadius, 30f);
@@ -131,11 +171,9 @@ public class BetterAimAssist : MonoBehaviour
             cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, desiredRot, Time.deltaTime * adsSnapSpeed);
         }
     }
-
     #endregion
 
     #region Bullet Magnetism
-
     public void Fire()
     {
         if (bulletPrefab == null || barrelTransform == null)
@@ -199,11 +237,9 @@ public class BetterAimAssist : MonoBehaviour
         else
             return ray.GetPoint(100f);
     }
-
     #endregion
 
     #region Utility
-
     Transform FindClosestTarget(Vector3 origin, float radius, float maxAngle)
     {
         Collider[] hits = Physics.OverlapSphere(origin, radius);
@@ -232,6 +268,5 @@ public class BetterAimAssist : MonoBehaviour
         Collider col = target.GetComponent<Collider>();
         return col != null ? col.bounds.center : target.position;
     }
-
     #endregion
 }

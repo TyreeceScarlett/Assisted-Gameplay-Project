@@ -2,51 +2,69 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class AimAssistVisualizer : MonoBehaviour
+public class HeadTrackerVisualizer : MonoBehaviour
 {
-    public BetterAimAssist aimAssist;
+    [Tooltip("UI Camera rendering the canvas.")]
     public Camera uiCamera;
+
+    [Tooltip("Prefab with RawImage component (light pink) and optional Text.")]
     public GameObject markerPrefab;
+
+    [Tooltip("Canvas RectTransform to hold the UI markers.")]
     public RectTransform canvasTransform;
 
-    private List<GameObject> markers = new();
+    [Tooltip("List of enemy head Transforms to track.")]
+    public List<Transform> headTargets = new();
+
+    private readonly List<GameObject> markers = new();
+
+    void Start()
+    {
+        // Spawn one marker per head
+        foreach (Transform head in headTargets)
+        {
+            GameObject marker = Instantiate(markerPrefab, canvasTransform);
+
+            RectTransform rt = marker.GetComponent<RectTransform>();
+            if (rt != null)
+                rt.sizeDelta = new Vector2(20f, 20f);  // reasonable crosshair size
+
+            RawImage rawImg = marker.GetComponent<RawImage>();
+            if (rawImg != null)
+                rawImg.color = new Color(1f, 0.8f, 0.9f, 1f); // light pink
+
+            markers.Add(marker);
+
+            Debug.Log("Created marker for: " + head.name);
+        }
+    }
 
     void Update()
     {
-        ClearMarkers();
+        for (int i = 0; i < headTargets.Count; i++)
+        {
+            Transform head = headTargets[i];
+            GameObject marker = markers[i];
 
-        if (aimAssist == null || uiCamera == null || markerPrefab == null || canvasTransform == null)
-            return;
+            if (head == null || marker == null)
+                continue;
 
-        DrawMarker(aimAssist.stickyTarget, Color.yellow, "Sticky");
-        DrawMarker(aimAssist.trackingTarget, Color.blue, "Track");
-        DrawMarker(aimAssist.adsTarget, Color.red, "ADS");
-        DrawMarker(aimAssist.bulletMagnetTarget, Color.magenta, "Magnet");
-    }
+            Vector3 headPosition = head.position + new Vector3(0, 0.2f, 0); // offset for better alignment
+            Vector3 screenPos = uiCamera.WorldToScreenPoint(headPosition);
 
-    void DrawMarker(Transform target, Color color, string label)
-    {
-        if (target == null) return;
+            bool isVisible = screenPos.z > 0 &&
+                             screenPos.x >= 0 && screenPos.x <= Screen.width &&
+                             screenPos.y >= 0 && screenPos.y <= Screen.height;
 
-        Vector3 screenPos = uiCamera.WorldToScreenPoint(target.position);
-        if (screenPos.z < 0) return;
+            marker.SetActive(isVisible);
 
-        GameObject marker = Instantiate(markerPrefab, canvasTransform);
-        marker.transform.position = screenPos;
+            if (!isVisible)
+                continue;
 
-        Image img = marker.GetComponent<Image>();
-        if (img != null) img.color = color;
-
-        Text txt = marker.GetComponentInChildren<Text>();
-        if (txt != null) txt.text = label;
-
-        markers.Add(marker);
-    }
-
-    void ClearMarkers()
-    {
-        foreach (var m in markers)
-            Destroy(m);
-        markers.Clear();
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform, screenPos, uiCamera, out Vector2 uiPos))
+            {
+                marker.GetComponent<RectTransform>().anchoredPosition = uiPos;
+            }
+        }
     }
 }
