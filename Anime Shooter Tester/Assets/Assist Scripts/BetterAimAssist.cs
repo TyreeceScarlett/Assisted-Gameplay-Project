@@ -46,7 +46,7 @@ public class BetterAimAssist : MonoBehaviour
     public Transform bulletMagnetTarget { get; private set; }
 
     private bool isStickyActive = false;
-    private bool isCursorLocked = true; // New toggle state
+    private bool isCursorLocked = true; // Cursor lock toggle state
 
     void Start()
     {
@@ -60,7 +60,6 @@ public class BetterAimAssist : MonoBehaviour
         if (barrelTransform == null)
             Debug.LogError("BetterAimAssist: Barrel transform not assigned!");
 
-        // Start with locked cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -68,6 +67,15 @@ public class BetterAimAssist : MonoBehaviour
     void Update()
     {
         HandleCursor();
+
+        if (IsInputBlockedByUI())
+        {
+            stickyTarget = null;
+            trackingTarget = null;
+            adsTarget = null;
+            bulletMagnetTarget = null;
+            return;
+        }
 
         if (enableStickyView)
             UpdateStickyView();
@@ -83,7 +91,7 @@ public class BetterAimAssist : MonoBehaviour
 
     void HandleCursor()
     {
-        if (Input.GetMouseButtonDown(2)) // Middle click toggles lock state
+        if (Input.GetMouseButtonDown(2)) // Middle mouse toggles cursor lock
         {
             isCursorLocked = !isCursorLocked;
         }
@@ -105,18 +113,15 @@ public class BetterAimAssist : MonoBehaviour
         if (EventSystem.current == null || blockedCanvases == null || blockedCanvases.Count == 0)
             return false;
 
-        // When cursor locked, skip UI check to avoid invalid mouse positions causing errors
         if (Cursor.lockState == CursorLockMode.Locked)
             return false;
 
         Vector3 mousePos = Input.mousePosition;
 
-        // Validate mouse position to prevent NaN or out-of-screen values
         if (float.IsNaN(mousePos.x) || float.IsNaN(mousePos.y) ||
             mousePos.x < 0 || mousePos.x > Screen.width ||
             mousePos.y < 0 || mousePos.y > Screen.height)
         {
-            // Fallback to center of screen
             mousePos = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
         }
 
@@ -138,6 +143,11 @@ public class BetterAimAssist : MonoBehaviour
         }
 
         return false;
+    }
+
+    bool IsInputBlockedByUI()
+    {
+        return !isCursorLocked && IsPointerOverBlockedUI();
     }
 
     #region Sticky View
@@ -162,9 +172,13 @@ public class BetterAimAssist : MonoBehaviour
                 float angle = Vector3.Angle(cameraTransform.forward, dirToEnemy);
                 if (angle < stickyMaxAngle)
                 {
-                    isStickyActive = true;
-                    stickyTarget = hit.transform;
-                    break;
+                    // Check line of sight
+                    if (HasLineOfSight(cameraTransform.position, hit.bounds.center))
+                    {
+                        isStickyActive = true;
+                        stickyTarget = hit.transform;
+                        break;
+                    }
                 }
             }
         }
@@ -174,7 +188,7 @@ public class BetterAimAssist : MonoBehaviour
     #region Assisted Tracking
     void UpdateAssistedTracking()
     {
-        trackingTarget = FindClosestTarget(cameraTransform.position, trackingDetectionRadius, trackingMaxAngle);
+        trackingTarget = FindClosestTargetWithLOS(cameraTransform.position, trackingDetectionRadius, trackingMaxAngle);
         if (trackingTarget != null)
         {
             Vector3 dirToTarget = (trackingTarget.position - cameraTransform.position).normalized;
@@ -187,7 +201,7 @@ public class BetterAimAssist : MonoBehaviour
     #region ADS Snapping
     void UpdateADSSnapping()
     {
-        adsTarget = FindClosestTarget(cameraTransform.position, adsDetectionRadius, 30f);
+        adsTarget = FindClosestTargetWithLOS(cameraTransform.position, adsDetectionRadius, 30f);
         if (adsTarget != null)
         {
             Vector3 targetCenter = GetTargetCenter(adsTarget);
@@ -235,11 +249,15 @@ public class BetterAimAssist : MonoBehaviour
         {
             if (hit.collider.CompareTag(enemyTag))
             {
-                float dist = Vector3.Distance(hit.point, ray.origin + ray.direction * hit.distance);
-                if (dist < closestDist)
+                // Check line of sight from camera to hit point
+                if (HasLineOfSight(ray.origin, hit.point))
                 {
-                    closestDist = dist;
-                    bestTarget = hit.transform;
+                    float dist = Vector3.Distance(hit.point, ray.origin + ray.direction * hit.distance);
+                    if (dist < closestDist)
+                    {
+                        closestDist = dist;
+                        bestTarget = hit.transform;
+                    }
                 }
             }
         }
@@ -265,6 +283,7 @@ public class BetterAimAssist : MonoBehaviour
     #endregion
 
     #region Utility
+
     Transform FindClosestTarget(Vector3 origin, float radius, float maxAngle)
     {
         Collider[] hits = Physics.OverlapSphere(origin, radius);
@@ -288,10 +307,67 @@ public class BetterAimAssist : MonoBehaviour
         return bestTarget;
     }
 
+    // New method that adds line of sight check
+    Transform FindClosestTargetWithLOS(Vector3 origin, float radius, float maxAngle)
+    {
+        Collider[] hits = Physics.OverlapSphere(origin, radius);
+        Transform bestTarget = null;
+        float closestAngle = maxAngle;
+
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag(enemyTag))
+            {
+                Vector3 targetCenter = hit.bounds.center;
+                Vector3 dirToEnemy = (targetCenter - origin).normalized;
+                float angle = Vector3.Angle(cameraTransform.forward, dirToEnemy);
+                if (angle < closestAngle)
+                {
+                    if (HasLineOfSight(origin, targetCenter))
+                    {
+                        bestTarget = hit.transform;
+                        closestAngle = angle;
+                    }
+                }
+            }
+        }
+
+        return bestTarget;
+    }
+
     Vector3 GetTargetCenter(Transform target)
     {
         Collider col = target.GetComponent<Collider>();
         return col != null ? col.bounds.center : target.position;
     }
+
+    // Raycast helper to check line of sight between two points
+    bool HasLineOfSight(Vector3 origin, Vector3 targetPos)
+    {
+        Vector3 direction = targetPos - origin;
+        float distance = direction.magnitude;
+        direction.Normalize();
+
+        if (Physics.Raycast(origin, direction, out RaycastHit hitInfo, distance))
+        {
+            // If the ray hits something other than the target position, LOS is blocked
+            // Because targetPos might not be a collider point exactly, we compare hit collider's bounds to targetPos
+            // We assume any hit other than the target collider blocks LOS
+
+            // Here, we accept LOS only if hitInfo.collider bounds contain targetPos or is the target
+            // For simplicity, if the hit collider is the target or contains targetPos, LOS is valid
+
+            // To implement this, if hit collider's bounds contain targetPos, it's likely the enemy itself
+            if (hitInfo.collider.bounds.Contains(targetPos))
+                return true;
+
+            // Else LOS is blocked
+            return false;
+        }
+
+        // Nothing blocking LOS
+        return true;
+    }
+
     #endregion
 }

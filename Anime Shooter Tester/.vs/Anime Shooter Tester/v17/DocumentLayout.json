@@ -3,11 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\assist scripts\\betteraimassist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\assist scripts\\betteraimassist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\assist scripts\\betteraimassist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\enemy character\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\scripts\\player states\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player states\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\enemyhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -59,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aipatrolstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aistate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aistate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -82,18 +86,19 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BetterAimTogglePanelController.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\BetterAimTogglePanelController.cs",
-              "RelativeDocumentMoniker": "Assets\\BetterAimTogglePanelController.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\BetterAimTogglePanelController.cs",
-              "RelativeToolTip": "Assets\\BetterAimTogglePanelController.cs",
+              "DocumentIndex": 1,
+              "Title": "MovementStateManager.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Player States\\MovementStateManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player States\\MovementStateManager.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Player States\\MovementStateManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player States\\MovementStateManager.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAQwKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T22:29:10.842Z"
+              "WhenOpened": "2025-05-21T18:07:34.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\GameManager.cs",
@@ -105,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Scrollbar.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Scrollbar.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\UI\\Core\\Scrollbar.cs",
@@ -117,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "DynamicCrosshair.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\DynamicCrosshair.cs",
               "RelativeDocumentMoniker": "Assets\\DynamicCrosshair.cs",
@@ -129,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "WeaponManager.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapons\\WeaponManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\WeaponManager.cs",
@@ -141,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AiAgent.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiAgent.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiAgent.cs",
@@ -153,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "BetterAimAssistUI.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Assist Scripts\\BetterAimAssistUI.cs",
               "RelativeDocumentMoniker": "Assets\\Assist Scripts\\BetterAimAssistUI.cs",
@@ -171,7 +176,7 @@
               "RelativeDocumentMoniker": "Assets\\Assist Scripts\\BetterAimAssist.cs",
               "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Assist Scripts\\BetterAimAssist.cs",
               "RelativeToolTip": "Assets\\Assist Scripts\\BetterAimAssist.cs",
-              "ViewState": "AgIAAAsBAAAAAAAAAAAxwCkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAYwHUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T23:58:28.031Z",
               "EditorCaption": ""
@@ -179,6 +184,29 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AiSensor.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiSensor.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiSensor.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiSensor.cs",
+              "RelativeToolTip": "Assets\\Enemy Character\\AiSensor.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAiwBEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T22:28:44.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BetterAimTogglePanelController.cs",
+              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\BetterAimTogglePanelController.cs",
+              "RelativeDocumentMoniker": "Assets\\BetterAimTogglePanelController.cs",
+              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\BetterAimTogglePanelController.cs",
+              "RelativeToolTip": "Assets\\BetterAimTogglePanelController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T22:29:10.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RagdollManager.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\RagdollManager.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\RagdollManager.cs",
@@ -190,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EnemyHealth.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\EnemyHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\EnemyHealth.cs",
@@ -198,12 +226,11 @@
               "RelativeToolTip": "Assets\\Enemy Character\\EnemyHealth.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAawFcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T23:11:11.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T23:11:11.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Bullet.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Weapons\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Weapons\\Bullet.cs",
@@ -215,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "SmartAimAssist.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Scripts\\Aim Assist\\SmartAimAssist.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Aim Assist\\SmartAimAssist.cs",
@@ -227,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AiState.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiState.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiState.cs",
@@ -239,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AiStateManager.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiStateManager.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiStateManager.cs",
@@ -251,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "AiChasePlayerState.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiChasePlayerState.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiChasePlayerState.cs",
@@ -263,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "AiPatrolState.cs",
               "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiPatrolState.cs",
               "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiPatrolState.cs",
@@ -272,18 +299,6 @@
               "ViewState": "AgIAABwAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T22:31:35.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AiSensor.cs",
-              "DocumentMoniker": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiSensor.cs",
-              "RelativeDocumentMoniker": "Assets\\Enemy Character\\AiSensor.cs",
-              "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Enemy Character\\AiSensor.cs",
-              "RelativeToolTip": "Assets\\Enemy Character\\AiSensor.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAAABEBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T22:28:44.793Z"
             }
           ]
         }
