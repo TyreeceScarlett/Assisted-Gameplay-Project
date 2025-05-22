@@ -3930,7 +3930,6 @@ GameObject:
   - component: {fileID: 352753162}
   - component: {fileID: 352753164}
   - component: {fileID: 352753163}
-  - component: {fileID: 352753165}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -3995,22 +3994,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352753161}
   m_CullTransparentMesh: 1
---- !u!114 &352753165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352753161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f5f6d7fcc182b45af5a5d7e2b15f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshairImage: {fileID: 352753163}
-  playerCamera: {fileID: 963194227}
-  maxDistance: 10
-  enemyTag: EnemyHead
 --- !u!1 &364392841
 GameObject:
   m_ObjectHideFlags: 0
@@ -16646,11 +16629,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541226213}
   m_CullTransparentMesh: 1
---- !u!4 &1556591149 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4779130782882330167, guid: 6578e20609a1cae4daa84d769dabf0f9, type: 3}
-  m_PrefabInstance: {fileID: 8042109664723255299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1568167762
 GameObject:
   m_ObjectHideFlags: 0
@@ -18508,14 +18486,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737732044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b6033f5f9f9f34392781287109af9d, type: 3}
+  m_Script: {fileID: 11500000, guid: e9f5f6d7fcc182b45af5a5d7e2b15f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiCamera: {fileID: 963194227}
-  markerPrefab: {fileID: 352753161}
-  canvasTransform: {fileID: 1737732048}
-  headTargets:
-  - {fileID: 1556591149}
+  crosshairImage: {fileID: 352753163}
+  playerCamera: {fileID: 963194227}
+  maxDistance: 500
+  enemyTag: EnemyHead
 --- !u!1 &1743615267
 GameObject:
   m_ObjectHideFlags: 0

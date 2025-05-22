@@ -4,38 +4,56 @@ using System.Collections.Generic;
 
 public class HeadTrackerVisualizer : MonoBehaviour
 {
-    [Tooltip("UI Camera rendering the canvas.")]
+    [Header("References")]
     public Camera uiCamera;
-
-    [Tooltip("Prefab with RawImage component (light pink) and optional Text.")]
     public GameObject markerPrefab;
-
-    [Tooltip("Canvas RectTransform to hold the UI markers.")]
     public RectTransform canvasTransform;
 
-    [Tooltip("List of enemy head Transforms to track.")]
+    [Header("Targets")]
     public List<Transform> headTargets = new();
+
+    [Header("Settings")]
+    [Tooltip("Max detection distance for the marker.")]
+    public float detectionRange = 50f;
+
+    [Tooltip("Distance considered 'far' but still detected.")]
+    public float farDistanceThreshold = 30f;
+
+    [Tooltip("Distance considered 'close' and triggers close color.")]
+    public float closeDistanceThreshold = 10f;
+
+    [Tooltip("Color when marker is default (out of detection range).")]
+    public Color defaultColor = Color.white;
+
+    [Tooltip("Color when target is far but within detection range.")]
+    public Color farColor = Color.yellow;
+
+    [Tooltip("Color when target is close.")]
+    public Color closeColor = Color.red;
 
     private readonly List<GameObject> markers = new();
 
     void Start()
     {
-        // Spawn one marker per head
+        if (!uiCamera || !canvasTransform || !markerPrefab)
+        {
+            Debug.LogError("Missing required references.");
+            enabled = false;
+            return;
+        }
+
         foreach (Transform head in headTargets)
         {
             GameObject marker = Instantiate(markerPrefab, canvasTransform);
-
             RectTransform rt = marker.GetComponent<RectTransform>();
             if (rt != null)
-                rt.sizeDelta = new Vector2(20f, 20f);  // reasonable crosshair size
+                rt.sizeDelta = new Vector2(20f, 20f);
 
             RawImage rawImg = marker.GetComponent<RawImage>();
             if (rawImg != null)
-                rawImg.color = new Color(1f, 0.8f, 0.9f, 1f); // light pink
+                rawImg.color = defaultColor;
 
             markers.Add(marker);
-
-            Debug.Log("Created marker for: " + head.name);
         }
     }
 
@@ -49,21 +67,44 @@ public class HeadTrackerVisualizer : MonoBehaviour
             if (head == null || marker == null)
                 continue;
 
-            Vector3 headPosition = head.position + new Vector3(0, 0.2f, 0); // offset for better alignment
-            Vector3 screenPos = uiCamera.WorldToScreenPoint(headPosition);
+            Vector3 headPos = head.position + Vector3.up * 0.2f;
+            Vector3 screenPos = uiCamera.WorldToScreenPoint(headPos);
 
-            bool isVisible = screenPos.z > 0 &&
-                             screenPos.x >= 0 && screenPos.x <= Screen.width &&
-                             screenPos.y >= 0 && screenPos.y <= Screen.height;
+            bool onScreen = screenPos.z > 0 &&
+                            screenPos.x >= 0 && screenPos.x <= Screen.width &&
+                            screenPos.y >= 0 && screenPos.y <= Screen.height;
 
-            marker.SetActive(isVisible);
-
-            if (!isVisible)
+            marker.SetActive(onScreen);
+            if (!onScreen)
                 continue;
 
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform, screenPos, uiCamera, out Vector2 uiPos))
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasTransform, screenPos, uiCamera, out Vector2 localPoint))
             {
-                marker.GetComponent<RectTransform>().anchoredPosition = uiPos;
+                marker.GetComponent<RectTransform>().anchoredPosition = localPoint;
+            }
+
+            float distance = Vector3.Distance(uiCamera.transform.position, head.position);
+
+            RawImage rawImg = marker.GetComponent<RawImage>();
+            if (rawImg != null)
+            {
+                if (distance > detectionRange)
+                {
+                    rawImg.color = defaultColor;
+                }
+                else if (distance > farDistanceThreshold)
+                {
+                    rawImg.color = farColor;
+                }
+                else if (distance <= closeDistanceThreshold)
+                {
+                    rawImg.color = closeColor;
+                }
+                else
+                {
+                    // Optional: color when distance is between close and far thresholds
+                    rawImg.color = farColor;
+                }
             }
         }
     }
