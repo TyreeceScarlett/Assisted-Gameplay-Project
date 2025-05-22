@@ -40,13 +40,11 @@ public class AimAssistUIManager : MonoBehaviour
     public TMP_Text magnetStrengthText;
     public TMP_Text bulletSpeedText;
 
-    [Header("Canvas Toggle")]
-    public GameObject aimAssistCanvas;
-    public Toggle showUIToggle;
-    public Toggle hideUIToggle;
-
     [Header("Reset Button")]
     public Button resetButton;
+
+    [Header("Turn Off All Button")]
+    public Button turnOffAllButton;
 
     void Start()
     {
@@ -57,32 +55,13 @@ public class AimAssistUIManager : MonoBehaviour
             return;
         }
 
-        showUIToggle.onValueChanged.AddListener(OnShowUIToggleChanged);
-        hideUIToggle.onValueChanged.AddListener(OnHideUIToggleChanged);
-        resetButton.onClick.AddListener(ResetToDefaults);
+        resetButton.onClick.AddListener(ResetToCreatedDefaults);
+        turnOffAllButton.onClick.AddListener(TurnOffAllFeatures);
 
         stickyToggle.onValueChanged.AddListener(value => aimAssist.enableStickyView = value);
         trackingToggle.onValueChanged.AddListener(value => aimAssist.enableAssistedTracking = value);
         adsToggle.onValueChanged.AddListener(value => aimAssist.enableADSSnapping = value);
         magnetismToggle.onValueChanged.AddListener(value => aimAssist.enableBulletMagnetism = value);
-    }
-
-    void OnShowUIToggleChanged(bool isOn)
-    {
-        if (isOn)
-        {
-            aimAssistCanvas.SetActive(true);
-            hideUIToggle.isOn = false;
-        }
-    }
-
-    void OnHideUIToggleChanged(bool isOn)
-    {
-        if (isOn)
-        {
-            aimAssistCanvas.SetActive(false);
-            showUIToggle.isOn = false;
-        }
     }
 
     void Update()
@@ -120,7 +99,8 @@ public class AimAssistUIManager : MonoBehaviour
         bulletSpeedText.text = bulletSpeedSlider.value.ToString("F0");
     }
 
-    void ResetToDefaults()
+    // Reset values to your created default settings
+    void ResetToCreatedDefaults()
     {
         stickyToggle.isOn = true;
         stickyRadiusSlider.value = 20f;
@@ -140,5 +120,28 @@ public class AimAssistUIManager : MonoBehaviour
         magnetRadiusSlider.value = 2f;
         magnetStrengthSlider.value = 1000f;
         bulletSpeedSlider.value = 50f;
+    }
+
+    // Turn off all features and set all values to 0
+    void TurnOffAllFeatures()
+    {
+        stickyToggle.isOn = false;
+        stickyRadiusSlider.value = 0f;
+        stickySlowdownSlider.value = 0f;
+        stickyAngleSlider.value = 0f;
+
+        trackingToggle.isOn = false;
+        trackingRadiusSlider.value = 0f;
+        trackingSpeedSlider.value = 0f;
+        trackingAngleSlider.value = 0f;
+
+        adsToggle.isOn = false;
+        adsRadiusSlider.value = 0f;
+        adsSpeedSlider.value = 0f;
+
+        magnetismToggle.isOn = false;
+        magnetRadiusSlider.value = 0f;
+        magnetStrengthSlider.value = 0f;
+        bulletSpeedSlider.value = 0f;
     }
 }

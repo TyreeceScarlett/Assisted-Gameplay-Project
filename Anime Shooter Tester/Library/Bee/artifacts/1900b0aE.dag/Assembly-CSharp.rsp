@@ -406,6 +406,7 @@
 "Assets/Assist Scripts/SmartAimAssistUIManager.cs"
 "Assets/ControlsHintToggle.cs"
 "Assets/CrosshairBump.cs"
+"Assets/CrosshairColorChanger.cs"
 "Assets/CubeBob.cs"
 "Assets/DebugNavMeshAgent.cs"
 "Assets/DynamicCrosshair.cs"
