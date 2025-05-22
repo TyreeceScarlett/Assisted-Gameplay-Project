@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\assist scripts\\betteraimassist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\assist scripts\\betteraimassist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\assist scripts\\betteraimassist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player states\\movementstatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|c:\\users\\pokes\\onedrive\\desktop\\github\\assisted-gameplay-game\\anime shooter tester\\assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC3F057-11FB-116B-C509-D1046FD26B6D}|Assembly-CSharp.csproj|solutionrelative:assets\\enemy character\\aisensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -94,8 +94,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player States\\MovementStateManager.cs",
               "ViewState": "AgIAAIsAAAAAAAAAAAAQwKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T18:07:34.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T18:07:34.786Z"
             },
             {
               "$type": "Document",
@@ -177,7 +176,7 @@
               "RelativeDocumentMoniker": "Assets\\Assist Scripts\\BetterAimAssist.cs",
               "ToolTip": "C:\\Users\\pokes\\OneDrive\\Desktop\\Github\\Assisted-Gameplay-Game\\Anime Shooter Tester\\Assets\\Assist Scripts\\BetterAimAssist.cs",
               "RelativeToolTip": "Assets\\Assist Scripts\\BetterAimAssist.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAAAzwDkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAYwHUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T23:58:28.031Z",
               "EditorCaption": ""
@@ -192,8 +191,7 @@
               "RelativeToolTip": "Assets\\Enemy Character\\AiSensor.cs",
               "ViewState": "AgIAAJIAAAAAAAAAAAAiwBEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T22:28:44.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T22:28:44.793Z"
             },
             {
               "$type": "Document",
