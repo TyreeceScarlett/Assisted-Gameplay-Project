@@ -94,6 +94,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Aim Assist\SmartAimAssist.cs" />
     <Compile Include="Assets\Spawn Enemy At Location\EnemySpawnerCustom.cs" />
+    <Compile Include="Assets\AimAssistPanelToggle.cs" />
     <Compile Include="Assets\Enemy Character\DamagePopup.cs" />
     <Compile Include="Assets\DynamicCrosshair.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponClassManager.cs" />

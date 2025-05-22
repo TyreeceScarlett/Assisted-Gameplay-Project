@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class EnemySpawnerCustom : MonoBehaviour
 {
@@ -13,44 +12,16 @@ public class EnemySpawnerCustom : MonoBehaviour
     private const float maxCoord = 400f;
 
     [Header("UI Panels")]
-    public GameObject enemySpawnScrollView;
-
-    [HideInInspector]
     public GameObject EnemySpawnPanelShow;
-
-    [Header("UI Controls")]
-    public Toggle maximizeToggle;
-
-    private void Start()
-    {
-        // Make sure the scroll view visibility matches the toggle at start
-        if (enemySpawnScrollView != null && maximizeToggle != null)
-            enemySpawnScrollView.SetActive(maximizeToggle.isOn);
-
-        // Set up listener for toggle changes
-        if (maximizeToggle != null)
-            maximizeToggle.onValueChanged.AddListener(OnToggleChanged);
-    }
 
     private void Update()
     {
-        // F6 toggles the panel manually (optional)
+        // F6 toggles the EnemySpawnPanelShow manually
         if (Input.GetKeyDown(KeyCode.F6))
         {
-            if (enemySpawnScrollView != null)
-            {
-                bool isActive = enemySpawnScrollView.activeSelf;
-                enemySpawnScrollView.SetActive(!isActive);
-                if (maximizeToggle != null)
-                    maximizeToggle.isOn = !isActive; // sync toggle state
-            }
+            if (EnemySpawnPanelShow != null)
+                EnemySpawnPanelShow.SetActive(!EnemySpawnPanelShow.activeSelf);
         }
-    }
-
-    private void OnToggleChanged(bool isOn)
-    {
-        if (enemySpawnScrollView != null)
-            enemySpawnScrollView.SetActive(isOn);
     }
 
     public void SpawnEnemyAtInputPosition()

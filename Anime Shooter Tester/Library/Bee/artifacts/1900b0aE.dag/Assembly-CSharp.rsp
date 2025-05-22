@@ -398,6 +398,7 @@
 "Assets/A Enemy Controller/EnemyChase.cs"
 "Assets/A Forver T-Pose in scene view/ForceTPoseInEditor.cs"
 "Assets/A Render Texture Minimap/MinimapCoordinatesDisplay.cs"
+"Assets/AimAssistPanelToggle.cs"
 "Assets/Assist Scripts/AimAssistVisualizer.cs"
 "Assets/Assist Scripts/BetterAimAssist.cs"
 "Assets/Assist Scripts/BetterAimAssistUI.cs"
